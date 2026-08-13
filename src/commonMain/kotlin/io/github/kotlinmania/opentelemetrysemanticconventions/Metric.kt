@@ -26,11 +26,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreDiagnosticsExceptionResult`] | `Required`
-     * | [`Attribute.aspnetcoreDiagnosticsHandlerType`] | `Conditionally_required`: if and only if the exception was handled by this handler.
-     * | [`Attribute.errorType`] | `Required`
+     * | [`crate::attribute::ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT`] | `Required`
+     * | [`crate::attribute::ASPNETCORE_DIAGNOSTICS_HANDLER_TYPE`] | `Conditionally_required`: if and only if the exception was handled by this handler.
+     * | [`crate::attribute::ERROR_TYPE`] | `Required`
      */
-    public const val aspnetcoreDiagnosticsExceptions: String = "aspnetcore.diagnostics.exceptions"
+    public const val ASPNETCORE_DIAGNOSTICS_EXCEPTIONS: String = "aspnetcore.diagnostics.exceptions"
 
     /**
      * ## Description
@@ -50,9 +50,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreRateLimitingPolicy`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
      */
-    public const val aspnetcoreRateLimitingActiveRequestLeases: String = "aspnetcore.rate_limiting.active_request_leases"
+    public const val ASPNETCORE_RATE_LIMITING_ACTIVE_REQUEST_LEASES: String = "aspnetcore.rate_limiting.active_request_leases"
 
     /**
      * ## Description
@@ -72,9 +72,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreRateLimitingPolicy`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
      */
-    public const val aspnetcoreRateLimitingQueuedRequests: String = "aspnetcore.rate_limiting.queued_requests"
+    public const val ASPNETCORE_RATE_LIMITING_QUEUED_REQUESTS: String = "aspnetcore.rate_limiting.queued_requests"
 
     /**
      * ## Description
@@ -94,10 +94,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreRateLimitingPolicy`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
-     * | [`Attribute.aspnetcoreRateLimitingResult`] | `Required`
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_RESULT`] | `Required`
      */
-    public const val aspnetcoreRateLimitingRequestTimeInQueue: String = "aspnetcore.rate_limiting.request.time_in_queue"
+    public const val ASPNETCORE_RATE_LIMITING_REQUEST_TIME_IN_QUEUE: String = "aspnetcore.rate_limiting.request.time_in_queue"
 
     /**
      * ## Description
@@ -117,9 +117,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreRateLimitingPolicy`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
      */
-    public const val aspnetcoreRateLimitingRequestLeaseDuration: String = "aspnetcore.rate_limiting.request_lease.duration"
+    public const val ASPNETCORE_RATE_LIMITING_REQUEST_LEASE_DURATION: String = "aspnetcore.rate_limiting.request_lease.duration"
 
     /**
      * ## Description
@@ -144,10 +144,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreRateLimitingPolicy`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
-     * | [`Attribute.aspnetcoreRateLimitingResult`] | `Required`
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`crate::attribute::ASPNETCORE_RATE_LIMITING_RESULT`] | `Required`
      */
-    public const val aspnetcoreRateLimitingRequests: String = "aspnetcore.rate_limiting.requests"
+    public const val ASPNETCORE_RATE_LIMITING_REQUESTS: String = "aspnetcore.rate_limiting.requests"
 
     /**
      * ## Description
@@ -167,11 +167,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.aspnetcoreRoutingIsFallback`] | `Conditionally_required`: if and only if a route was successfully matched.
-     * | [`Attribute.aspnetcoreRoutingMatchStatus`] | `Required`
-     * | [`Attribute.httpRoute`] | `Conditionally_required`: if and only if a route was successfully matched.
+     * | [`crate::attribute::ASPNETCORE_ROUTING_IS_FALLBACK`] | `Conditionally_required`: if and only if a route was successfully matched.
+     * | [`crate::attribute::ASPNETCORE_ROUTING_MATCH_STATUS`] | `Required`
+     * | [`crate::attribute::HTTP_ROUTE`] | `Conditionally_required`: if and only if a route was successfully matched.
      */
-    public const val aspnetcoreRoutingMatchAttempts: String = "aspnetcore.routing.match_attempts"
+    public const val ASPNETCORE_ROUTING_MATCH_ATTEMPTS: String = "aspnetcore.routing.match_attempts"
 
     /**
      * ## Description
@@ -187,10 +187,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
-    public const val azureCosmosdbClientActiveInstanceCount: String = "azure.cosmosdb.client.active_instance.count"
+    public const val AZURE_COSMOSDB_CLIENT_ACTIVE_INSTANCE_COUNT: String = "azure.cosmosdb.client.active_instance.count"
 
     /**
      * ## Description
@@ -206,18 +206,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.azureCosmosdbConsistencyLevel`] | `Conditionally_required`: If available.
-     * | [`Attribute.azureCosmosdbOperationContactedRegions`] | `{"recommended": "if available"}`
-     * | [`Attribute.azureCosmosdbResponseSubStatusCode`] | `Conditionally_required`: when response was received and contained sub-code.
-     * | [`Attribute.dbCollectionName`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbNamespace`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbOperationName`] | `Required`
-     * | [`Attribute.dbResponseStatusCode`] | `Conditionally_required`: If the operation failed and status code is available.
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the operation failed.
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`crate::attribute::AZURE_COSMOSDB_CONSISTENCY_LEVEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::AZURE_COSMOSDB_OPERATION_CONTACTED_REGIONS`] | `{"recommended": "if available"}`
+     * | [`crate::attribute::AZURE_COSMOSDB_RESPONSE_SUB_STATUS_CODE`] | `Conditionally_required`: when response was received and contained sub-code.
+     * | [`crate::attribute::DB_COLLECTION_NAME`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_NAMESPACE`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::DB_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If the operation failed and status code is available.
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the operation failed.
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
-    public const val azureCosmosdbClientOperationRequestCharge: String = "azure.cosmosdb.client.operation.request_charge"
+    public const val AZURE_COSMOSDB_CLIENT_OPERATION_REQUEST_CHARGE: String = "azure.cosmosdb.client.operation.request_charge"
 
     /**
      * ## Description
@@ -233,10 +233,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cicdPipelineName`] | `Required`
-     * | [`Attribute.cicdPipelineRunState`] | `Required`
+     * | [`crate::attribute::CICD_PIPELINE_NAME`] | `Required`
+     * | [`crate::attribute::CICD_PIPELINE_RUN_STATE`] | `Required`
      */
-    public const val cicdPipelineRunActive: String = "cicd.pipeline.run.active"
+    public const val CICD_PIPELINE_RUN_ACTIVE: String = "cicd.pipeline.run.active"
 
     /**
      * ## Description
@@ -252,12 +252,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cicdPipelineName`] | `Required`
-     * | [`Attribute.cicdPipelineResult`] | `Conditionally_required`: If and only if the pipeline run result has been set during that state.
-     * | [`Attribute.cicdPipelineRunState`] | `Required`
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the pipeline run failed.
+     * | [`crate::attribute::CICD_PIPELINE_NAME`] | `Required`
+     * | [`crate::attribute::CICD_PIPELINE_RESULT`] | `Conditionally_required`: If and only if the pipeline run result has been set during that state.
+     * | [`crate::attribute::CICD_PIPELINE_RUN_STATE`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the pipeline run failed.
      */
-    public const val cicdPipelineRunDuration: String = "cicd.pipeline.run.duration"
+    public const val CICD_PIPELINE_RUN_DURATION: String = "cicd.pipeline.run.duration"
 
     /**
      * ## Description
@@ -278,10 +278,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cicdPipelineName`] | `Required`
-     * | [`Attribute.errorType`] | `Required`
+     * | [`crate::attribute::CICD_PIPELINE_NAME`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Required`
      */
-    public const val cicdPipelineRunErrors: String = "cicd.pipeline.run.errors"
+    public const val CICD_PIPELINE_RUN_ERRORS: String = "cicd.pipeline.run.errors"
 
     /**
      * ## Description
@@ -301,10 +301,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cicdSystemComponent`] | `Required`
-     * | [`Attribute.errorType`] | `Required`
+     * | [`crate::attribute::CICD_SYSTEM_COMPONENT`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Required`
      */
-    public const val cicdSystemErrors: String = "cicd.system.errors"
+    public const val CICD_SYSTEM_ERRORS: String = "cicd.system.errors"
 
     /**
      * ## Description
@@ -320,9 +320,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cicdWorkerState`] | `Required`
+     * | [`crate::attribute::CICD_WORKER_STATE`] | `Required`
      */
-    public const val cicdWorkerCount: String = "cicd.worker.count"
+    public const val CICD_WORKER_COUNT: String = "cicd.worker.count"
 
     /**
      * ## Description
@@ -342,9 +342,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuMode`] | `Conditionally_required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
+     * | [`crate::attribute::CPU_MODE`] | `Conditionally_required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
      */
-    public const val containerCpuTime: String = "container.cpu.time"
+    public const val CONTAINER_CPU_TIME: String = "container.cpu.time"
 
     /**
      * ## Description
@@ -364,9 +364,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuMode`] | `Conditionally_required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
+     * | [`crate::attribute::CPU_MODE`] | `Conditionally_required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
      */
-    public const val containerCpuUsage: String = "container.cpu.usage"
+    public const val CONTAINER_CPU_USAGE: String = "container.cpu.usage"
 
     /**
      * ## Description
@@ -386,10 +386,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.diskIoDirection`] | `Recommended`
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::DISK_IO_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val containerDiskIo: String = "container.disk.io"
+    public const val CONTAINER_DISK_IO: String = "container.disk.io"
 
     /**
      * ## Description
@@ -406,7 +406,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val containerMemoryUsage: String = "container.memory.usage"
+    public const val CONTAINER_MEMORY_USAGE: String = "container.memory.usage"
 
     /**
      * ## Description
@@ -426,10 +426,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val containerNetworkIo: String = "container.network.io"
+    public const val CONTAINER_NETWORK_IO: String = "container.network.io"
 
     /**
      * ## Description
@@ -447,7 +447,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val containerUptime: String = "container.uptime"
+    public const val CONTAINER_UPTIME: String = "container.uptime"
 
     /**
      * ## Description
@@ -461,7 +461,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `system.cpu.frequency`., reason: renamed, renamed_to: system.cpu.frequency}")
-    public const val cpuFrequency: String = "cpu.frequency"
+    public const val CPU_FREQUENCY: String = "cpu.frequency"
 
     /**
      * ## Description
@@ -477,11 +477,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuLogicalNumber`] | `Recommended`
-     * | [`Attribute.cpuMode`] | `Recommended`
+     * | [`crate::attribute::CPU_LOGICAL_NUMBER`] | `Recommended`
+     * | [`crate::attribute::CPU_MODE`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `system.cpu.time`., reason: renamed, renamed_to: system.cpu.time}")
-    public const val cpuTime: String = "cpu.time"
+    public const val CPU_TIME: String = "cpu.time"
 
     /**
      * ## Description
@@ -497,11 +497,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuLogicalNumber`] | `Recommended`
-     * | [`Attribute.cpuMode`] | `Recommended`
+     * | [`crate::attribute::CPU_LOGICAL_NUMBER`] | `Recommended`
+     * | [`crate::attribute::CPU_MODE`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `system.cpu.utilization`., reason: renamed, renamed_to: system.cpu.utilization}")
-    public const val cpuUtilization: String = "cpu.utilization"
+    public const val CPU_UTILIZATION: String = "cpu.utilization"
 
     /**
      * ## Description
@@ -521,9 +521,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpythonGcGeneration`] | `Required`
+     * | [`crate::attribute::CPYTHON_GC_GENERATION`] | `Required`
      */
-    public const val cpythonGcCollectedObjects: String = "cpython.gc.collected_objects"
+    public const val CPYTHON_GC_COLLECTED_OBJECTS: String = "cpython.gc.collected_objects"
 
     /**
      * ## Description
@@ -543,9 +543,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpythonGcGeneration`] | `Required`
+     * | [`crate::attribute::CPYTHON_GC_GENERATION`] | `Required`
      */
-    public const val cpythonGcCollections: String = "cpython.gc.collections"
+    public const val CPYTHON_GC_COLLECTIONS: String = "cpython.gc.collections"
 
     /**
      * ## Description
@@ -565,9 +565,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpythonGcGeneration`] | `Required`
+     * | [`crate::attribute::CPYTHON_GC_GENERATION`] | `Required`
      */
-    public const val cpythonGcUncollectableObjects: String = "cpython.gc.uncollectable_objects"
+    public const val CPYTHON_GC_UNCOLLECTABLE_OBJECTS: String = "cpython.gc.uncollectable_objects"
 
     /**
      * ## Description
@@ -583,10 +583,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
-     * | [`Attribute.dbClientConnectionState`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_STATE`] | `Required`
      */
-    public const val dbClientConnectionCount: String = "db.client.connection.count"
+    public const val DB_CLIENT_CONNECTION_COUNT: String = "db.client.connection.count"
 
     /**
      * ## Description
@@ -602,9 +602,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionCreateTime: String = "db.client.connection.create_time"
+    public const val DB_CLIENT_CONNECTION_CREATE_TIME: String = "db.client.connection.create_time"
 
     /**
      * ## Description
@@ -620,9 +620,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionIdleMax: String = "db.client.connection.idle.max"
+    public const val DB_CLIENT_CONNECTION_IDLE_MAX: String = "db.client.connection.idle.max"
 
     /**
      * ## Description
@@ -638,9 +638,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionIdleMin: String = "db.client.connection.idle.min"
+    public const val DB_CLIENT_CONNECTION_IDLE_MIN: String = "db.client.connection.idle.min"
 
     /**
      * ## Description
@@ -656,9 +656,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionMax: String = "db.client.connection.max"
+    public const val DB_CLIENT_CONNECTION_MAX: String = "db.client.connection.max"
 
     /**
      * ## Description
@@ -674,9 +674,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionPendingRequests: String = "db.client.connection.pending_requests"
+    public const val DB_CLIENT_CONNECTION_PENDING_REQUESTS: String = "db.client.connection.pending_requests"
 
     /**
      * ## Description
@@ -692,9 +692,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionTimeouts: String = "db.client.connection.timeouts"
+    public const val DB_CLIENT_CONNECTION_TIMEOUTS: String = "db.client.connection.timeouts"
 
     /**
      * ## Description
@@ -710,9 +710,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionUseTime: String = "db.client.connection.use_time"
+    public const val DB_CLIENT_CONNECTION_USE_TIME: String = "db.client.connection.use_time"
 
     /**
      * ## Description
@@ -728,9 +728,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTION_POOL_NAME`] | `Required`
      */
-    public const val dbClientConnectionWaitTime: String = "db.client.connection.wait_time"
+    public const val DB_CLIENT_CONNECTION_WAIT_TIME: String = "db.client.connection.wait_time"
 
     /**
      * ## Description
@@ -746,10 +746,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.create_time` with unit `s`., reason: uncategorized}")
-    public const val dbClientConnectionsCreateTime: String = "db.client.connections.create_time"
+    public const val DB_CLIENT_CONNECTIONS_CREATE_TIME: String = "db.client.connections.create_time"
 
     /**
      * ## Description
@@ -765,10 +765,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.idle.max`., reason: renamed, renamed_to: db.client.connection.idle.max}")
-    public const val dbClientConnectionsIdleMax: String = "db.client.connections.idle.max"
+    public const val DB_CLIENT_CONNECTIONS_IDLE_MAX: String = "db.client.connections.idle.max"
 
     /**
      * ## Description
@@ -784,10 +784,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.idle.min`., reason: renamed, renamed_to: db.client.connection.idle.min}")
-    public const val dbClientConnectionsIdleMin: String = "db.client.connections.idle.min"
+    public const val DB_CLIENT_CONNECTIONS_IDLE_MIN: String = "db.client.connections.idle.min"
 
     /**
      * ## Description
@@ -803,10 +803,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.max`., reason: renamed, renamed_to: db.client.connection.max}")
-    public const val dbClientConnectionsMax: String = "db.client.connections.max"
+    public const val DB_CLIENT_CONNECTIONS_MAX: String = "db.client.connections.max"
 
     /**
      * ## Description
@@ -822,10 +822,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.pending_requests`., reason: renamed, renamed_to: db.client.connection.pending_requests}")
-    public const val dbClientConnectionsPendingRequests: String = "db.client.connections.pending_requests"
+    public const val DB_CLIENT_CONNECTIONS_PENDING_REQUESTS: String = "db.client.connections.pending_requests"
 
     /**
      * ## Description
@@ -841,10 +841,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.timeouts`., reason: renamed, renamed_to: db.client.connection.timeouts}")
-    public const val dbClientConnectionsTimeouts: String = "db.client.connections.timeouts"
+    public const val DB_CLIENT_CONNECTIONS_TIMEOUTS: String = "db.client.connections.timeouts"
 
     /**
      * ## Description
@@ -860,11 +860,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
-     * | [`Attribute.dbClientConnectionsState`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_STATE`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.count`., reason: renamed, renamed_to: db.client.connection.count}")
-    public const val dbClientConnectionsUsage: String = "db.client.connections.usage"
+    public const val DB_CLIENT_CONNECTIONS_USAGE: String = "db.client.connections.usage"
 
     /**
      * ## Description
@@ -880,10 +880,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.use_time` with unit `s`., reason: uncategorized}")
-    public const val dbClientConnectionsUseTime: String = "db.client.connections.use_time"
+    public const val DB_CLIENT_CONNECTIONS_USE_TIME: String = "db.client.connections.use_time"
 
     /**
      * ## Description
@@ -899,10 +899,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbClientConnectionsPoolName`] | `Required`
+     * | [`crate::attribute::DB_CLIENT_CONNECTIONS_POOL_NAME`] | `Required`
      */
     @Deprecated("{note: Replaced by `db.client.connection.wait_time` with unit `s`., reason: uncategorized}")
-    public const val dbClientConnectionsWaitTime: String = "db.client.connections.wait_time"
+    public const val DB_CLIENT_CONNECTIONS_WAIT_TIME: String = "db.client.connections.wait_time"
 
     /**
      * ## Description
@@ -918,11 +918,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
     @Deprecated("{note: Replaced by `azure.cosmosdb.client.active_instance.count`., reason: renamed, renamed_to: azure.cosmosdb.client.active_instance.count}")
-    public const val dbClientCosmosdbActiveInstanceCount: String = "db.client.cosmosdb.active_instance.count"
+    public const val DB_CLIENT_COSMOSDB_ACTIVE_INSTANCE_COUNT: String = "db.client.cosmosdb.active_instance.count"
 
     /**
      * ## Description
@@ -938,15 +938,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbCollectionName`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbCosmosdbConsistencyLevel`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbCosmosdbRegionsContacted`] | `{"recommended": "if available"}`
-     * | [`Attribute.dbCosmosdbSubStatusCode`] | `Conditionally_required`: when response was received and contained sub-code.
-     * | [`Attribute.dbNamespace`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbOperationName`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call. The operation name MAY be parsed from the query text, in which case it SHOULD be the single operation name found in the query.
+     * | [`crate::attribute::DB_COLLECTION_NAME`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_COSMOSDB_CONSISTENCY_LEVEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_COSMOSDB_REGIONS_CONTACTED`] | `{"recommended": "if available"}`
+     * | [`crate::attribute::DB_COSMOSDB_SUB_STATUS_CODE`] | `Conditionally_required`: when response was received and contained sub-code.
+     * | [`crate::attribute::DB_NAMESPACE`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_OPERATION_NAME`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call. The operation name MAY be parsed from the query text, in which case it SHOULD be the single operation name found in the query.
      */
     @Deprecated("{note: Replaced by `azure.cosmosdb.client.operation.request_charge`., reason: renamed, renamed_to: azure.cosmosdb.client.operation.request_charge}")
-    public const val dbClientCosmosdbOperationRequestCharge: String = "db.client.cosmosdb.operation.request_charge"
+    public const val DB_CLIENT_COSMOSDB_OPERATION_REQUEST_CHARGE: String = "db.client.cosmosdb.operation.request_charge"
 
     /**
      * ## Description
@@ -966,21 +966,21 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbCollectionName`] | `Conditionally_required`: If readily available and if a database call is performed on a single collection.
-     * | [`Attribute.dbNamespace`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbOperationName`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call.
-     * | [`Attribute.dbQuerySummary`] | `{"recommended": "if available through instrumentation hooks or if the instrumentation supports generating a query summary."}`
-     * | [`Attribute.dbQueryText`] | `Opt_in`
-     * | [`Attribute.dbResponseStatusCode`] | `Conditionally_required`: If the operation failed and status code is available.
-     * | [`Attribute.dbStoredProcedureName`] | `{"recommended": "if operation applies to a specific stored procedure."}`
-     * | [`Attribute.dbSystemName`] | `Required`
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the operation failed.
-     * | [`Attribute.networkPeerAddress`] | `{"recommended": "if applicable for this database system."}`
-     * | [`Attribute.networkPeerPort`] | `{"recommended": "if and only if `network.peer.address` is set."}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`crate::attribute::DB_COLLECTION_NAME`] | `Conditionally_required`: If readily available and if a database call is performed on a single collection.
+     * | [`crate::attribute::DB_NAMESPACE`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_OPERATION_NAME`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call.
+     * | [`crate::attribute::DB_QUERY_SUMMARY`] | `{"recommended": "if available through instrumentation hooks or if the instrumentation supports generating a query summary."}`
+     * | [`crate::attribute::DB_QUERY_TEXT`] | `Opt_in`
+     * | [`crate::attribute::DB_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If the operation failed and status code is available.
+     * | [`crate::attribute::DB_STORED_PROCEDURE_NAME`] | `{"recommended": "if operation applies to a specific stored procedure."}`
+     * | [`crate::attribute::DB_SYSTEM_NAME`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the operation failed.
+     * | [`crate::attribute::NETWORK_PEER_ADDRESS`] | `{"recommended": "if applicable for this database system."}`
+     * | [`crate::attribute::NETWORK_PEER_PORT`] | `{"recommended": "if and only if `network.peer.address` is set."}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
-    public const val dbClientOperationDuration: String = "db.client.operation.duration"
+    public const val DB_CLIENT_OPERATION_DURATION: String = "db.client.operation.duration"
 
     /**
      * ## Description
@@ -996,20 +996,20 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dbCollectionName`] | `Conditionally_required`: If readily available and if a database call is performed on a single collection.
-     * | [`Attribute.dbNamespace`] | `Conditionally_required`: If available.
-     * | [`Attribute.dbOperationName`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call.
-     * | [`Attribute.dbQuerySummary`] | `{"recommended": "if available through instrumentation hooks or if the instrumentation supports generating a query summary."}`
-     * | [`Attribute.dbQueryText`] | `Opt_in`
-     * | [`Attribute.dbResponseStatusCode`] | `Conditionally_required`: If the operation failed and status code is available.
-     * | [`Attribute.dbSystemName`] | `Required`
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the operation failed.
-     * | [`Attribute.networkPeerAddress`] | `{"recommended": "if applicable for this database system."}`
-     * | [`Attribute.networkPeerPort`] | `{"recommended": "if and only if `network.peer.address` is set."}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`crate::attribute::DB_COLLECTION_NAME`] | `Conditionally_required`: If readily available and if a database call is performed on a single collection.
+     * | [`crate::attribute::DB_NAMESPACE`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::DB_OPERATION_NAME`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call.
+     * | [`crate::attribute::DB_QUERY_SUMMARY`] | `{"recommended": "if available through instrumentation hooks or if the instrumentation supports generating a query summary."}`
+     * | [`crate::attribute::DB_QUERY_TEXT`] | `Opt_in`
+     * | [`crate::attribute::DB_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If the operation failed and status code is available.
+     * | [`crate::attribute::DB_SYSTEM_NAME`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the operation failed.
+     * | [`crate::attribute::NETWORK_PEER_ADDRESS`] | `{"recommended": "if applicable for this database system."}`
+     * | [`crate::attribute::NETWORK_PEER_PORT`] | `{"recommended": "if and only if `network.peer.address` is set."}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
-    public const val dbClientResponseReturnedRows: String = "db.client.response.returned_rows"
+    public const val DB_CLIENT_RESPONSE_RETURNED_ROWS: String = "db.client.response.returned_rows"
 
     /**
      * ## Description
@@ -1025,10 +1025,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dnsQuestionName`] | `Required`
-     * | [`Attribute.errorType`] | `Conditionally_required`: if and only if an error has occurred.
+     * | [`crate::attribute::DNS_QUESTION_NAME`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred.
      */
-    public const val dnsLookupDuration: String = "dns.lookup.duration"
+    public const val DNS_LOOKUP_DURATION: String = "dns.lookup.duration"
 
     /**
      * ## Description
@@ -1046,7 +1046,7 @@ public object Metric {
      * | Unit: | `{assembly}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetAssemblyCount: String = "dotnet.assembly.count"
+    public const val DOTNET_ASSEMBLY_COUNT: String = "dotnet.assembly.count"
 
     /**
      * ## Description
@@ -1067,9 +1067,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Required`
      */
-    public const val dotnetExceptions: String = "dotnet.exceptions"
+    public const val DOTNET_EXCEPTIONS: String = "dotnet.exceptions"
 
     /**
      * ## Description
@@ -1090,9 +1090,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dotnetGcHeapGeneration`] | `Required`
+     * | [`crate::attribute::DOTNET_GC_HEAP_GENERATION`] | `Required`
      */
-    public const val dotnetGcCollections: String = "dotnet.gc.collections"
+    public const val DOTNET_GC_COLLECTIONS: String = "dotnet.gc.collections"
 
     /**
      * ## Description
@@ -1110,7 +1110,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetGcHeapTotalAllocated: String = "dotnet.gc.heap.total_allocated"
+    public const val DOTNET_GC_HEAP_TOTAL_ALLOCATED: String = "dotnet.gc.heap.total_allocated"
 
     /**
      * ## Description
@@ -1131,9 +1131,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dotnetGcHeapGeneration`] | `Required`
+     * | [`crate::attribute::DOTNET_GC_HEAP_GENERATION`] | `Required`
      */
-    public const val dotnetGcLastCollectionHeapFragmentationSize: String = "dotnet.gc.last_collection.heap.fragmentation.size"
+    public const val DOTNET_GC_LAST_COLLECTION_HEAP_FRAGMENTATION_SIZE: String = "dotnet.gc.last_collection.heap.fragmentation.size"
 
     /**
      * ## Description
@@ -1154,9 +1154,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.dotnetGcHeapGeneration`] | `Required`
+     * | [`crate::attribute::DOTNET_GC_HEAP_GENERATION`] | `Required`
      */
-    public const val dotnetGcLastCollectionHeapSize: String = "dotnet.gc.last_collection.heap.size"
+    public const val DOTNET_GC_LAST_COLLECTION_HEAP_SIZE: String = "dotnet.gc.last_collection.heap.size"
 
     /**
      * ## Description
@@ -1174,7 +1174,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetGcLastCollectionMemoryCommittedSize: String = "dotnet.gc.last_collection.memory.committed_size"
+    public const val DOTNET_GC_LAST_COLLECTION_MEMORY_COMMITTED_SIZE: String = "dotnet.gc.last_collection.memory.committed_size"
 
     /**
      * ## Description
@@ -1192,7 +1192,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetGcPauseTime: String = "dotnet.gc.pause.time"
+    public const val DOTNET_GC_PAUSE_TIME: String = "dotnet.gc.pause.time"
 
     /**
      * ## Description
@@ -1210,7 +1210,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetJitCompilationTime: String = "dotnet.jit.compilation.time"
+    public const val DOTNET_JIT_COMPILATION_TIME: String = "dotnet.jit.compilation.time"
 
     /**
      * ## Description
@@ -1228,7 +1228,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetJitCompiledIlSize: String = "dotnet.jit.compiled_il.size"
+    public const val DOTNET_JIT_COMPILED_IL_SIZE: String = "dotnet.jit.compiled_il.size"
 
     /**
      * ## Description
@@ -1246,7 +1246,7 @@ public object Metric {
      * | Unit: | `{method}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetJitCompiledMethods: String = "dotnet.jit.compiled_methods"
+    public const val DOTNET_JIT_COMPILED_METHODS: String = "dotnet.jit.compiled_methods"
 
     /**
      * ## Description
@@ -1264,7 +1264,7 @@ public object Metric {
      * | Unit: | `{contention}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetMonitorLockContentions: String = "dotnet.monitor.lock_contentions"
+    public const val DOTNET_MONITOR_LOCK_CONTENTIONS: String = "dotnet.monitor.lock_contentions"
 
     /**
      * ## Description
@@ -1282,7 +1282,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetProcessCpuCount: String = "dotnet.process.cpu.count"
+    public const val DOTNET_PROCESS_CPU_COUNT: String = "dotnet.process.cpu.count"
 
     /**
      * ## Description
@@ -1303,9 +1303,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuMode`] | `Required`
+     * | [`crate::attribute::CPU_MODE`] | `Required`
      */
-    public const val dotnetProcessCpuTime: String = "dotnet.process.cpu.time"
+    public const val DOTNET_PROCESS_CPU_TIME: String = "dotnet.process.cpu.time"
 
     /**
      * ## Description
@@ -1323,7 +1323,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetProcessMemoryWorkingSet: String = "dotnet.process.memory.working_set"
+    public const val DOTNET_PROCESS_MEMORY_WORKING_SET: String = "dotnet.process.memory.working_set"
 
     /**
      * ## Description
@@ -1341,7 +1341,7 @@ public object Metric {
      * | Unit: | `{work_item}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetThreadPoolQueueLength: String = "dotnet.thread_pool.queue.length"
+    public const val DOTNET_THREAD_POOL_QUEUE_LENGTH: String = "dotnet.thread_pool.queue.length"
 
     /**
      * ## Description
@@ -1359,7 +1359,7 @@ public object Metric {
      * | Unit: | `{thread}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetThreadPoolThreadCount: String = "dotnet.thread_pool.thread.count"
+    public const val DOTNET_THREAD_POOL_THREAD_COUNT: String = "dotnet.thread_pool.thread.count"
 
     /**
      * ## Description
@@ -1377,7 +1377,7 @@ public object Metric {
      * | Unit: | `{work_item}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetThreadPoolWorkItemCount: String = "dotnet.thread_pool.work_item.count"
+    public const val DOTNET_THREAD_POOL_WORK_ITEM_COUNT: String = "dotnet.thread_pool.work_item.count"
 
     /**
      * ## Description
@@ -1395,7 +1395,7 @@ public object Metric {
      * | Unit: | `{timer}` |
      * | Status: | `Stable`  |
      */
-    public const val dotnetTimerCount: String = "dotnet.timer.count"
+    public const val DOTNET_TIMER_COUNT: String = "dotnet.timer.count"
 
     /**
      * ## Description
@@ -1411,9 +1411,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasColdstarts: String = "faas.coldstarts"
+    public const val FAAS_COLDSTARTS: String = "faas.coldstarts"
 
     /**
      * ## Description
@@ -1429,9 +1429,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasCpuUsage: String = "faas.cpu_usage"
+    public const val FAAS_CPU_USAGE: String = "faas.cpu_usage"
 
     /**
      * ## Description
@@ -1447,9 +1447,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasErrors: String = "faas.errors"
+    public const val FAAS_ERRORS: String = "faas.errors"
 
     /**
      * ## Description
@@ -1465,9 +1465,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasInitDuration: String = "faas.init_duration"
+    public const val FAAS_INIT_DURATION: String = "faas.init_duration"
 
     /**
      * ## Description
@@ -1483,9 +1483,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasInvocations: String = "faas.invocations"
+    public const val FAAS_INVOCATIONS: String = "faas.invocations"
 
     /**
      * ## Description
@@ -1501,9 +1501,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasInvokeDuration: String = "faas.invoke_duration"
+    public const val FAAS_INVOKE_DURATION: String = "faas.invoke_duration"
 
     /**
      * ## Description
@@ -1519,9 +1519,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasMemUsage: String = "faas.mem_usage"
+    public const val FAAS_MEM_USAGE: String = "faas.mem_usage"
 
     /**
      * ## Description
@@ -1537,9 +1537,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasNetIo: String = "faas.net_io"
+    public const val FAAS_NET_IO: String = "faas.net_io"
 
     /**
      * ## Description
@@ -1555,9 +1555,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.faasTrigger`] | `Recommended`
+     * | [`crate::attribute::FAAS_TRIGGER`] | `Recommended`
      */
-    public const val faasTimeouts: String = "faas.timeouts"
+    public const val FAAS_TIMEOUTS: String = "faas.timeouts"
 
     /**
      * ## Description
@@ -1573,15 +1573,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: if the operation ended in an error
-     * | [`Attribute.genAiOperationName`] | `Required`
-     * | [`Attribute.genAiRequestModel`] | `Conditionally_required`: If available.
-     * | [`Attribute.genAiResponseModel`] | `Recommended`
-     * | [`Attribute.genAiSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If `server.address` is set.
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: if the operation ended in an error
+     * | [`crate::attribute::GEN_AI_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::GEN_AI_RESPONSE_MODEL`] | `Recommended`
+     * | [`crate::attribute::GEN_AI_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
      */
-    public const val genAiClientOperationDuration: String = "gen_ai.client.operation.duration"
+    public const val GEN_AI_CLIENT_OPERATION_DURATION: String = "gen_ai.client.operation.duration"
 
     /**
      * ## Description
@@ -1597,15 +1597,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.genAiOperationName`] | `Required`
-     * | [`Attribute.genAiRequestModel`] | `Conditionally_required`: If available.
-     * | [`Attribute.genAiResponseModel`] | `Recommended`
-     * | [`Attribute.genAiSystem`] | `Required`
-     * | [`Attribute.genAiTokenType`] | `Required`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If `server.address` is set.
+     * | [`crate::attribute::GEN_AI_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::GEN_AI_RESPONSE_MODEL`] | `Recommended`
+     * | [`crate::attribute::GEN_AI_SYSTEM`] | `Required`
+     * | [`crate::attribute::GEN_AI_TOKEN_TYPE`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
      */
-    public const val genAiClientTokenUsage: String = "gen_ai.client.token.usage"
+    public const val GEN_AI_CLIENT_TOKEN_USAGE: String = "gen_ai.client.token.usage"
 
     /**
      * ## Description
@@ -1621,15 +1621,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: if the operation ended in an error
-     * | [`Attribute.genAiOperationName`] | `Required`
-     * | [`Attribute.genAiRequestModel`] | `Conditionally_required`: If available.
-     * | [`Attribute.genAiResponseModel`] | `Recommended`
-     * | [`Attribute.genAiSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If `server.address` is set.
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: if the operation ended in an error
+     * | [`crate::attribute::GEN_AI_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::GEN_AI_RESPONSE_MODEL`] | `Recommended`
+     * | [`crate::attribute::GEN_AI_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
      */
-    public const val genAiServerRequestDuration: String = "gen_ai.server.request.duration"
+    public const val GEN_AI_SERVER_REQUEST_DURATION: String = "gen_ai.server.request.duration"
 
     /**
      * ## Description
@@ -1645,14 +1645,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.genAiOperationName`] | `Required`
-     * | [`Attribute.genAiRequestModel`] | `Conditionally_required`: If available.
-     * | [`Attribute.genAiResponseModel`] | `Recommended`
-     * | [`Attribute.genAiSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If `server.address` is set.
+     * | [`crate::attribute::GEN_AI_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::GEN_AI_RESPONSE_MODEL`] | `Recommended`
+     * | [`crate::attribute::GEN_AI_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
      */
-    public const val genAiServerTimePerOutputToken: String = "gen_ai.server.time_per_output_token"
+    public const val GEN_AI_SERVER_TIME_PER_OUTPUT_TOKEN: String = "gen_ai.server.time_per_output_token"
 
     /**
      * ## Description
@@ -1668,14 +1668,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.genAiOperationName`] | `Required`
-     * | [`Attribute.genAiRequestModel`] | `Conditionally_required`: If available.
-     * | [`Attribute.genAiResponseModel`] | `Recommended`
-     * | [`Attribute.genAiSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Conditionally_required`: If `server.address` is set.
+     * | [`crate::attribute::GEN_AI_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::GEN_AI_RESPONSE_MODEL`] | `Recommended`
+     * | [`crate::attribute::GEN_AI_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
      */
-    public const val genAiServerTimeToFirstToken: String = "gen_ai.server.time_to_first_token"
+    public const val GEN_AI_SERVER_TIME_TO_FIRST_TOKEN: String = "gen_ai.server.time_to_first_token"
 
     /**
      * ## Description
@@ -1692,7 +1692,7 @@ public object Metric {
      * | Unit: | `%` |
      * | Status: | `Development`  |
      */
-    public const val goConfigGogc: String = "go.config.gogc"
+    public const val GO_CONFIG_GOGC: String = "go.config.gogc"
 
     /**
      * ## Description
@@ -1709,7 +1709,7 @@ public object Metric {
      * | Unit: | `{goroutine}` |
      * | Status: | `Development`  |
      */
-    public const val goGoroutineCount: String = "go.goroutine.count"
+    public const val GO_GOROUTINE_COUNT: String = "go.goroutine.count"
 
     /**
      * ## Description
@@ -1726,7 +1726,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val goMemoryAllocated: String = "go.memory.allocated"
+    public const val GO_MEMORY_ALLOCATED: String = "go.memory.allocated"
 
     /**
      * ## Description
@@ -1743,7 +1743,7 @@ public object Metric {
      * | Unit: | `{allocation}` |
      * | Status: | `Development`  |
      */
-    public const val goMemoryAllocations: String = "go.memory.allocations"
+    public const val GO_MEMORY_ALLOCATIONS: String = "go.memory.allocations"
 
     /**
      * ## Description
@@ -1760,7 +1760,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val goMemoryGcGoal: String = "go.memory.gc.goal"
+    public const val GO_MEMORY_GC_GOAL: String = "go.memory.gc.goal"
 
     /**
      * ## Description
@@ -1777,7 +1777,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val goMemoryLimit: String = "go.memory.limit"
+    public const val GO_MEMORY_LIMIT: String = "go.memory.limit"
 
     /**
      * ## Description
@@ -1797,9 +1797,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.goMemoryType`] | `Recommended`
+     * | [`crate::attribute::GO_MEMORY_TYPE`] | `Recommended`
      */
-    public const val goMemoryUsed: String = "go.memory.used"
+    public const val GO_MEMORY_USED: String = "go.memory.used"
 
     /**
      * ## Description
@@ -1816,7 +1816,7 @@ public object Metric {
      * | Unit: | `{thread}` |
      * | Status: | `Development`  |
      */
-    public const val goProcessorLimit: String = "go.processor.limit"
+    public const val GO_PROCESSOR_LIMIT: String = "go.processor.limit"
 
     /**
      * ## Description
@@ -1833,7 +1833,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val goScheduleDuration: String = "go.schedule.duration"
+    public const val GO_SCHEDULE_DURATION: String = "go.schedule.duration"
 
     /**
      * ## Description
@@ -1849,13 +1849,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.httpRequestMethod`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Required`
-     * | [`Attribute.serverPort`] | `Required`
-     * | [`Attribute.urlScheme`] | `Opt_in`
-     * | [`Attribute.urlTemplate`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Required`
+     * | [`crate::attribute::SERVER_PORT`] | `Required`
+     * | [`crate::attribute::URL_SCHEME`] | `Opt_in`
+     * | [`crate::attribute::URL_TEMPLATE`] | `Conditionally_required`: If available.
      */
-    public const val httpClientActiveRequests: String = "http.client.active_requests"
+    public const val HTTP_CLIENT_ACTIVE_REQUESTS: String = "http.client.active_requests"
 
     /**
      * ## Description
@@ -1871,13 +1871,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkPeerAddress`] | `Recommended`
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Required`
-     * | [`Attribute.serverPort`] | `Required`
-     * | [`Attribute.urlScheme`] | `Opt_in`
+     * | [`crate::attribute::NETWORK_PEER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Required`
+     * | [`crate::attribute::SERVER_PORT`] | `Required`
+     * | [`crate::attribute::URL_SCHEME`] | `Opt_in`
      */
-    public const val httpClientConnectionDuration: String = "http.client.connection.duration"
+    public const val HTTP_CLIENT_CONNECTION_DURATION: String = "http.client.connection.duration"
 
     /**
      * ## Description
@@ -1893,14 +1893,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.httpConnectionState`] | `Required`
-     * | [`Attribute.networkPeerAddress`] | `Recommended`
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Required`
-     * | [`Attribute.serverPort`] | `Required`
-     * | [`Attribute.urlScheme`] | `Opt_in`
+     * | [`crate::attribute::HTTP_CONNECTION_STATE`] | `Required`
+     * | [`crate::attribute::NETWORK_PEER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Required`
+     * | [`crate::attribute::SERVER_PORT`] | `Required`
+     * | [`crate::attribute::URL_SCHEME`] | `Opt_in`
      */
-    public const val httpClientOpenConnections: String = "http.client.open_connections"
+    public const val HTTP_CLIENT_OPEN_CONNECTIONS: String = "http.client.open_connections"
 
     /**
      * ## Description
@@ -1920,17 +1920,17 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If request has ended with an error.
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.httpResponseStatusCode`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.networkProtocolName`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Required`
-     * | [`Attribute.serverPort`] | `Required`
-     * | [`Attribute.urlScheme`] | `Opt_in`
-     * | [`Attribute.urlTemplate`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Required`
+     * | [`crate::attribute::SERVER_PORT`] | `Required`
+     * | [`crate::attribute::URL_SCHEME`] | `Opt_in`
+     * | [`crate::attribute::URL_TEMPLATE`] | `Conditionally_required`: If available.
      */
-    public const val httpClientRequestBodySize: String = "http.client.request.body.size"
+    public const val HTTP_CLIENT_REQUEST_BODY_SIZE: String = "http.client.request.body.size"
 
     /**
      * ## Description
@@ -1946,17 +1946,17 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If request has ended with an error.
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.httpResponseStatusCode`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.networkProtocolName`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Required`
-     * | [`Attribute.serverPort`] | `Required`
-     * | [`Attribute.urlScheme`] | `Opt_in`
-     * | [`Attribute.urlTemplate`] | `Opt_in`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Required`
+     * | [`crate::attribute::SERVER_PORT`] | `Required`
+     * | [`crate::attribute::URL_SCHEME`] | `Opt_in`
+     * | [`crate::attribute::URL_TEMPLATE`] | `Opt_in`
      */
-    public const val httpClientRequestDuration: String = "http.client.request.duration"
+    public const val HTTP_CLIENT_REQUEST_DURATION: String = "http.client.request.duration"
 
     /**
      * ## Description
@@ -1976,17 +1976,17 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If request has ended with an error.
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.httpResponseStatusCode`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.networkProtocolName`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Required`
-     * | [`Attribute.serverPort`] | `Required`
-     * | [`Attribute.urlScheme`] | `Opt_in`
-     * | [`Attribute.urlTemplate`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Required`
+     * | [`crate::attribute::SERVER_PORT`] | `Required`
+     * | [`crate::attribute::URL_SCHEME`] | `Opt_in`
+     * | [`crate::attribute::URL_TEMPLATE`] | `Conditionally_required`: If available.
      */
-    public const val httpClientResponseBodySize: String = "http.client.response.body.size"
+    public const val HTTP_CLIENT_RESPONSE_BODY_SIZE: String = "http.client.response.body.size"
 
     /**
      * ## Description
@@ -2002,12 +2002,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.serverAddress`] | `Opt_in`
-     * | [`Attribute.serverPort`] | `Opt_in`
-     * | [`Attribute.urlScheme`] | `Required`
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Opt_in`
+     * | [`crate::attribute::SERVER_PORT`] | `Opt_in`
+     * | [`crate::attribute::URL_SCHEME`] | `Required`
      */
-    public const val httpServerActiveRequests: String = "http.server.active_requests"
+    public const val HTTP_SERVER_ACTIVE_REQUESTS: String = "http.server.active_requests"
 
     /**
      * ## Description
@@ -2027,18 +2027,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If request has ended with an error.
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.httpResponseStatusCode`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.httpRoute`] | `Conditionally_required`: If and only if it's available
-     * | [`Attribute.networkProtocolName`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Opt_in`
-     * | [`Attribute.serverPort`] | `Opt_in`
-     * | [`Attribute.urlScheme`] | `Required`
-     * | [`Attribute.userAgentSyntheticType`] | `Opt_in`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
+     * | [`crate::attribute::HTTP_ROUTE`] | `Conditionally_required`: If and only if it's available
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Opt_in`
+     * | [`crate::attribute::SERVER_PORT`] | `Opt_in`
+     * | [`crate::attribute::URL_SCHEME`] | `Required`
+     * | [`crate::attribute::USER_AGENT_SYNTHETIC_TYPE`] | `Opt_in`
      */
-    public const val httpServerRequestBodySize: String = "http.server.request.body.size"
+    public const val HTTP_SERVER_REQUEST_BODY_SIZE: String = "http.server.request.body.size"
 
     /**
      * ## Description
@@ -2054,18 +2054,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If request has ended with an error.
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.httpResponseStatusCode`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.httpRoute`] | `Conditionally_required`: If and only if it's available
-     * | [`Attribute.networkProtocolName`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Opt_in`
-     * | [`Attribute.serverPort`] | `Opt_in`
-     * | [`Attribute.urlScheme`] | `Required`
-     * | [`Attribute.userAgentSyntheticType`] | `Opt_in`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
+     * | [`crate::attribute::HTTP_ROUTE`] | `Conditionally_required`: If and only if it's available
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Opt_in`
+     * | [`crate::attribute::SERVER_PORT`] | `Opt_in`
+     * | [`crate::attribute::URL_SCHEME`] | `Required`
+     * | [`crate::attribute::USER_AGENT_SYNTHETIC_TYPE`] | `Opt_in`
      */
-    public const val httpServerRequestDuration: String = "http.server.request.duration"
+    public const val HTTP_SERVER_REQUEST_DURATION: String = "http.server.request.duration"
 
     /**
      * ## Description
@@ -2085,18 +2085,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If request has ended with an error.
-     * | [`Attribute.httpRequestMethod`] | `Required`
-     * | [`Attribute.httpResponseStatusCode`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.httpRoute`] | `Conditionally_required`: If and only if it's available
-     * | [`Attribute.networkProtocolName`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `Opt_in`
-     * | [`Attribute.serverPort`] | `Opt_in`
-     * | [`Attribute.urlScheme`] | `Required`
-     * | [`Attribute.userAgentSyntheticType`] | `Opt_in`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`crate::attribute::HTTP_REQUEST_METHOD`] | `Required`
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
+     * | [`crate::attribute::HTTP_ROUTE`] | `Conditionally_required`: If and only if it's available
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Opt_in`
+     * | [`crate::attribute::SERVER_PORT`] | `Opt_in`
+     * | [`crate::attribute::URL_SCHEME`] | `Required`
+     * | [`crate::attribute::USER_AGENT_SYNTHETIC_TYPE`] | `Opt_in`
      */
-    public const val httpServerResponseBodySize: String = "http.server.response.body.size"
+    public const val HTTP_SERVER_RESPONSE_BODY_SIZE: String = "http.server.response.body.size"
 
     /**
      * ## Description
@@ -2112,12 +2112,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
-     * | [`Attribute.hwType`] | `Required`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
+     * | [`crate::attribute::HW_TYPE`] | `Required`
      */
-    public const val hwEnergy: String = "hw.energy"
+    public const val HW_ENERGY: String = "hw.energy"
 
     /**
      * ## Description
@@ -2133,13 +2133,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: if and only if an error has occurred
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
-     * | [`Attribute.hwType`] | `Required`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
+     * | [`crate::attribute::HW_TYPE`] | `Required`
      */
-    public const val hwErrors: String = "hw.errors"
+    public const val HW_ERRORS: String = "hw.errors"
 
     /**
      * ## Description
@@ -2155,11 +2155,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
      */
-    public const val hwHostAmbientTemperature: String = "hw.host.ambient_temperature"
+    public const val HW_HOST_AMBIENT_TEMPERATURE: String = "hw.host.ambient_temperature"
 
     /**
      * ## Description
@@ -2179,11 +2179,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
      */
-    public const val hwHostEnergy: String = "hw.host.energy"
+    public const val HW_HOST_ENERGY: String = "hw.host.energy"
 
     /**
      * ## Description
@@ -2199,11 +2199,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
      */
-    public const val hwHostHeatingMargin: String = "hw.host.heating_margin"
+    public const val HW_HOST_HEATING_MARGIN: String = "hw.host.heating_margin"
 
     /**
      * ## Description
@@ -2223,11 +2223,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
      */
-    public const val hwHostPower: String = "hw.host.power"
+    public const val HW_HOST_POWER: String = "hw.host.power"
 
     /**
      * ## Description
@@ -2247,12 +2247,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
-     * | [`Attribute.hwType`] | `Required`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
+     * | [`crate::attribute::HW_TYPE`] | `Required`
      */
-    public const val hwPower: String = "hw.power"
+    public const val HW_POWER: String = "hw.power"
 
     /**
      * ## Description
@@ -2272,13 +2272,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.hwId`] | `Required`
-     * | [`Attribute.hwName`] | `Recommended`
-     * | [`Attribute.hwParent`] | `Recommended`
-     * | [`Attribute.hwState`] | `Required`
-     * | [`Attribute.hwType`] | `Required`
+     * | [`crate::attribute::HW_ID`] | `Required`
+     * | [`crate::attribute::HW_NAME`] | `Recommended`
+     * | [`crate::attribute::HW_PARENT`] | `Recommended`
+     * | [`crate::attribute::HW_STATE`] | `Required`
+     * | [`crate::attribute::HW_TYPE`] | `Required`
      */
-    public const val hwStatus: String = "hw.status"
+    public const val HW_STATUS: String = "hw.status"
 
     /**
      * ## Description
@@ -2294,9 +2294,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmBufferPoolName`] | `Recommended`
+     * | [`crate::attribute::JVM_BUFFER_POOL_NAME`] | `Recommended`
      */
-    public const val jvmBufferCount: String = "jvm.buffer.count"
+    public const val JVM_BUFFER_COUNT: String = "jvm.buffer.count"
 
     /**
      * ## Description
@@ -2312,9 +2312,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmBufferPoolName`] | `Recommended`
+     * | [`crate::attribute::JVM_BUFFER_POOL_NAME`] | `Recommended`
      */
-    public const val jvmBufferMemoryLimit: String = "jvm.buffer.memory.limit"
+    public const val JVM_BUFFER_MEMORY_LIMIT: String = "jvm.buffer.memory.limit"
 
     /**
      * ## Description
@@ -2330,10 +2330,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmBufferPoolName`] | `Recommended`
+     * | [`crate::attribute::JVM_BUFFER_POOL_NAME`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `jvm.buffer.memory.used`., reason: renamed, renamed_to: jvm.buffer.memory.used}")
-    public const val jvmBufferMemoryUsage: String = "jvm.buffer.memory.usage"
+    public const val JVM_BUFFER_MEMORY_USAGE: String = "jvm.buffer.memory.usage"
 
     /**
      * ## Description
@@ -2349,9 +2349,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmBufferPoolName`] | `Recommended`
+     * | [`crate::attribute::JVM_BUFFER_POOL_NAME`] | `Recommended`
      */
-    public const val jvmBufferMemoryUsed: String = "jvm.buffer.memory.used"
+    public const val JVM_BUFFER_MEMORY_USED: String = "jvm.buffer.memory.used"
 
     /**
      * ## Description
@@ -2364,7 +2364,7 @@ public object Metric {
      * | Unit: | `{class}` |
      * | Status: | `Stable`  |
      */
-    public const val jvmClassCount: String = "jvm.class.count"
+    public const val JVM_CLASS_COUNT: String = "jvm.class.count"
 
     /**
      * ## Description
@@ -2377,7 +2377,7 @@ public object Metric {
      * | Unit: | `{class}` |
      * | Status: | `Stable`  |
      */
-    public const val jvmClassLoaded: String = "jvm.class.loaded"
+    public const val JVM_CLASS_LOADED: String = "jvm.class.loaded"
 
     /**
      * ## Description
@@ -2390,7 +2390,7 @@ public object Metric {
      * | Unit: | `{class}` |
      * | Status: | `Stable`  |
      */
-    public const val jvmClassUnloaded: String = "jvm.class.unloaded"
+    public const val JVM_CLASS_UNLOADED: String = "jvm.class.unloaded"
 
     /**
      * ## Description
@@ -2403,7 +2403,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Stable`  |
      */
-    public const val jvmCpuCount: String = "jvm.cpu.count"
+    public const val JVM_CPU_COUNT: String = "jvm.cpu.count"
 
     /**
      * ## Description
@@ -2420,7 +2420,7 @@ public object Metric {
      * | Unit: | `1` |
      * | Status: | `Stable`  |
      */
-    public const val jvmCpuRecentUtilization: String = "jvm.cpu.recent_utilization"
+    public const val JVM_CPU_RECENT_UTILIZATION: String = "jvm.cpu.recent_utilization"
 
     /**
      * ## Description
@@ -2433,7 +2433,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Stable`  |
      */
-    public const val jvmCpuTime: String = "jvm.cpu.time"
+    public const val JVM_CPU_TIME: String = "jvm.cpu.time"
 
     /**
      * ## Description
@@ -2446,7 +2446,7 @@ public object Metric {
      * | Unit: | `{file_descriptor}` |
      * | Status: | `Development`  |
      */
-    public const val jvmFileDescriptorCount: String = "jvm.file_descriptor.count"
+    public const val JVM_FILE_DESCRIPTOR_COUNT: String = "jvm.file_descriptor.count"
 
     /**
      * ## Description
@@ -2462,11 +2462,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmGcAction`] | `Recommended`
-     * | [`Attribute.jvmGcCause`] | `Opt_in`
-     * | [`Attribute.jvmGcName`] | `Recommended`
+     * | [`crate::attribute::JVM_GC_ACTION`] | `Recommended`
+     * | [`crate::attribute::JVM_GC_CAUSE`] | `Opt_in`
+     * | [`crate::attribute::JVM_GC_NAME`] | `Recommended`
      */
-    public const val jvmGcDuration: String = "jvm.gc.duration"
+    public const val JVM_GC_DURATION: String = "jvm.gc.duration"
 
     /**
      * ## Description
@@ -2482,10 +2482,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmMemoryPoolName`] | `Recommended`
-     * | [`Attribute.jvmMemoryType`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_POOL_NAME`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_TYPE`] | `Recommended`
      */
-    public const val jvmMemoryCommitted: String = "jvm.memory.committed"
+    public const val JVM_MEMORY_COMMITTED: String = "jvm.memory.committed"
 
     /**
      * ## Description
@@ -2501,10 +2501,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmMemoryPoolName`] | `Recommended`
-     * | [`Attribute.jvmMemoryType`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_POOL_NAME`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_TYPE`] | `Recommended`
      */
-    public const val jvmMemoryInit: String = "jvm.memory.init"
+    public const val JVM_MEMORY_INIT: String = "jvm.memory.init"
 
     /**
      * ## Description
@@ -2520,10 +2520,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmMemoryPoolName`] | `Recommended`
-     * | [`Attribute.jvmMemoryType`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_POOL_NAME`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_TYPE`] | `Recommended`
      */
-    public const val jvmMemoryLimit: String = "jvm.memory.limit"
+    public const val JVM_MEMORY_LIMIT: String = "jvm.memory.limit"
 
     /**
      * ## Description
@@ -2539,10 +2539,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmMemoryPoolName`] | `Recommended`
-     * | [`Attribute.jvmMemoryType`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_POOL_NAME`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_TYPE`] | `Recommended`
      */
-    public const val jvmMemoryUsed: String = "jvm.memory.used"
+    public const val JVM_MEMORY_USED: String = "jvm.memory.used"
 
     /**
      * ## Description
@@ -2558,10 +2558,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmMemoryPoolName`] | `Recommended`
-     * | [`Attribute.jvmMemoryType`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_POOL_NAME`] | `Recommended`
+     * | [`crate::attribute::JVM_MEMORY_TYPE`] | `Recommended`
      */
-    public const val jvmMemoryUsedAfterLastGc: String = "jvm.memory.used_after_last_gc"
+    public const val JVM_MEMORY_USED_AFTER_LAST_GC: String = "jvm.memory.used_after_last_gc"
 
     /**
      * ## Description
@@ -2578,7 +2578,7 @@ public object Metric {
      * | Unit: | `{run_queue_item}` |
      * | Status: | `Development`  |
      */
-    public const val jvmSystemCpuLoad1m: String = "jvm.system.cpu.load_1m"
+    public const val JVM_SYSTEM_CPU_LOAD_1M: String = "jvm.system.cpu.load_1m"
 
     /**
      * ## Description
@@ -2595,7 +2595,7 @@ public object Metric {
      * | Unit: | `1` |
      * | Status: | `Development`  |
      */
-    public const val jvmSystemCpuUtilization: String = "jvm.system.cpu.utilization"
+    public const val JVM_SYSTEM_CPU_UTILIZATION: String = "jvm.system.cpu.utilization"
 
     /**
      * ## Description
@@ -2611,10 +2611,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.jvmThreadDaemon`] | `Recommended`
-     * | [`Attribute.jvmThreadState`] | `Recommended`
+     * | [`crate::attribute::JVM_THREAD_DAEMON`] | `Recommended`
+     * | [`crate::attribute::JVM_THREAD_STATE`] | `Recommended`
      */
-    public const val jvmThreadCount: String = "jvm.thread.count"
+    public const val JVM_THREAD_COUNT: String = "jvm.thread.count"
 
     /**
      * ## Description
@@ -2631,7 +2631,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerCpuLimit: String = "k8s.container.cpu.limit"
+    public const val K8S_CONTAINER_CPU_LIMIT: String = "k8s.container.cpu.limit"
 
     /**
      * ## Description
@@ -2648,7 +2648,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerCpuRequest: String = "k8s.container.cpu.request"
+    public const val K8S_CONTAINER_CPU_REQUEST: String = "k8s.container.cpu.request"
 
     /**
      * ## Description
@@ -2665,7 +2665,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerEphemeralStorageLimit: String = "k8s.container.ephemeral_storage.limit"
+    public const val K8S_CONTAINER_EPHEMERAL_STORAGE_LIMIT: String = "k8s.container.ephemeral_storage.limit"
 
     /**
      * ## Description
@@ -2682,7 +2682,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerEphemeralStorageRequest: String = "k8s.container.ephemeral_storage.request"
+    public const val K8S_CONTAINER_EPHEMERAL_STORAGE_REQUEST: String = "k8s.container.ephemeral_storage.request"
 
     /**
      * ## Description
@@ -2699,7 +2699,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerMemoryLimit: String = "k8s.container.memory.limit"
+    public const val K8S_CONTAINER_MEMORY_LIMIT: String = "k8s.container.memory.limit"
 
     /**
      * ## Description
@@ -2716,7 +2716,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerMemoryRequest: String = "k8s.container.memory.request"
+    public const val K8S_CONTAINER_MEMORY_REQUEST: String = "k8s.container.memory.request"
 
     /**
      * ## Description
@@ -2734,7 +2734,7 @@ public object Metric {
      * | Unit: | `{container}` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerReady: String = "k8s.container.ready"
+    public const val K8S_CONTAINER_READY: String = "k8s.container.ready"
 
     /**
      * ## Description
@@ -2755,7 +2755,7 @@ public object Metric {
      * | Unit: | `{restart}` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerRestartCount: String = "k8s.container.restart.count"
+    public const val K8S_CONTAINER_RESTART_COUNT: String = "k8s.container.restart.count"
 
     /**
      * ## Description
@@ -2776,9 +2776,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sContainerStatusReason`] | `Required`
+     * | [`crate::attribute::K8S_CONTAINER_STATUS_REASON`] | `Required`
      */
-    public const val k8sContainerStatusReason: String = "k8s.container.status.reason"
+    public const val K8S_CONTAINER_STATUS_REASON: String = "k8s.container.status.reason"
 
     /**
      * ## Description
@@ -2799,9 +2799,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sContainerStatusState`] | `Required`
+     * | [`crate::attribute::K8S_CONTAINER_STATUS_STATE`] | `Required`
      */
-    public const val k8sContainerStatusState: String = "k8s.container.status.state"
+    public const val K8S_CONTAINER_STATUS_STATE: String = "k8s.container.status.state"
 
     /**
      * ## Description
@@ -2818,7 +2818,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerStorageLimit: String = "k8s.container.storage.limit"
+    public const val K8S_CONTAINER_STORAGE_LIMIT: String = "k8s.container.storage.limit"
 
     /**
      * ## Description
@@ -2835,7 +2835,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sContainerStorageRequest: String = "k8s.container.storage.request"
+    public const val K8S_CONTAINER_STORAGE_REQUEST: String = "k8s.container.storage.request"
 
     /**
      * ## Description
@@ -2853,7 +2853,7 @@ public object Metric {
      * | Unit: | `{job}` |
      * | Status: | `Development`  |
      */
-    public const val k8sCronjobActiveJobs: String = "k8s.cronjob.active_jobs"
+    public const val K8S_CRONJOB_ACTIVE_JOBS: String = "k8s.cronjob.active_jobs"
 
     /**
      * ## Description
@@ -2871,7 +2871,7 @@ public object Metric {
      * | Unit: | `{node}` |
      * | Status: | `Development`  |
      */
-    public const val k8sDaemonsetCurrentScheduledNodes: String = "k8s.daemonset.current_scheduled_nodes"
+    public const val K8S_DAEMONSET_CURRENT_SCHEDULED_NODES: String = "k8s.daemonset.current_scheduled_nodes"
 
     /**
      * ## Description
@@ -2889,7 +2889,7 @@ public object Metric {
      * | Unit: | `{node}` |
      * | Status: | `Development`  |
      */
-    public const val k8sDaemonsetDesiredScheduledNodes: String = "k8s.daemonset.desired_scheduled_nodes"
+    public const val K8S_DAEMONSET_DESIRED_SCHEDULED_NODES: String = "k8s.daemonset.desired_scheduled_nodes"
 
     /**
      * ## Description
@@ -2907,7 +2907,7 @@ public object Metric {
      * | Unit: | `{node}` |
      * | Status: | `Development`  |
      */
-    public const val k8sDaemonsetMisscheduledNodes: String = "k8s.daemonset.misscheduled_nodes"
+    public const val K8S_DAEMONSET_MISSCHEDULED_NODES: String = "k8s.daemonset.misscheduled_nodes"
 
     /**
      * ## Description
@@ -2925,7 +2925,7 @@ public object Metric {
      * | Unit: | `{node}` |
      * | Status: | `Development`  |
      */
-    public const val k8sDaemonsetReadyNodes: String = "k8s.daemonset.ready_nodes"
+    public const val K8S_DAEMONSET_READY_NODES: String = "k8s.daemonset.ready_nodes"
 
     /**
      * ## Description
@@ -2943,7 +2943,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sDeploymentAvailablePods: String = "k8s.deployment.available_pods"
+    public const val K8S_DEPLOYMENT_AVAILABLE_PODS: String = "k8s.deployment.available_pods"
 
     /**
      * ## Description
@@ -2961,7 +2961,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sDeploymentDesiredPods: String = "k8s.deployment.desired_pods"
+    public const val K8S_DEPLOYMENT_DESIRED_PODS: String = "k8s.deployment.desired_pods"
 
     /**
      * ## Description
@@ -2979,7 +2979,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sHpaCurrentPods: String = "k8s.hpa.current_pods"
+    public const val K8S_HPA_CURRENT_PODS: String = "k8s.hpa.current_pods"
 
     /**
      * ## Description
@@ -2997,7 +2997,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sHpaDesiredPods: String = "k8s.hpa.desired_pods"
+    public const val K8S_HPA_DESIRED_PODS: String = "k8s.hpa.desired_pods"
 
     /**
      * ## Description
@@ -3015,7 +3015,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sHpaMaxPods: String = "k8s.hpa.max_pods"
+    public const val K8S_HPA_MAX_PODS: String = "k8s.hpa.max_pods"
 
     /**
      * ## Description
@@ -3038,10 +3038,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sContainerName`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource.
-     * | [`Attribute.k8sHpaMetricType`] | `Recommended`
+     * | [`crate::attribute::K8S_CONTAINER_NAME`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource.
+     * | [`crate::attribute::K8S_HPA_METRIC_TYPE`] | `Recommended`
      */
-    public const val k8sHpaMetricTargetCpuAverageUtilization: String = "k8s.hpa.metric.target.cpu.average_utilization"
+    public const val K8S_HPA_METRIC_TARGET_CPU_AVERAGE_UTILIZATION: String = "k8s.hpa.metric.target.cpu.average_utilization"
 
     /**
      * ## Description
@@ -3064,10 +3064,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sContainerName`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource
-     * | [`Attribute.k8sHpaMetricType`] | `Recommended`
+     * | [`crate::attribute::K8S_CONTAINER_NAME`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource
+     * | [`crate::attribute::K8S_HPA_METRIC_TYPE`] | `Recommended`
      */
-    public const val k8sHpaMetricTargetCpuAverageValue: String = "k8s.hpa.metric.target.cpu.average_value"
+    public const val K8S_HPA_METRIC_TARGET_CPU_AVERAGE_VALUE: String = "k8s.hpa.metric.target.cpu.average_value"
 
     /**
      * ## Description
@@ -3090,10 +3090,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sContainerName`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource
-     * | [`Attribute.k8sHpaMetricType`] | `Recommended`
+     * | [`crate::attribute::K8S_CONTAINER_NAME`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource
+     * | [`crate::attribute::K8S_HPA_METRIC_TYPE`] | `Recommended`
      */
-    public const val k8sHpaMetricTargetCpuValue: String = "k8s.hpa.metric.target.cpu.value"
+    public const val K8S_HPA_METRIC_TARGET_CPU_VALUE: String = "k8s.hpa.metric.target.cpu.value"
 
     /**
      * ## Description
@@ -3111,7 +3111,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sHpaMinPods: String = "k8s.hpa.min_pods"
+    public const val K8S_HPA_MIN_PODS: String = "k8s.hpa.min_pods"
 
     /**
      * ## Description
@@ -3129,7 +3129,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sJobActivePods: String = "k8s.job.active_pods"
+    public const val K8S_JOB_ACTIVE_PODS: String = "k8s.job.active_pods"
 
     /**
      * ## Description
@@ -3147,7 +3147,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sJobDesiredSuccessfulPods: String = "k8s.job.desired_successful_pods"
+    public const val K8S_JOB_DESIRED_SUCCESSFUL_PODS: String = "k8s.job.desired_successful_pods"
 
     /**
      * ## Description
@@ -3165,7 +3165,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sJobFailedPods: String = "k8s.job.failed_pods"
+    public const val K8S_JOB_FAILED_PODS: String = "k8s.job.failed_pods"
 
     /**
      * ## Description
@@ -3183,7 +3183,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sJobMaxParallelPods: String = "k8s.job.max_parallel_pods"
+    public const val K8S_JOB_MAX_PARALLEL_PODS: String = "k8s.job.max_parallel_pods"
 
     /**
      * ## Description
@@ -3201,7 +3201,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sJobSuccessfulPods: String = "k8s.job.successful_pods"
+    public const val K8S_JOB_SUCCESSFUL_PODS: String = "k8s.job.successful_pods"
 
     /**
      * ## Description
@@ -3217,9 +3217,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sNamespacePhase`] | `Required`
+     * | [`crate::attribute::K8S_NAMESPACE_PHASE`] | `Required`
      */
-    public const val k8sNamespacePhase: String = "k8s.namespace.phase"
+    public const val K8S_NAMESPACE_PHASE: String = "k8s.namespace.phase"
 
     /**
      * ## Description
@@ -3232,7 +3232,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeAllocatableCpu: String = "k8s.node.allocatable.cpu"
+    public const val K8S_NODE_ALLOCATABLE_CPU: String = "k8s.node.allocatable.cpu"
 
     /**
      * ## Description
@@ -3245,7 +3245,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeAllocatableEphemeralStorage: String = "k8s.node.allocatable.ephemeral_storage"
+    public const val K8S_NODE_ALLOCATABLE_EPHEMERAL_STORAGE: String = "k8s.node.allocatable.ephemeral_storage"
 
     /**
      * ## Description
@@ -3258,7 +3258,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeAllocatableMemory: String = "k8s.node.allocatable.memory"
+    public const val K8S_NODE_ALLOCATABLE_MEMORY: String = "k8s.node.allocatable.memory"
 
     /**
      * ## Description
@@ -3271,7 +3271,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeAllocatablePods: String = "k8s.node.allocatable.pods"
+    public const val K8S_NODE_ALLOCATABLE_PODS: String = "k8s.node.allocatable.pods"
 
     /**
      * ## Description
@@ -3291,10 +3291,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sNodeConditionStatus`] | `Required`
-     * | [`Attribute.k8sNodeConditionType`] | `Required`
+     * | [`crate::attribute::K8S_NODE_CONDITION_STATUS`] | `Required`
+     * | [`crate::attribute::K8S_NODE_CONDITION_TYPE`] | `Required`
      */
-    public const val k8sNodeConditionStatus: String = "k8s.node.condition.status"
+    public const val K8S_NODE_CONDITION_STATUS: String = "k8s.node.condition.status"
 
     /**
      * ## Description
@@ -3311,7 +3311,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeCpuTime: String = "k8s.node.cpu.time"
+    public const val K8S_NODE_CPU_TIME: String = "k8s.node.cpu.time"
 
     /**
      * ## Description
@@ -3328,7 +3328,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeCpuUsage: String = "k8s.node.cpu.usage"
+    public const val K8S_NODE_CPU_USAGE: String = "k8s.node.cpu.usage"
 
     /**
      * ## Description
@@ -3345,7 +3345,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeMemoryUsage: String = "k8s.node.memory.usage"
+    public const val K8S_NODE_MEMORY_USAGE: String = "k8s.node.memory.usage"
 
     /**
      * ## Description
@@ -3361,10 +3361,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val k8sNodeNetworkErrors: String = "k8s.node.network.errors"
+    public const val K8S_NODE_NETWORK_ERRORS: String = "k8s.node.network.errors"
 
     /**
      * ## Description
@@ -3380,10 +3380,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val k8sNodeNetworkIo: String = "k8s.node.network.io"
+    public const val K8S_NODE_NETWORK_IO: String = "k8s.node.network.io"
 
     /**
      * ## Description
@@ -3401,7 +3401,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val k8sNodeUptime: String = "k8s.node.uptime"
+    public const val K8S_NODE_UPTIME: String = "k8s.node.uptime"
 
     /**
      * ## Description
@@ -3418,7 +3418,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val k8sPodCpuTime: String = "k8s.pod.cpu.time"
+    public const val K8S_POD_CPU_TIME: String = "k8s.pod.cpu.time"
 
     /**
      * ## Description
@@ -3435,7 +3435,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sPodCpuUsage: String = "k8s.pod.cpu.usage"
+    public const val K8S_POD_CPU_USAGE: String = "k8s.pod.cpu.usage"
 
     /**
      * ## Description
@@ -3452,7 +3452,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sPodMemoryUsage: String = "k8s.pod.memory.usage"
+    public const val K8S_POD_MEMORY_USAGE: String = "k8s.pod.memory.usage"
 
     /**
      * ## Description
@@ -3468,10 +3468,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val k8sPodNetworkErrors: String = "k8s.pod.network.errors"
+    public const val K8S_POD_NETWORK_ERRORS: String = "k8s.pod.network.errors"
 
     /**
      * ## Description
@@ -3487,10 +3487,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val k8sPodNetworkIo: String = "k8s.pod.network.io"
+    public const val K8S_POD_NETWORK_IO: String = "k8s.pod.network.io"
 
     /**
      * ## Description
@@ -3508,7 +3508,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val k8sPodUptime: String = "k8s.pod.uptime"
+    public const val K8S_POD_UPTIME: String = "k8s.pod.uptime"
 
     /**
      * ## Description
@@ -3526,7 +3526,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sReplicasetAvailablePods: String = "k8s.replicaset.available_pods"
+    public const val K8S_REPLICASET_AVAILABLE_PODS: String = "k8s.replicaset.available_pods"
 
     /**
      * ## Description
@@ -3544,7 +3544,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sReplicasetDesiredPods: String = "k8s.replicaset.desired_pods"
+    public const val K8S_REPLICASET_DESIRED_PODS: String = "k8s.replicaset.desired_pods"
 
     /**
      * ## Description
@@ -3558,7 +3558,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `k8s.replicationcontroller.available_pods`., reason: renamed, renamed_to: k8s.replicationcontroller.available_pods}")
-    public const val k8sReplicationControllerAvailablePods: String = "k8s.replication_controller.available_pods"
+    public const val K8S_REPLICATION_CONTROLLER_AVAILABLE_PODS: String = "k8s.replication_controller.available_pods"
 
     /**
      * ## Description
@@ -3572,7 +3572,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `k8s.replicationcontroller.desired_pods`., reason: renamed, renamed_to: k8s.replicationcontroller.desired_pods}")
-    public const val k8sReplicationControllerDesiredPods: String = "k8s.replication_controller.desired_pods"
+    public const val K8S_REPLICATION_CONTROLLER_DESIRED_PODS: String = "k8s.replication_controller.desired_pods"
 
     /**
      * ## Description
@@ -3590,7 +3590,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sReplicationcontrollerAvailablePods: String = "k8s.replicationcontroller.available_pods"
+    public const val K8S_REPLICATIONCONTROLLER_AVAILABLE_PODS: String = "k8s.replicationcontroller.available_pods"
 
     /**
      * ## Description
@@ -3608,7 +3608,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sReplicationcontrollerDesiredPods: String = "k8s.replicationcontroller.desired_pods"
+    public const val K8S_REPLICATIONCONTROLLER_DESIRED_PODS: String = "k8s.replicationcontroller.desired_pods"
 
     /**
      * ## Description
@@ -3627,7 +3627,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaCpuLimitHard: String = "k8s.resourcequota.cpu.limit.hard"
+    public const val K8S_RESOURCEQUOTA_CPU_LIMIT_HARD: String = "k8s.resourcequota.cpu.limit.hard"
 
     /**
      * ## Description
@@ -3646,7 +3646,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaCpuLimitUsed: String = "k8s.resourcequota.cpu.limit.used"
+    public const val K8S_RESOURCEQUOTA_CPU_LIMIT_USED: String = "k8s.resourcequota.cpu.limit.used"
 
     /**
      * ## Description
@@ -3665,7 +3665,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaCpuRequestHard: String = "k8s.resourcequota.cpu.request.hard"
+    public const val K8S_RESOURCEQUOTA_CPU_REQUEST_HARD: String = "k8s.resourcequota.cpu.request.hard"
 
     /**
      * ## Description
@@ -3684,7 +3684,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaCpuRequestUsed: String = "k8s.resourcequota.cpu.request.used"
+    public const val K8S_RESOURCEQUOTA_CPU_REQUEST_USED: String = "k8s.resourcequota.cpu.request.used"
 
     /**
      * ## Description
@@ -3703,7 +3703,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaEphemeralStorageLimitHard: String = "k8s.resourcequota.ephemeral_storage.limit.hard"
+    public const val K8S_RESOURCEQUOTA_EPHEMERAL_STORAGE_LIMIT_HARD: String = "k8s.resourcequota.ephemeral_storage.limit.hard"
 
     /**
      * ## Description
@@ -3722,7 +3722,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaEphemeralStorageLimitUsed: String = "k8s.resourcequota.ephemeral_storage.limit.used"
+    public const val K8S_RESOURCEQUOTA_EPHEMERAL_STORAGE_LIMIT_USED: String = "k8s.resourcequota.ephemeral_storage.limit.used"
 
     /**
      * ## Description
@@ -3741,7 +3741,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaEphemeralStorageRequestHard: String = "k8s.resourcequota.ephemeral_storage.request.hard"
+    public const val K8S_RESOURCEQUOTA_EPHEMERAL_STORAGE_REQUEST_HARD: String = "k8s.resourcequota.ephemeral_storage.request.hard"
 
     /**
      * ## Description
@@ -3760,7 +3760,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaEphemeralStorageRequestUsed: String = "k8s.resourcequota.ephemeral_storage.request.used"
+    public const val K8S_RESOURCEQUOTA_EPHEMERAL_STORAGE_REQUEST_USED: String = "k8s.resourcequota.ephemeral_storage.request.used"
 
     /**
      * ## Description
@@ -3782,9 +3782,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sHugepageSize`] | `Required`
+     * | [`crate::attribute::K8S_HUGEPAGE_SIZE`] | `Required`
      */
-    public const val k8sResourcequotaHugepageCountRequestHard: String = "k8s.resourcequota.hugepage_count.request.hard"
+    public const val K8S_RESOURCEQUOTA_HUGEPAGE_COUNT_REQUEST_HARD: String = "k8s.resourcequota.hugepage_count.request.hard"
 
     /**
      * ## Description
@@ -3806,9 +3806,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sHugepageSize`] | `Required`
+     * | [`crate::attribute::K8S_HUGEPAGE_SIZE`] | `Required`
      */
-    public const val k8sResourcequotaHugepageCountRequestUsed: String = "k8s.resourcequota.hugepage_count.request.used"
+    public const val K8S_RESOURCEQUOTA_HUGEPAGE_COUNT_REQUEST_USED: String = "k8s.resourcequota.hugepage_count.request.used"
 
     /**
      * ## Description
@@ -3827,7 +3827,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaMemoryLimitHard: String = "k8s.resourcequota.memory.limit.hard"
+    public const val K8S_RESOURCEQUOTA_MEMORY_LIMIT_HARD: String = "k8s.resourcequota.memory.limit.hard"
 
     /**
      * ## Description
@@ -3846,7 +3846,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaMemoryLimitUsed: String = "k8s.resourcequota.memory.limit.used"
+    public const val K8S_RESOURCEQUOTA_MEMORY_LIMIT_USED: String = "k8s.resourcequota.memory.limit.used"
 
     /**
      * ## Description
@@ -3865,7 +3865,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaMemoryRequestHard: String = "k8s.resourcequota.memory.request.hard"
+    public const val K8S_RESOURCEQUOTA_MEMORY_REQUEST_HARD: String = "k8s.resourcequota.memory.request.hard"
 
     /**
      * ## Description
@@ -3884,7 +3884,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val k8sResourcequotaMemoryRequestUsed: String = "k8s.resourcequota.memory.request.used"
+    public const val K8S_RESOURCEQUOTA_MEMORY_REQUEST_USED: String = "k8s.resourcequota.memory.request.used"
 
     /**
      * ## Description
@@ -3906,9 +3906,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sResourcequotaResourceName`] | `Required`
+     * | [`crate::attribute::K8S_RESOURCEQUOTA_RESOURCE_NAME`] | `Required`
      */
-    public const val k8sResourcequotaObjectCountHard: String = "k8s.resourcequota.object_count.hard"
+    public const val K8S_RESOURCEQUOTA_OBJECT_COUNT_HARD: String = "k8s.resourcequota.object_count.hard"
 
     /**
      * ## Description
@@ -3930,9 +3930,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sResourcequotaResourceName`] | `Required`
+     * | [`crate::attribute::K8S_RESOURCEQUOTA_RESOURCE_NAME`] | `Required`
      */
-    public const val k8sResourcequotaObjectCountUsed: String = "k8s.resourcequota.object_count.used"
+    public const val K8S_RESOURCEQUOTA_OBJECT_COUNT_USED: String = "k8s.resourcequota.object_count.used"
 
     /**
      * ## Description
@@ -3957,9 +3957,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sStorageclassName`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`crate::attribute::K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
-    public const val k8sResourcequotaPersistentvolumeclaimCountHard: String = "k8s.resourcequota.persistentvolumeclaim_count.hard"
+    public const val K8S_RESOURCEQUOTA_PERSISTENTVOLUMECLAIM_COUNT_HARD: String = "k8s.resourcequota.persistentvolumeclaim_count.hard"
 
     /**
      * ## Description
@@ -3984,9 +3984,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sStorageclassName`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`crate::attribute::K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
-    public const val k8sResourcequotaPersistentvolumeclaimCountUsed: String = "k8s.resourcequota.persistentvolumeclaim_count.used"
+    public const val K8S_RESOURCEQUOTA_PERSISTENTVOLUMECLAIM_COUNT_USED: String = "k8s.resourcequota.persistentvolumeclaim_count.used"
 
     /**
      * ## Description
@@ -4011,9 +4011,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sStorageclassName`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`crate::attribute::K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
-    public const val k8sResourcequotaStorageRequestHard: String = "k8s.resourcequota.storage.request.hard"
+    public const val K8S_RESOURCEQUOTA_STORAGE_REQUEST_HARD: String = "k8s.resourcequota.storage.request.hard"
 
     /**
      * ## Description
@@ -4038,9 +4038,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.k8sStorageclassName`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`crate::attribute::K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
-    public const val k8sResourcequotaStorageRequestUsed: String = "k8s.resourcequota.storage.request.used"
+    public const val K8S_RESOURCEQUOTA_STORAGE_REQUEST_USED: String = "k8s.resourcequota.storage.request.used"
 
     /**
      * ## Description
@@ -4058,7 +4058,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sStatefulsetCurrentPods: String = "k8s.statefulset.current_pods"
+    public const val K8S_STATEFULSET_CURRENT_PODS: String = "k8s.statefulset.current_pods"
 
     /**
      * ## Description
@@ -4076,7 +4076,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sStatefulsetDesiredPods: String = "k8s.statefulset.desired_pods"
+    public const val K8S_STATEFULSET_DESIRED_PODS: String = "k8s.statefulset.desired_pods"
 
     /**
      * ## Description
@@ -4094,7 +4094,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sStatefulsetReadyPods: String = "k8s.statefulset.ready_pods"
+    public const val K8S_STATEFULSET_READY_PODS: String = "k8s.statefulset.ready_pods"
 
     /**
      * ## Description
@@ -4112,7 +4112,7 @@ public object Metric {
      * | Unit: | `{pod}` |
      * | Status: | `Development`  |
      */
-    public const val k8sStatefulsetUpdatedPods: String = "k8s.statefulset.updated_pods"
+    public const val K8S_STATEFULSET_UPDATED_PODS: String = "k8s.statefulset.updated_pods"
 
     /**
      * ## Description
@@ -4132,12 +4132,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val kestrelActiveConnections: String = "kestrel.active_connections"
+    public const val KESTREL_ACTIVE_CONNECTIONS: String = "kestrel.active_connections"
 
     /**
      * ## Description
@@ -4157,12 +4157,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val kestrelActiveTlsHandshakes: String = "kestrel.active_tls_handshakes"
+    public const val KESTREL_ACTIVE_TLS_HANDSHAKES: String = "kestrel.active_tls_handshakes"
 
     /**
      * ## Description
@@ -4182,16 +4182,16 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: if and only if an error has occurred.
-     * | [`Attribute.networkProtocolName`] | `Recommended`
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
-     * | [`Attribute.tlsProtocolVersion`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred.
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
+     * | [`crate::attribute::TLS_PROTOCOL_VERSION`] | `Recommended`
      */
-    public const val kestrelConnectionDuration: String = "kestrel.connection.duration"
+    public const val KESTREL_CONNECTION_DURATION: String = "kestrel.connection.duration"
 
     /**
      * ## Description
@@ -4211,12 +4211,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val kestrelQueuedConnections: String = "kestrel.queued_connections"
+    public const val KESTREL_QUEUED_CONNECTIONS: String = "kestrel.queued_connections"
 
     /**
      * ## Description
@@ -4236,14 +4236,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkProtocolName`] | `Recommended`
-     * | [`Attribute.networkProtocolVersion`] | `Recommended`
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::NETWORK_PROTOCOL_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_PROTOCOL_VERSION`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val kestrelQueuedRequests: String = "kestrel.queued_requests"
+    public const val KESTREL_QUEUED_REQUESTS: String = "kestrel.queued_requests"
 
     /**
      * ## Description
@@ -4264,12 +4264,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val kestrelRejectedConnections: String = "kestrel.rejected_connections"
+    public const val KESTREL_REJECTED_CONNECTIONS: String = "kestrel.rejected_connections"
 
     /**
      * ## Description
@@ -4289,14 +4289,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: if and only if an error has occurred.
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
-     * | [`Attribute.tlsProtocolVersion`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred.
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
+     * | [`crate::attribute::TLS_PROTOCOL_VERSION`] | `Recommended`
      */
-    public const val kestrelTlsHandshakeDuration: String = "kestrel.tls_handshake.duration"
+    public const val KESTREL_TLS_HANDSHAKE_DURATION: String = "kestrel.tls_handshake.duration"
 
     /**
      * ## Description
@@ -4318,12 +4318,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkTransport`] | `Recommended`
-     * | [`Attribute.networkType`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
-     * | [`Attribute.serverAddress`] | `Recommended`
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Recommended`
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val kestrelUpgradedConnections: String = "kestrel.upgraded_connections"
+    public const val KESTREL_UPGRADED_CONNECTIONS: String = "kestrel.upgraded_connections"
 
     /**
      * ## Description
@@ -4344,18 +4344,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingConsumerGroupName`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.messagingDestinationName`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
-     * | [`Attribute.messagingDestinationPartitionId`] | `Recommended`
-     * | [`Attribute.messagingDestinationSubscriptionName`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.messagingDestinationTemplate`] | `Conditionally_required`: if available.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.messagingSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally_required`: if applicable.
+     * | [`crate::attribute::MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`crate::attribute::MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
+     * | [`crate::attribute::MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally_required`: if applicable.
+     * | [`crate::attribute::MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::MESSAGING_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val messagingClientConsumedMessages: String = "messaging.client.consumed.messages"
+    public const val MESSAGING_CLIENT_CONSUMED_MESSAGES: String = "messaging.client.consumed.messages"
 
     /**
      * ## Description
@@ -4375,19 +4375,19 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingConsumerGroupName`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.messagingDestinationName`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
-     * | [`Attribute.messagingDestinationPartitionId`] | `Recommended`
-     * | [`Attribute.messagingDestinationSubscriptionName`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.messagingDestinationTemplate`] | `Conditionally_required`: if available.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.messagingOperationType`] | `Conditionally_required`: If applicable.
-     * | [`Attribute.messagingSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally_required`: if applicable.
+     * | [`crate::attribute::MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`crate::attribute::MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
+     * | [`crate::attribute::MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally_required`: if applicable.
+     * | [`crate::attribute::MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::MESSAGING_OPERATION_TYPE`] | `Conditionally_required`: If applicable.
+     * | [`crate::attribute::MESSAGING_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val messagingClientOperationDuration: String = "messaging.client.operation.duration"
+    public const val MESSAGING_CLIENT_OPERATION_DURATION: String = "messaging.client.operation.duration"
 
     /**
      * ## Description
@@ -4403,17 +4403,17 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingDestinationName`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
-     * | [`Attribute.messagingDestinationPartitionId`] | `Recommended`
-     * | [`Attribute.messagingDestinationTemplate`] | `Conditionally_required`: if available.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.messagingSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`crate::attribute::MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
+     * | [`crate::attribute::MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::MESSAGING_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.sent.messages`., reason: renamed, renamed_to: messaging.client.sent.messages}")
-    public const val messagingClientPublishedMessages: String = "messaging.client.published.messages"
+    public const val MESSAGING_CLIENT_PUBLISHED_MESSAGES: String = "messaging.client.published.messages"
 
     /**
      * ## Description
@@ -4433,16 +4433,16 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingDestinationName`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
-     * | [`Attribute.messagingDestinationPartitionId`] | `Recommended`
-     * | [`Attribute.messagingDestinationTemplate`] | `Conditionally_required`: if available.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.messagingSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`crate::attribute::MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
+     * | [`crate::attribute::MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::MESSAGING_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val messagingClientSentMessages: String = "messaging.client.sent.messages"
+    public const val MESSAGING_CLIENT_SENT_MESSAGES: String = "messaging.client.sent.messages"
 
     /**
      * ## Description
@@ -4462,18 +4462,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingConsumerGroupName`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.messagingDestinationName`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
-     * | [`Attribute.messagingDestinationPartitionId`] | `Recommended`
-     * | [`Attribute.messagingDestinationSubscriptionName`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.messagingDestinationTemplate`] | `Conditionally_required`: if available.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.messagingSystem`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally_required`: if applicable.
+     * | [`crate::attribute::MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`crate::attribute::MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
+     * | [`crate::attribute::MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally_required`: if applicable.
+     * | [`crate::attribute::MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::MESSAGING_SYSTEM`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
-    public const val messagingProcessDuration: String = "messaging.process.duration"
+    public const val MESSAGING_PROCESS_DURATION: String = "messaging.process.duration"
 
     /**
      * ## Description
@@ -4489,13 +4489,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.consumed.messages`., reason: renamed, renamed_to: messaging.client.consumed.messages}")
-    public const val messagingProcessMessages: String = "messaging.process.messages"
+    public const val MESSAGING_PROCESS_MESSAGES: String = "messaging.process.messages"
 
     /**
      * ## Description
@@ -4511,13 +4511,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.operation.duration`., reason: renamed, renamed_to: messaging.client.operation.duration}")
-    public const val messagingPublishDuration: String = "messaging.publish.duration"
+    public const val MESSAGING_PUBLISH_DURATION: String = "messaging.publish.duration"
 
     /**
      * ## Description
@@ -4533,13 +4533,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.sent.messages`., reason: renamed, renamed_to: messaging.client.sent.messages}")
-    public const val messagingPublishMessages: String = "messaging.publish.messages"
+    public const val MESSAGING_PUBLISH_MESSAGES: String = "messaging.publish.messages"
 
     /**
      * ## Description
@@ -4555,13 +4555,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.operation.duration`., reason: renamed, renamed_to: messaging.client.operation.duration}")
-    public const val messagingReceiveDuration: String = "messaging.receive.duration"
+    public const val MESSAGING_RECEIVE_DURATION: String = "messaging.receive.duration"
 
     /**
      * ## Description
@@ -4577,13 +4577,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.messagingOperationName`] | `Required`
-     * | [`Attribute.serverAddress`] | `Conditionally_required`: If available.
-     * | [`Attribute.serverPort`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`crate::attribute::MESSAGING_OPERATION_NAME`] | `Required`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`crate::attribute::SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.consumed.messages`., reason: renamed, renamed_to: messaging.client.consumed.messages}")
-    public const val messagingReceiveMessages: String = "messaging.receive.messages"
+    public const val MESSAGING_RECEIVE_MESSAGES: String = "messaging.receive.messages"
 
     /**
      * ## Description
@@ -4600,7 +4600,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayMax: String = "nodejs.eventloop.delay.max"
+    public const val NODEJS_EVENTLOOP_DELAY_MAX: String = "nodejs.eventloop.delay.max"
 
     /**
      * ## Description
@@ -4617,7 +4617,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayMean: String = "nodejs.eventloop.delay.mean"
+    public const val NODEJS_EVENTLOOP_DELAY_MEAN: String = "nodejs.eventloop.delay.mean"
 
     /**
      * ## Description
@@ -4634,7 +4634,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayMin: String = "nodejs.eventloop.delay.min"
+    public const val NODEJS_EVENTLOOP_DELAY_MIN: String = "nodejs.eventloop.delay.min"
 
     /**
      * ## Description
@@ -4651,7 +4651,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayP50: String = "nodejs.eventloop.delay.p50"
+    public const val NODEJS_EVENTLOOP_DELAY_P50: String = "nodejs.eventloop.delay.p50"
 
     /**
      * ## Description
@@ -4668,7 +4668,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayP90: String = "nodejs.eventloop.delay.p90"
+    public const val NODEJS_EVENTLOOP_DELAY_P90: String = "nodejs.eventloop.delay.p90"
 
     /**
      * ## Description
@@ -4685,7 +4685,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayP99: String = "nodejs.eventloop.delay.p99"
+    public const val NODEJS_EVENTLOOP_DELAY_P99: String = "nodejs.eventloop.delay.p99"
 
     /**
      * ## Description
@@ -4702,7 +4702,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopDelayStddev: String = "nodejs.eventloop.delay.stddev"
+    public const val NODEJS_EVENTLOOP_DELAY_STDDEV: String = "nodejs.eventloop.delay.stddev"
 
     /**
      * ## Description
@@ -4722,9 +4722,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.nodejsEventloopState`] | `Required`
+     * | [`crate::attribute::NODEJS_EVENTLOOP_STATE`] | `Required`
      */
-    public const val nodejsEventloopTime: String = "nodejs.eventloop.time"
+    public const val NODEJS_EVENTLOOP_TIME: String = "nodejs.eventloop.time"
 
     /**
      * ## Description
@@ -4741,7 +4741,7 @@ public object Metric {
      * | Unit: | `1` |
      * | Status: | `Development`  |
      */
-    public const val nodejsEventloopUtilization: String = "nodejs.eventloop.utilization"
+    public const val NODEJS_EVENTLOOP_UTILIZATION: String = "nodejs.eventloop.utilization"
 
     /**
      * ## Description
@@ -4763,13 +4763,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Recommended`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::ERROR_TYPE`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterLogExported: String = "otel.sdk.exporter.log.exported"
+    public const val OTEL_SDK_EXPORTER_LOG_EXPORTED: String = "otel.sdk.exporter.log.exported"
 
     /**
      * ## Description
@@ -4789,12 +4789,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterLogInflight: String = "otel.sdk.exporter.log.inflight"
+    public const val OTEL_SDK_EXPORTER_LOG_INFLIGHT: String = "otel.sdk.exporter.log.inflight"
 
     /**
      * ## Description
@@ -4816,13 +4816,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Recommended`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::ERROR_TYPE`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterMetricDataPointExported: String = "otel.sdk.exporter.metric_data_point.exported"
+    public const val OTEL_SDK_EXPORTER_METRIC_DATA_POINT_EXPORTED: String = "otel.sdk.exporter.metric_data_point.exported"
 
     /**
      * ## Description
@@ -4842,12 +4842,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterMetricDataPointInflight: String = "otel.sdk.exporter.metric_data_point.inflight"
+    public const val OTEL_SDK_EXPORTER_METRIC_DATA_POINT_INFLIGHT: String = "otel.sdk.exporter.metric_data_point.inflight"
 
     /**
      * ## Description
@@ -4869,15 +4869,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Conditionally_required`: If operation has ended with an error
-     * | [`Attribute.httpResponseStatusCode`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.rpcGrpcStatusCode`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::ERROR_TYPE`] | `Conditionally_required`: If operation has ended with an error
+     * | [`crate::attribute::HTTP_RESPONSE_STATUS_CODE`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::RPC_GRPC_STATUS_CODE`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterOperationDuration: String = "otel.sdk.exporter.operation.duration"
+    public const val OTEL_SDK_EXPORTER_OPERATION_DURATION: String = "otel.sdk.exporter.operation.duration"
 
     /**
      * ## Description
@@ -4899,13 +4899,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Recommended`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::ERROR_TYPE`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterSpanExported: String = "otel.sdk.exporter.span.exported"
+    public const val OTEL_SDK_EXPORTER_SPAN_EXPORTED: String = "otel.sdk.exporter.span.exported"
 
     /**
      * ## Description
@@ -4919,7 +4919,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `otel.sdk.exporter.span.exported`., reason: renamed, renamed_to: otel.sdk.exporter.span.exported}")
-    public const val otelSdkExporterSpanExportedCount: String = "otel.sdk.exporter.span.exported.count"
+    public const val OTEL_SDK_EXPORTER_SPAN_EXPORTED_COUNT: String = "otel.sdk.exporter.span.exported.count"
 
     /**
      * ## Description
@@ -4939,12 +4939,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
-     * | [`Attribute.serverAddress`] | `{"recommended": "when applicable"}`
-     * | [`Attribute.serverPort`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
+     * | [`crate::attribute::SERVER_ADDRESS`] | `{"recommended": "when applicable"}`
+     * | [`crate::attribute::SERVER_PORT`] | `{"recommended": "when applicable"}`
      */
-    public const val otelSdkExporterSpanInflight: String = "otel.sdk.exporter.span.inflight"
+    public const val OTEL_SDK_EXPORTER_SPAN_INFLIGHT: String = "otel.sdk.exporter.span.inflight"
 
     /**
      * ## Description
@@ -4958,7 +4958,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `otel.sdk.exporter.span.inflight`., reason: renamed, renamed_to: otel.sdk.exporter.span.inflight}")
-    public const val otelSdkExporterSpanInflightCount: String = "otel.sdk.exporter.span.inflight.count"
+    public const val OTEL_SDK_EXPORTER_SPAN_INFLIGHT_COUNT: String = "otel.sdk.exporter.span.inflight.count"
 
     /**
      * ## Description
@@ -4971,7 +4971,7 @@ public object Metric {
      * | Unit: | `{log_record}` |
      * | Status: | `Development`  |
      */
-    public const val otelSdkLogCreated: String = "otel.sdk.log.created"
+    public const val OTEL_SDK_LOG_CREATED: String = "otel.sdk.log.created"
 
     /**
      * ## Description
@@ -4992,11 +4992,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Recommended`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkMetricReaderCollectionDuration: String = "otel.sdk.metric_reader.collection.duration"
+    public const val OTEL_SDK_METRIC_READER_COLLECTION_DURATION: String = "otel.sdk.metric_reader.collection.duration"
 
     /**
      * ## Description
@@ -5018,11 +5018,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Recommended`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkProcessorLogProcessed: String = "otel.sdk.processor.log.processed"
+    public const val OTEL_SDK_PROCESSOR_LOG_PROCESSED: String = "otel.sdk.processor.log.processed"
 
     /**
      * ## Description
@@ -5042,10 +5042,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkProcessorLogQueueCapacity: String = "otel.sdk.processor.log.queue.capacity"
+    public const val OTEL_SDK_PROCESSOR_LOG_QUEUE_CAPACITY: String = "otel.sdk.processor.log.queue.capacity"
 
     /**
      * ## Description
@@ -5065,10 +5065,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkProcessorLogQueueSize: String = "otel.sdk.processor.log.queue.size"
+    public const val OTEL_SDK_PROCESSOR_LOG_QUEUE_SIZE: String = "otel.sdk.processor.log.queue.size"
 
     /**
      * ## Description
@@ -5089,11 +5089,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.errorType`] | `Recommended`
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::ERROR_TYPE`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkProcessorSpanProcessed: String = "otel.sdk.processor.span.processed"
+    public const val OTEL_SDK_PROCESSOR_SPAN_PROCESSED: String = "otel.sdk.processor.span.processed"
 
     /**
      * ## Description
@@ -5107,7 +5107,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `otel.sdk.processor.span.processed`., reason: renamed, renamed_to: otel.sdk.processor.span.processed}")
-    public const val otelSdkProcessorSpanProcessedCount: String = "otel.sdk.processor.span.processed.count"
+    public const val OTEL_SDK_PROCESSOR_SPAN_PROCESSED_COUNT: String = "otel.sdk.processor.span.processed.count"
 
     /**
      * ## Description
@@ -5127,10 +5127,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkProcessorSpanQueueCapacity: String = "otel.sdk.processor.span.queue.capacity"
+    public const val OTEL_SDK_PROCESSOR_SPAN_QUEUE_CAPACITY: String = "otel.sdk.processor.span.queue.capacity"
 
     /**
      * ## Description
@@ -5150,10 +5150,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelComponentName`] | `Recommended`
-     * | [`Attribute.otelComponentType`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_NAME`] | `Recommended`
+     * | [`crate::attribute::OTEL_COMPONENT_TYPE`] | `Recommended`
      */
-    public const val otelSdkProcessorSpanQueueSize: String = "otel.sdk.processor.span.queue.size"
+    public const val OTEL_SDK_PROCESSOR_SPAN_QUEUE_SIZE: String = "otel.sdk.processor.span.queue.size"
 
     /**
      * ## Description
@@ -5167,7 +5167,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Obsoleted., reason: obsoleted}")
-    public const val otelSdkSpanEnded: String = "otel.sdk.span.ended"
+    public const val OTEL_SDK_SPAN_ENDED: String = "otel.sdk.span.ended"
 
     /**
      * ## Description
@@ -5181,7 +5181,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Obsoleted., reason: obsoleted}")
-    public const val otelSdkSpanEndedCount: String = "otel.sdk.span.ended.count"
+    public const val OTEL_SDK_SPAN_ENDED_COUNT: String = "otel.sdk.span.ended.count"
 
     /**
      * ## Description
@@ -5197,9 +5197,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelSpanSamplingResult`] | `Recommended`
+     * | [`crate::attribute::OTEL_SPAN_SAMPLING_RESULT`] | `Recommended`
      */
-    public const val otelSdkSpanLive: String = "otel.sdk.span.live"
+    public const val OTEL_SDK_SPAN_LIVE: String = "otel.sdk.span.live"
 
     /**
      * ## Description
@@ -5213,7 +5213,7 @@ public object Metric {
      * | Status: | `Development`  |
      */
     @Deprecated("{note: Replaced by `otel.sdk.span.live`., reason: renamed, renamed_to: otel.sdk.span.live}")
-    public const val otelSdkSpanLiveCount: String = "otel.sdk.span.live.count"
+    public const val OTEL_SDK_SPAN_LIVE_COUNT: String = "otel.sdk.span.live.count"
 
     /**
      * ## Description
@@ -5233,10 +5233,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.otelSpanParentOrigin`] | `Recommended`
-     * | [`Attribute.otelSpanSamplingResult`] | `Recommended`
+     * | [`crate::attribute::OTEL_SPAN_PARENT_ORIGIN`] | `Recommended`
+     * | [`crate::attribute::OTEL_SPAN_SAMPLING_RESULT`] | `Recommended`
      */
-    public const val otelSdkSpanStarted: String = "otel.sdk.span.started"
+    public const val OTEL_SDK_SPAN_STARTED: String = "otel.sdk.span.started"
 
     /**
      * ## Description
@@ -5252,9 +5252,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.processContextSwitchType`] | `Recommended`
+     * | [`crate::attribute::PROCESS_CONTEXT_SWITCH_TYPE`] | `Recommended`
      */
-    public const val processContextSwitches: String = "process.context_switches"
+    public const val PROCESS_CONTEXT_SWITCHES: String = "process.context_switches"
 
     /**
      * ## Description
@@ -5270,9 +5270,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuMode`] | `Recommended`
+     * | [`crate::attribute::CPU_MODE`] | `Recommended`
      */
-    public const val processCpuTime: String = "process.cpu.time"
+    public const val PROCESS_CPU_TIME: String = "process.cpu.time"
 
     /**
      * ## Description
@@ -5288,9 +5288,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuMode`] | `Recommended`
+     * | [`crate::attribute::CPU_MODE`] | `Recommended`
      */
-    public const val processCpuUtilization: String = "process.cpu.utilization"
+    public const val PROCESS_CPU_UTILIZATION: String = "process.cpu.utilization"
 
     /**
      * ## Description
@@ -5306,9 +5306,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.diskIoDirection`] | `Recommended`
+     * | [`crate::attribute::DISK_IO_DIRECTION`] | `Recommended`
      */
-    public const val processDiskIo: String = "process.disk.io"
+    public const val PROCESS_DISK_IO: String = "process.disk.io"
 
     /**
      * ## Description
@@ -5321,7 +5321,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val processMemoryUsage: String = "process.memory.usage"
+    public const val PROCESS_MEMORY_USAGE: String = "process.memory.usage"
 
     /**
      * ## Description
@@ -5334,7 +5334,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val processMemoryVirtual: String = "process.memory.virtual"
+    public const val PROCESS_MEMORY_VIRTUAL: String = "process.memory.virtual"
 
     /**
      * ## Description
@@ -5350,9 +5350,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val processNetworkIo: String = "process.network.io"
+    public const val PROCESS_NETWORK_IO: String = "process.network.io"
 
     /**
      * ## Description
@@ -5365,7 +5365,7 @@ public object Metric {
      * | Unit: | `{file_descriptor}` |
      * | Status: | `Development`  |
      */
-    public const val processOpenFileDescriptorCount: String = "process.open_file_descriptor.count"
+    public const val PROCESS_OPEN_FILE_DESCRIPTOR_COUNT: String = "process.open_file_descriptor.count"
 
     /**
      * ## Description
@@ -5381,9 +5381,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.processPagingFaultType`] | `Recommended`
+     * | [`crate::attribute::PROCESS_PAGING_FAULT_TYPE`] | `Recommended`
      */
-    public const val processPagingFaults: String = "process.paging.faults"
+    public const val PROCESS_PAGING_FAULTS: String = "process.paging.faults"
 
     /**
      * ## Description
@@ -5396,7 +5396,7 @@ public object Metric {
      * | Unit: | `{thread}` |
      * | Status: | `Development`  |
      */
-    public const val processThreadCount: String = "process.thread.count"
+    public const val PROCESS_THREAD_COUNT: String = "process.thread.count"
 
     /**
      * ## Description
@@ -5414,7 +5414,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val processUptime: String = "process.uptime"
+    public const val PROCESS_UPTIME: String = "process.uptime"
 
     /**
      * ## Description
@@ -5434,7 +5434,7 @@ public object Metric {
      * | Unit: | `ms` |
      * | Status: | `Development`  |
      */
-    public const val rpcClientDuration: String = "rpc.client.duration"
+    public const val RPC_CLIENT_DURATION: String = "rpc.client.duration"
 
     /**
      * ## Description
@@ -5451,7 +5451,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val rpcClientRequestSize: String = "rpc.client.request.size"
+    public const val RPC_CLIENT_REQUEST_SIZE: String = "rpc.client.request.size"
 
     /**
      * ## Description
@@ -5470,7 +5470,7 @@ public object Metric {
      * | Unit: | `{count}` |
      * | Status: | `Development`  |
      */
-    public const val rpcClientRequestsPerRpc: String = "rpc.client.requests_per_rpc"
+    public const val RPC_CLIENT_REQUESTS_PER_RPC: String = "rpc.client.requests_per_rpc"
 
     /**
      * ## Description
@@ -5487,7 +5487,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val rpcClientResponseSize: String = "rpc.client.response.size"
+    public const val RPC_CLIENT_RESPONSE_SIZE: String = "rpc.client.response.size"
 
     /**
      * ## Description
@@ -5506,7 +5506,7 @@ public object Metric {
      * | Unit: | `{count}` |
      * | Status: | `Development`  |
      */
-    public const val rpcClientResponsesPerRpc: String = "rpc.client.responses_per_rpc"
+    public const val RPC_CLIENT_RESPONSES_PER_RPC: String = "rpc.client.responses_per_rpc"
 
     /**
      * ## Description
@@ -5526,7 +5526,7 @@ public object Metric {
      * | Unit: | `ms` |
      * | Status: | `Development`  |
      */
-    public const val rpcServerDuration: String = "rpc.server.duration"
+    public const val RPC_SERVER_DURATION: String = "rpc.server.duration"
 
     /**
      * ## Description
@@ -5543,7 +5543,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val rpcServerRequestSize: String = "rpc.server.request.size"
+    public const val RPC_SERVER_REQUEST_SIZE: String = "rpc.server.request.size"
 
     /**
      * ## Description
@@ -5562,7 +5562,7 @@ public object Metric {
      * | Unit: | `{count}` |
      * | Status: | `Development`  |
      */
-    public const val rpcServerRequestsPerRpc: String = "rpc.server.requests_per_rpc"
+    public const val RPC_SERVER_REQUESTS_PER_RPC: String = "rpc.server.requests_per_rpc"
 
     /**
      * ## Description
@@ -5579,7 +5579,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val rpcServerResponseSize: String = "rpc.server.response.size"
+    public const val RPC_SERVER_RESPONSE_SIZE: String = "rpc.server.response.size"
 
     /**
      * ## Description
@@ -5598,7 +5598,7 @@ public object Metric {
      * | Unit: | `{count}` |
      * | Status: | `Development`  |
      */
-    public const val rpcServerResponsesPerRpc: String = "rpc.server.responses_per_rpc"
+    public const val RPC_SERVER_RESPONSES_PER_RPC: String = "rpc.server.responses_per_rpc"
 
     /**
      * ## Description
@@ -5618,10 +5618,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.signalrConnectionStatus`] | `Recommended`
-     * | [`Attribute.signalrTransport`] | `Recommended`
+     * | [`crate::attribute::SIGNALR_CONNECTION_STATUS`] | `Recommended`
+     * | [`crate::attribute::SIGNALR_TRANSPORT`] | `Recommended`
      */
-    public const val signalrServerActiveConnections: String = "signalr.server.active_connections"
+    public const val SIGNALR_SERVER_ACTIVE_CONNECTIONS: String = "signalr.server.active_connections"
 
     /**
      * ## Description
@@ -5641,10 +5641,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.signalrConnectionStatus`] | `Recommended`
-     * | [`Attribute.signalrTransport`] | `Recommended`
+     * | [`crate::attribute::SIGNALR_CONNECTION_STATUS`] | `Recommended`
+     * | [`crate::attribute::SIGNALR_TRANSPORT`] | `Recommended`
      */
-    public const val signalrServerConnectionDuration: String = "signalr.server.connection.duration"
+    public const val SIGNALR_SERVER_CONNECTION_DURATION: String = "signalr.server.connection.duration"
 
     /**
      * ## Description
@@ -5660,9 +5660,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuLogicalNumber`] | `Recommended`
+     * | [`crate::attribute::CPU_LOGICAL_NUMBER`] | `Recommended`
      */
-    public const val systemCpuFrequency: String = "system.cpu.frequency"
+    public const val SYSTEM_CPU_FREQUENCY: String = "system.cpu.frequency"
 
     /**
      * ## Description
@@ -5679,7 +5679,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val systemCpuLogicalCount: String = "system.cpu.logical.count"
+    public const val SYSTEM_CPU_LOGICAL_COUNT: String = "system.cpu.logical.count"
 
     /**
      * ## Description
@@ -5696,7 +5696,7 @@ public object Metric {
      * | Unit: | `{cpu}` |
      * | Status: | `Development`  |
      */
-    public const val systemCpuPhysicalCount: String = "system.cpu.physical.count"
+    public const val SYSTEM_CPU_PHYSICAL_COUNT: String = "system.cpu.physical.count"
 
     /**
      * ## Description
@@ -5712,10 +5712,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuLogicalNumber`] | `Recommended`
-     * | [`Attribute.cpuMode`] | `Recommended`
+     * | [`crate::attribute::CPU_LOGICAL_NUMBER`] | `Recommended`
+     * | [`crate::attribute::CPU_MODE`] | `Recommended`
      */
-    public const val systemCpuTime: String = "system.cpu.time"
+    public const val SYSTEM_CPU_TIME: String = "system.cpu.time"
 
     /**
      * ## Description
@@ -5731,10 +5731,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.cpuLogicalNumber`] | `Recommended`
-     * | [`Attribute.cpuMode`] | `Recommended`
+     * | [`crate::attribute::CPU_LOGICAL_NUMBER`] | `Recommended`
+     * | [`crate::attribute::CPU_MODE`] | `Recommended`
      */
-    public const val systemCpuUtilization: String = "system.cpu.utilization"
+    public const val SYSTEM_CPU_UTILIZATION: String = "system.cpu.utilization"
 
     /**
      * ## Description
@@ -5748,10 +5748,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.diskIoDirection`] | `Recommended`
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::DISK_IO_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemDiskIo: String = "system.disk.io"
+    public const val SYSTEM_DISK_IO: String = "system.disk.io"
 
     /**
      * ## Description
@@ -5776,9 +5776,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemDiskIoTime: String = "system.disk.io_time"
+    public const val SYSTEM_DISK_IO_TIME: String = "system.disk.io_time"
 
     /**
      * ## Description
@@ -5794,9 +5794,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemDiskLimit: String = "system.disk.limit"
+    public const val SYSTEM_DISK_LIMIT: String = "system.disk.limit"
 
     /**
      * ## Description
@@ -5810,10 +5810,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.diskIoDirection`] | `Recommended`
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::DISK_IO_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemDiskMerged: String = "system.disk.merged"
+    public const val SYSTEM_DISK_MERGED: String = "system.disk.merged"
 
     /**
      * ## Description
@@ -5836,10 +5836,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.diskIoDirection`] | `Recommended`
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::DISK_IO_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemDiskOperationTime: String = "system.disk.operation_time"
+    public const val SYSTEM_DISK_OPERATION_TIME: String = "system.disk.operation_time"
 
     /**
      * ## Description
@@ -5853,10 +5853,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.diskIoDirection`] | `Recommended`
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::DISK_IO_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemDiskOperations: String = "system.disk.operations"
+    public const val SYSTEM_DISK_OPERATIONS: String = "system.disk.operations"
 
     /**
      * ## Description
@@ -5872,12 +5872,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
-     * | [`Attribute.systemFilesystemMode`] | `Recommended`
-     * | [`Attribute.systemFilesystemMountpoint`] | `Recommended`
-     * | [`Attribute.systemFilesystemType`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_MODE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_MOUNTPOINT`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_TYPE`] | `Recommended`
      */
-    public const val systemFilesystemLimit: String = "system.filesystem.limit"
+    public const val SYSTEM_FILESYSTEM_LIMIT: String = "system.filesystem.limit"
 
     /**
      * ## Description
@@ -5898,13 +5898,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
-     * | [`Attribute.systemFilesystemMode`] | `Recommended`
-     * | [`Attribute.systemFilesystemMountpoint`] | `Recommended`
-     * | [`Attribute.systemFilesystemState`] | `Recommended`
-     * | [`Attribute.systemFilesystemType`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_MODE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_MOUNTPOINT`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_STATE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_TYPE`] | `Recommended`
      */
-    public const val systemFilesystemUsage: String = "system.filesystem.usage"
+    public const val SYSTEM_FILESYSTEM_USAGE: String = "system.filesystem.usage"
 
     /**
      * ## Description
@@ -5918,13 +5918,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
-     * | [`Attribute.systemFilesystemMode`] | `Recommended`
-     * | [`Attribute.systemFilesystemMountpoint`] | `Recommended`
-     * | [`Attribute.systemFilesystemState`] | `Recommended`
-     * | [`Attribute.systemFilesystemType`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_MODE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_MOUNTPOINT`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_STATE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_FILESYSTEM_TYPE`] | `Recommended`
      */
-    public const val systemFilesystemUtilization: String = "system.filesystem.utilization"
+    public const val SYSTEM_FILESYSTEM_UTILIZATION: String = "system.filesystem.utilization"
 
     /**
      * ## Description
@@ -5945,7 +5945,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val systemLinuxMemoryAvailable: String = "system.linux.memory.available"
+    public const val SYSTEM_LINUX_MEMORY_AVAILABLE: String = "system.linux.memory.available"
 
     /**
      * ## Description
@@ -5967,9 +5967,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.linuxMemorySlabState`] | `Recommended`
+     * | [`crate::attribute::LINUX_MEMORY_SLAB_STATE`] | `Recommended`
      */
-    public const val systemLinuxMemorySlabUsage: String = "system.linux.memory.slab.usage"
+    public const val SYSTEM_LINUX_MEMORY_SLAB_USAGE: String = "system.linux.memory.slab.usage"
 
     /**
      * ## Description
@@ -5986,7 +5986,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val systemMemoryLimit: String = "system.memory.limit"
+    public const val SYSTEM_MEMORY_LIMIT: String = "system.memory.limit"
 
     /**
      * ## Description
@@ -6004,7 +6004,7 @@ public object Metric {
      * | Unit: | `By` |
      * | Status: | `Development`  |
      */
-    public const val systemMemoryShared: String = "system.memory.shared"
+    public const val SYSTEM_MEMORY_SHARED: String = "system.memory.shared"
 
     /**
      * ## Description
@@ -6025,9 +6025,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemMemoryState`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_MEMORY_STATE`] | `Recommended`
      */
-    public const val systemMemoryUsage: String = "system.memory.usage"
+    public const val SYSTEM_MEMORY_USAGE: String = "system.memory.usage"
 
     /**
      * ## Description
@@ -6041,9 +6041,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemMemoryState`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_MEMORY_STATE`] | `Recommended`
      */
-    public const val systemMemoryUtilization: String = "system.memory.utilization"
+    public const val SYSTEM_MEMORY_UTILIZATION: String = "system.memory.utilization"
 
     /**
      * ## Description
@@ -6057,11 +6057,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkConnectionState`] | `Recommended`
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkTransport`] | `Recommended`
+     * | [`crate::attribute::NETWORK_CONNECTION_STATE`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
      */
-    public const val systemNetworkConnectionCount: String = "system.network.connection.count"
+    public const val SYSTEM_NETWORK_CONNECTION_COUNT: String = "system.network.connection.count"
 
     /**
      * ## Description
@@ -6077,12 +6077,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkConnectionState`] | `Recommended`
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkTransport`] | `Recommended`
+     * | [`crate::attribute::NETWORK_CONNECTION_STATE`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_TRANSPORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `system.network.connection.count`., reason: renamed, renamed_to: system.network.connection.count}")
-    public const val systemNetworkConnections: String = "system.network.connections"
+    public const val SYSTEM_NETWORK_CONNECTIONS: String = "system.network.connections"
 
     /**
      * ## Description
@@ -6106,10 +6106,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val systemNetworkDropped: String = "system.network.dropped"
+    public const val SYSTEM_NETWORK_DROPPED: String = "system.network.dropped"
 
     /**
      * ## Description
@@ -6133,10 +6133,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val systemNetworkErrors: String = "system.network.errors"
+    public const val SYSTEM_NETWORK_ERRORS: String = "system.network.errors"
 
     /**
      * ## Description
@@ -6150,10 +6150,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkInterfaceName`] | `Recommended`
-     * | [`Attribute.networkIoDirection`] | `Recommended`
+     * | [`crate::attribute::NETWORK_INTERFACE_NAME`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
      */
-    public const val systemNetworkIo: String = "system.network.io"
+    public const val SYSTEM_NETWORK_IO: String = "system.network.io"
 
     /**
      * ## Description
@@ -6167,10 +6167,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.networkIoDirection`] | `Recommended`
-     * | [`Attribute.systemDevice`] | `Recommended`
+     * | [`crate::attribute::NETWORK_IO_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
      */
-    public const val systemNetworkPackets: String = "system.network.packets"
+    public const val SYSTEM_NETWORK_PACKETS: String = "system.network.packets"
 
     /**
      * ## Description
@@ -6184,9 +6184,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemPagingType`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_PAGING_TYPE`] | `Recommended`
      */
-    public const val systemPagingFaults: String = "system.paging.faults"
+    public const val SYSTEM_PAGING_FAULTS: String = "system.paging.faults"
 
     /**
      * ## Description
@@ -6200,10 +6200,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemPagingDirection`] | `Recommended`
-     * | [`Attribute.systemPagingType`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_PAGING_DIRECTION`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_PAGING_TYPE`] | `Recommended`
      */
-    public const val systemPagingOperations: String = "system.paging.operations"
+    public const val SYSTEM_PAGING_OPERATIONS: String = "system.paging.operations"
 
     /**
      * ## Description
@@ -6219,10 +6219,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
-     * | [`Attribute.systemPagingState`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_PAGING_STATE`] | `Recommended`
      */
-    public const val systemPagingUsage: String = "system.paging.usage"
+    public const val SYSTEM_PAGING_USAGE: String = "system.paging.usage"
 
     /**
      * ## Description
@@ -6236,10 +6236,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemDevice`] | `Recommended`
-     * | [`Attribute.systemPagingState`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_DEVICE`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_PAGING_STATE`] | `Recommended`
      */
-    public const val systemPagingUtilization: String = "system.paging.utilization"
+    public const val SYSTEM_PAGING_UTILIZATION: String = "system.paging.utilization"
 
     /**
      * ## Description
@@ -6255,9 +6255,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.systemProcessStatus`] | `Recommended`
+     * | [`crate::attribute::SYSTEM_PROCESS_STATUS`] | `Recommended`
      */
-    public const val systemProcessCount: String = "system.process.count"
+    public const val SYSTEM_PROCESS_COUNT: String = "system.process.count"
 
     /**
      * ## Description
@@ -6270,7 +6270,7 @@ public object Metric {
      * | Unit: | `{process}` |
      * | Status: | `Development`  |
      */
-    public const val systemProcessCreated: String = "system.process.created"
+    public const val SYSTEM_PROCESS_CREATED: String = "system.process.created"
 
     /**
      * ## Description
@@ -6288,7 +6288,7 @@ public object Metric {
      * | Unit: | `s` |
      * | Status: | `Development`  |
      */
-    public const val systemUptime: String = "system.uptime"
+    public const val SYSTEM_UPTIME: String = "system.uptime"
 
     /**
      * ## Description
@@ -6308,9 +6308,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.v8jsGcType`] | `Required`
+     * | [`crate::attribute::V8JS_GC_TYPE`] | `Required`
      */
-    public const val v8jsGcDuration: String = "v8js.gc.duration"
+    public const val V8JS_GC_DURATION: String = "v8js.gc.duration"
 
     /**
      * ## Description
@@ -6330,9 +6330,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.v8jsHeapSpaceName`] | `Required`
+     * | [`crate::attribute::V8JS_HEAP_SPACE_NAME`] | `Required`
      */
-    public const val v8jsHeapSpaceAvailableSize: String = "v8js.heap.space.available_size"
+    public const val V8JS_HEAP_SPACE_AVAILABLE_SIZE: String = "v8js.heap.space.available_size"
 
     /**
      * ## Description
@@ -6352,9 +6352,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.v8jsHeapSpaceName`] | `Required`
+     * | [`crate::attribute::V8JS_HEAP_SPACE_NAME`] | `Required`
      */
-    public const val v8jsHeapSpacePhysicalSize: String = "v8js.heap.space.physical_size"
+    public const val V8JS_HEAP_SPACE_PHYSICAL_SIZE: String = "v8js.heap.space.physical_size"
 
     /**
      * ## Description
@@ -6374,9 +6374,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.v8jsHeapSpaceName`] | `Required`
+     * | [`crate::attribute::V8JS_HEAP_SPACE_NAME`] | `Required`
      */
-    public const val v8jsMemoryHeapLimit: String = "v8js.memory.heap.limit"
+    public const val V8JS_MEMORY_HEAP_LIMIT: String = "v8js.memory.heap.limit"
 
     /**
      * ## Description
@@ -6396,9 +6396,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.v8jsHeapSpaceName`] | `Required`
+     * | [`crate::attribute::V8JS_HEAP_SPACE_NAME`] | `Required`
      */
-    public const val v8jsMemoryHeapUsed: String = "v8js.memory.heap.used"
+    public const val V8JS_MEMORY_HEAP_USED: String = "v8js.memory.heap.used"
 
     /**
      * ## Description
@@ -6414,13 +6414,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsChangeState`] | `Required`
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_CHANGE_STATE`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsChangeCount: String = "vcs.change.count"
+    public const val VCS_CHANGE_COUNT: String = "vcs.change.count"
 
     /**
      * ## Description
@@ -6436,14 +6436,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsChangeState`] | `Required`
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefHeadName`] | `Required`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_CHANGE_STATE`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_HEAD_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsChangeDuration: String = "vcs.change.duration"
+    public const val VCS_CHANGE_DURATION: String = "vcs.change.duration"
 
     /**
      * ## Description
@@ -6459,16 +6459,16 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefBaseName`] | `Recommended`
-     * | [`Attribute.vcsRefBaseRevision`] | `Opt_in`
-     * | [`Attribute.vcsRefHeadName`] | `Required`
-     * | [`Attribute.vcsRefHeadRevision`] | `Opt_in`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_BASE_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REF_BASE_REVISION`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_HEAD_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_REVISION`] | `Opt_in`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsChangeTimeToApproval: String = "vcs.change.time_to_approval"
+    public const val VCS_CHANGE_TIME_TO_APPROVAL: String = "vcs.change.time_to_approval"
 
     /**
      * ## Description
@@ -6484,16 +6484,16 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefBaseName`] | `Recommended`
-     * | [`Attribute.vcsRefBaseRevision`] | `Opt_in`
-     * | [`Attribute.vcsRefHeadName`] | `Required`
-     * | [`Attribute.vcsRefHeadRevision`] | `Opt_in`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_BASE_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REF_BASE_REVISION`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_HEAD_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_REVISION`] | `Opt_in`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsChangeTimeToMerge: String = "vcs.change.time_to_merge"
+    public const val VCS_CHANGE_TIME_TO_MERGE: String = "vcs.change.time_to_merge"
 
     /**
      * ## Description
@@ -6509,12 +6509,12 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsContributorCount: String = "vcs.contributor.count"
+    public const val VCS_CONTRIBUTOR_COUNT: String = "vcs.contributor.count"
 
     /**
      * ## Description
@@ -6530,13 +6530,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefType`] | `Required`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsRefCount: String = "vcs.ref.count"
+    public const val VCS_REF_COUNT: String = "vcs.ref.count"
 
     /**
      * ## Description
@@ -6558,18 +6558,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsChangeId`] | `Conditionally_required`: if a change is associate with the ref.
-     * | [`Attribute.vcsLineChangeType`] | `Required`
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefBaseName`] | `Required`
-     * | [`Attribute.vcsRefBaseType`] | `Required`
-     * | [`Attribute.vcsRefHeadName`] | `Required`
-     * | [`Attribute.vcsRefHeadType`] | `Required`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_CHANGE_ID`] | `Conditionally_required`: if a change is associate with the ref.
+     * | [`crate::attribute::VCS_LINE_CHANGE_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_BASE_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_BASE_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsRefLinesDelta: String = "vcs.ref.lines_delta"
+    public const val VCS_REF_LINES_DELTA: String = "vcs.ref.lines_delta"
 
     /**
      * ## Description
@@ -6590,18 +6590,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsChangeId`] | `Conditionally_required`: if a change is associate with the ref.
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefBaseName`] | `Required`
-     * | [`Attribute.vcsRefBaseType`] | `Required`
-     * | [`Attribute.vcsRefHeadName`] | `Required`
-     * | [`Attribute.vcsRefHeadType`] | `Required`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
-     * | [`Attribute.vcsRevisionDeltaDirection`] | `Required`
+     * | [`crate::attribute::VCS_CHANGE_ID`] | `Conditionally_required`: if a change is associate with the ref.
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_BASE_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_BASE_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
+     * | [`crate::attribute::VCS_REVISION_DELTA_DIRECTION`] | `Required`
      */
-    public const val vcsRefRevisionsDelta: String = "vcs.ref.revisions_delta"
+    public const val VCS_REF_REVISIONS_DELTA: String = "vcs.ref.revisions_delta"
 
     /**
      * ## Description
@@ -6617,14 +6617,14 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
-     * | [`Attribute.vcsRefHeadName`] | `Required`
-     * | [`Attribute.vcsRefHeadType`] | `Required`
-     * | [`Attribute.vcsRepositoryName`] | `Recommended`
-     * | [`Attribute.vcsRepositoryUrlFull`] | `Required`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
+     * | [`crate::attribute::VCS_REF_HEAD_NAME`] | `Required`
+     * | [`crate::attribute::VCS_REF_HEAD_TYPE`] | `Required`
+     * | [`crate::attribute::VCS_REPOSITORY_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_REPOSITORY_URL_FULL`] | `Required`
      */
-    public const val vcsRefTime: String = "vcs.ref.time"
+    public const val VCS_REF_TIME: String = "vcs.ref.time"
 
     /**
      * ## Description
@@ -6640,8 +6640,8 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.vcsOwnerName`] | `Recommended`
-     * | [`Attribute.vcsProviderName`] | `Opt_in`
+     * | [`crate::attribute::VCS_OWNER_NAME`] | `Recommended`
+     * | [`crate::attribute::VCS_PROVIDER_NAME`] | `Opt_in`
      */
-    public const val vcsRepositoryCount: String = "vcs.repository.count"
+    public const val VCS_REPOSITORY_COUNT: String = "vcs.repository.count"
 }
