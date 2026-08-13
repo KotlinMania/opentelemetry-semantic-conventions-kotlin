@@ -8,365 +8,365 @@ package io.github.kotlinmania.opentelemetrysemanticconventions
  * to be used in resources.
  */
 public object Resource {
-    public val androidOsApiLevel: String get() = Attribute.androidOsApiLevel
+    public val ANDROID_OS_API_LEVEL: String get() = Attribute.ANDROID_OS_API_LEVEL
 
-    public val appInstallationId: String get() = Attribute.appInstallationId
+    public val APP_INSTALLATION_ID: String get() = Attribute.APP_INSTALLATION_ID
 
-    public val awsEcsClusterArn: String get() = Attribute.awsEcsClusterArn
+    public val AWS_ECS_CLUSTER_ARN: String get() = Attribute.AWS_ECS_CLUSTER_ARN
 
-    public val awsEcsContainerArn: String get() = Attribute.awsEcsContainerArn
+    public val AWS_ECS_CONTAINER_ARN: String get() = Attribute.AWS_ECS_CONTAINER_ARN
 
-    public val awsEcsLaunchtype: String get() = Attribute.awsEcsLaunchtype
+    public val AWS_ECS_LAUNCHTYPE: String get() = Attribute.AWS_ECS_LAUNCHTYPE
 
-    public val awsEcsTaskArn: String get() = Attribute.awsEcsTaskArn
+    public val AWS_ECS_TASK_ARN: String get() = Attribute.AWS_ECS_TASK_ARN
 
-    public val awsEcsTaskFamily: String get() = Attribute.awsEcsTaskFamily
+    public val AWS_ECS_TASK_FAMILY: String get() = Attribute.AWS_ECS_TASK_FAMILY
 
-    public val awsEcsTaskId: String get() = Attribute.awsEcsTaskId
+    public val AWS_ECS_TASK_ID: String get() = Attribute.AWS_ECS_TASK_ID
 
-    public val awsEcsTaskRevision: String get() = Attribute.awsEcsTaskRevision
+    public val AWS_ECS_TASK_REVISION: String get() = Attribute.AWS_ECS_TASK_REVISION
 
-    public val awsEksClusterArn: String get() = Attribute.awsEksClusterArn
+    public val AWS_EKS_CLUSTER_ARN: String get() = Attribute.AWS_EKS_CLUSTER_ARN
 
-    public val awsLogGroupArns: String get() = Attribute.awsLogGroupArns
+    public val AWS_LOG_GROUP_ARNS: String get() = Attribute.AWS_LOG_GROUP_ARNS
 
-    public val awsLogGroupNames: String get() = Attribute.awsLogGroupNames
+    public val AWS_LOG_GROUP_NAMES: String get() = Attribute.AWS_LOG_GROUP_NAMES
 
-    public val awsLogStreamArns: String get() = Attribute.awsLogStreamArns
+    public val AWS_LOG_STREAM_ARNS: String get() = Attribute.AWS_LOG_STREAM_ARNS
 
-    public val awsLogStreamNames: String get() = Attribute.awsLogStreamNames
+    public val AWS_LOG_STREAM_NAMES: String get() = Attribute.AWS_LOG_STREAM_NAMES
 
-    public val browserBrands: String get() = Attribute.browserBrands
+    public val BROWSER_BRANDS: String get() = Attribute.BROWSER_BRANDS
 
-    public val browserLanguage: String get() = Attribute.browserLanguage
+    public val BROWSER_LANGUAGE: String get() = Attribute.BROWSER_LANGUAGE
 
-    public val browserMobile: String get() = Attribute.browserMobile
+    public val BROWSER_MOBILE: String get() = Attribute.BROWSER_MOBILE
 
-    public val browserPlatform: String get() = Attribute.browserPlatform
+    public val BROWSER_PLATFORM: String get() = Attribute.BROWSER_PLATFORM
 
-    public val cicdPipelineName: String get() = Attribute.cicdPipelineName
+    public val CICD_PIPELINE_NAME: String get() = Attribute.CICD_PIPELINE_NAME
 
-    public val cicdPipelineRunId: String get() = Attribute.cicdPipelineRunId
+    public val CICD_PIPELINE_RUN_ID: String get() = Attribute.CICD_PIPELINE_RUN_ID
 
-    public val cicdPipelineRunUrlFull: String get() = Attribute.cicdPipelineRunUrlFull
+    public val CICD_PIPELINE_RUN_URL_FULL: String get() = Attribute.CICD_PIPELINE_RUN_URL_FULL
 
-    public val cicdWorkerId: String get() = Attribute.cicdWorkerId
+    public val CICD_WORKER_ID: String get() = Attribute.CICD_WORKER_ID
 
-    public val cicdWorkerName: String get() = Attribute.cicdWorkerName
+    public val CICD_WORKER_NAME: String get() = Attribute.CICD_WORKER_NAME
 
-    public val cicdWorkerUrlFull: String get() = Attribute.cicdWorkerUrlFull
+    public val CICD_WORKER_URL_FULL: String get() = Attribute.CICD_WORKER_URL_FULL
 
-    public val cloudAccountId: String get() = Attribute.cloudAccountId
+    public val CLOUD_ACCOUNT_ID: String get() = Attribute.CLOUD_ACCOUNT_ID
 
-    public val cloudAvailabilityZone: String get() = Attribute.cloudAvailabilityZone
+    public val CLOUD_AVAILABILITY_ZONE: String get() = Attribute.CLOUD_AVAILABILITY_ZONE
 
-    public val cloudPlatform: String get() = Attribute.cloudPlatform
+    public val CLOUD_PLATFORM: String get() = Attribute.CLOUD_PLATFORM
 
-    public val cloudProvider: String get() = Attribute.cloudProvider
+    public val CLOUD_PROVIDER: String get() = Attribute.CLOUD_PROVIDER
 
-    public val cloudRegion: String get() = Attribute.cloudRegion
+    public val CLOUD_REGION: String get() = Attribute.CLOUD_REGION
 
-    public val cloudResourceId: String get() = Attribute.cloudResourceId
+    public val CLOUD_RESOURCE_ID: String get() = Attribute.CLOUD_RESOURCE_ID
 
-    public val cloudfoundryAppId: String get() = Attribute.cloudfoundryAppId
+    public val CLOUDFOUNDRY_APP_ID: String get() = Attribute.CLOUDFOUNDRY_APP_ID
 
-    public val cloudfoundryAppName: String get() = Attribute.cloudfoundryAppName
+    public val CLOUDFOUNDRY_APP_NAME: String get() = Attribute.CLOUDFOUNDRY_APP_NAME
 
-    public val cloudfoundryOrgId: String get() = Attribute.cloudfoundryOrgId
+    public val CLOUDFOUNDRY_ORG_ID: String get() = Attribute.CLOUDFOUNDRY_ORG_ID
 
-    public val cloudfoundryOrgName: String get() = Attribute.cloudfoundryOrgName
+    public val CLOUDFOUNDRY_ORG_NAME: String get() = Attribute.CLOUDFOUNDRY_ORG_NAME
 
-    public val cloudfoundryProcessId: String get() = Attribute.cloudfoundryProcessId
+    public val CLOUDFOUNDRY_PROCESS_ID: String get() = Attribute.CLOUDFOUNDRY_PROCESS_ID
 
-    public val cloudfoundryProcessType: String get() = Attribute.cloudfoundryProcessType
+    public val CLOUDFOUNDRY_PROCESS_TYPE: String get() = Attribute.CLOUDFOUNDRY_PROCESS_TYPE
 
-    public val cloudfoundrySpaceId: String get() = Attribute.cloudfoundrySpaceId
+    public val CLOUDFOUNDRY_SPACE_ID: String get() = Attribute.CLOUDFOUNDRY_SPACE_ID
 
-    public val cloudfoundrySpaceName: String get() = Attribute.cloudfoundrySpaceName
+    public val CLOUDFOUNDRY_SPACE_NAME: String get() = Attribute.CLOUDFOUNDRY_SPACE_NAME
 
-    public val cloudfoundrySystemId: String get() = Attribute.cloudfoundrySystemId
+    public val CLOUDFOUNDRY_SYSTEM_ID: String get() = Attribute.CLOUDFOUNDRY_SYSTEM_ID
 
-    public val cloudfoundrySystemInstanceId: String get() = Attribute.cloudfoundrySystemInstanceId
+    public val CLOUDFOUNDRY_SYSTEM_INSTANCE_ID: String get() = Attribute.CLOUDFOUNDRY_SYSTEM_INSTANCE_ID
 
-    public val containerCommand: String get() = Attribute.containerCommand
+    public val CONTAINER_COMMAND: String get() = Attribute.CONTAINER_COMMAND
 
-    public val containerCommandArgs: String get() = Attribute.containerCommandArgs
+    public val CONTAINER_COMMAND_ARGS: String get() = Attribute.CONTAINER_COMMAND_ARGS
 
-    public val containerCommandLine: String get() = Attribute.containerCommandLine
+    public val CONTAINER_COMMAND_LINE: String get() = Attribute.CONTAINER_COMMAND_LINE
 
-    public val containerId: String get() = Attribute.containerId
+    public val CONTAINER_ID: String get() = Attribute.CONTAINER_ID
 
-    public val containerImageId: String get() = Attribute.containerImageId
+    public val CONTAINER_IMAGE_ID: String get() = Attribute.CONTAINER_IMAGE_ID
 
-    public val containerImageName: String get() = Attribute.containerImageName
+    public val CONTAINER_IMAGE_NAME: String get() = Attribute.CONTAINER_IMAGE_NAME
 
-    public val containerImageRepoDigests: String get() = Attribute.containerImageRepoDigests
+    public val CONTAINER_IMAGE_REPO_DIGESTS: String get() = Attribute.CONTAINER_IMAGE_REPO_DIGESTS
 
-    public val containerImageTags: String get() = Attribute.containerImageTags
+    public val CONTAINER_IMAGE_TAGS: String get() = Attribute.CONTAINER_IMAGE_TAGS
 
-    public val containerLabel: String get() = Attribute.containerLabel
+    public val CONTAINER_LABEL: String get() = Attribute.CONTAINER_LABEL
 
-    public val containerName: String get() = Attribute.containerName
+    public val CONTAINER_NAME: String get() = Attribute.CONTAINER_NAME
 
-    public val containerRuntime: String get() = Attribute.containerRuntime
+    public val CONTAINER_RUNTIME: String get() = Attribute.CONTAINER_RUNTIME
 
-    public val deploymentEnvironmentName: String get() = Attribute.deploymentEnvironmentName
+    public val DEPLOYMENT_ENVIRONMENT_NAME: String get() = Attribute.DEPLOYMENT_ENVIRONMENT_NAME
 
-    public val deviceId: String get() = Attribute.deviceId
+    public val DEVICE_ID: String get() = Attribute.DEVICE_ID
 
-    public val deviceManufacturer: String get() = Attribute.deviceManufacturer
+    public val DEVICE_MANUFACTURER: String get() = Attribute.DEVICE_MANUFACTURER
 
-    public val deviceModelIdentifier: String get() = Attribute.deviceModelIdentifier
+    public val DEVICE_MODEL_IDENTIFIER: String get() = Attribute.DEVICE_MODEL_IDENTIFIER
 
-    public val deviceModelName: String get() = Attribute.deviceModelName
+    public val DEVICE_MODEL_NAME: String get() = Attribute.DEVICE_MODEL_NAME
 
-    public val faasInstance: String get() = Attribute.faasInstance
+    public val FAAS_INSTANCE: String get() = Attribute.FAAS_INSTANCE
 
-    public val faasMaxMemory: String get() = Attribute.faasMaxMemory
+    public val FAAS_MAX_MEMORY: String get() = Attribute.FAAS_MAX_MEMORY
 
-    public val faasName: String get() = Attribute.faasName
+    public val FAAS_NAME: String get() = Attribute.FAAS_NAME
 
-    public val faasVersion: String get() = Attribute.faasVersion
+    public val FAAS_VERSION: String get() = Attribute.FAAS_VERSION
 
-    public val gcpApphubApplicationContainer: String get() = Attribute.gcpApphubApplicationContainer
+    public val GCP_APPHUB_APPLICATION_CONTAINER: String get() = Attribute.GCP_APPHUB_APPLICATION_CONTAINER
 
-    public val gcpApphubApplicationId: String get() = Attribute.gcpApphubApplicationId
+    public val GCP_APPHUB_APPLICATION_ID: String get() = Attribute.GCP_APPHUB_APPLICATION_ID
 
-    public val gcpApphubApplicationLocation: String get() = Attribute.gcpApphubApplicationLocation
+    public val GCP_APPHUB_APPLICATION_LOCATION: String get() = Attribute.GCP_APPHUB_APPLICATION_LOCATION
 
-    public val gcpApphubServiceCriticalityType: String get() = Attribute.gcpApphubServiceCriticalityType
+    public val GCP_APPHUB_SERVICE_CRITICALITY_TYPE: String get() = Attribute.GCP_APPHUB_SERVICE_CRITICALITY_TYPE
 
-    public val gcpApphubServiceEnvironmentType: String get() = Attribute.gcpApphubServiceEnvironmentType
+    public val GCP_APPHUB_SERVICE_ENVIRONMENT_TYPE: String get() = Attribute.GCP_APPHUB_SERVICE_ENVIRONMENT_TYPE
 
-    public val gcpApphubServiceId: String get() = Attribute.gcpApphubServiceId
+    public val GCP_APPHUB_SERVICE_ID: String get() = Attribute.GCP_APPHUB_SERVICE_ID
 
-    public val gcpApphubWorkloadCriticalityType: String get() = Attribute.gcpApphubWorkloadCriticalityType
+    public val GCP_APPHUB_WORKLOAD_CRITICALITY_TYPE: String get() = Attribute.GCP_APPHUB_WORKLOAD_CRITICALITY_TYPE
 
-    public val gcpApphubWorkloadEnvironmentType: String get() = Attribute.gcpApphubWorkloadEnvironmentType
+    public val GCP_APPHUB_WORKLOAD_ENVIRONMENT_TYPE: String get() = Attribute.GCP_APPHUB_WORKLOAD_ENVIRONMENT_TYPE
 
-    public val gcpApphubWorkloadId: String get() = Attribute.gcpApphubWorkloadId
+    public val GCP_APPHUB_WORKLOAD_ID: String get() = Attribute.GCP_APPHUB_WORKLOAD_ID
 
-    public val gcpCloudRunJobExecution: String get() = Attribute.gcpCloudRunJobExecution
+    public val GCP_CLOUD_RUN_JOB_EXECUTION: String get() = Attribute.GCP_CLOUD_RUN_JOB_EXECUTION
 
-    public val gcpCloudRunJobTaskIndex: String get() = Attribute.gcpCloudRunJobTaskIndex
+    public val GCP_CLOUD_RUN_JOB_TASK_INDEX: String get() = Attribute.GCP_CLOUD_RUN_JOB_TASK_INDEX
 
-    public val gcpGceInstanceHostname: String get() = Attribute.gcpGceInstanceHostname
+    public val GCP_GCE_INSTANCE_HOSTNAME: String get() = Attribute.GCP_GCE_INSTANCE_HOSTNAME
 
-    public val gcpGceInstanceName: String get() = Attribute.gcpGceInstanceName
+    public val GCP_GCE_INSTANCE_NAME: String get() = Attribute.GCP_GCE_INSTANCE_NAME
 
-    public val herokuAppId: String get() = Attribute.herokuAppId
+    public val HEROKU_APP_ID: String get() = Attribute.HEROKU_APP_ID
 
-    public val herokuReleaseCommit: String get() = Attribute.herokuReleaseCommit
+    public val HEROKU_RELEASE_COMMIT: String get() = Attribute.HEROKU_RELEASE_COMMIT
 
-    public val herokuReleaseCreationTimestamp: String get() = Attribute.herokuReleaseCreationTimestamp
+    public val HEROKU_RELEASE_CREATION_TIMESTAMP: String get() = Attribute.HEROKU_RELEASE_CREATION_TIMESTAMP
 
-    public val hostArch: String get() = Attribute.hostArch
+    public val HOST_ARCH: String get() = Attribute.HOST_ARCH
 
-    public val hostCpuCacheL2Size: String get() = Attribute.hostCpuCacheL2Size
+    public val HOST_CPU_CACHE_L2_SIZE: String get() = Attribute.HOST_CPU_CACHE_L2_SIZE
 
-    public val hostCpuFamily: String get() = Attribute.hostCpuFamily
+    public val HOST_CPU_FAMILY: String get() = Attribute.HOST_CPU_FAMILY
 
-    public val hostCpuModelId: String get() = Attribute.hostCpuModelId
+    public val HOST_CPU_MODEL_ID: String get() = Attribute.HOST_CPU_MODEL_ID
 
-    public val hostCpuModelName: String get() = Attribute.hostCpuModelName
+    public val HOST_CPU_MODEL_NAME: String get() = Attribute.HOST_CPU_MODEL_NAME
 
-    public val hostCpuStepping: String get() = Attribute.hostCpuStepping
+    public val HOST_CPU_STEPPING: String get() = Attribute.HOST_CPU_STEPPING
 
-    public val hostCpuVendorId: String get() = Attribute.hostCpuVendorId
+    public val HOST_CPU_VENDOR_ID: String get() = Attribute.HOST_CPU_VENDOR_ID
 
-    public val hostId: String get() = Attribute.hostId
+    public val HOST_ID: String get() = Attribute.HOST_ID
 
-    public val hostImageId: String get() = Attribute.hostImageId
+    public val HOST_IMAGE_ID: String get() = Attribute.HOST_IMAGE_ID
 
-    public val hostImageName: String get() = Attribute.hostImageName
+    public val HOST_IMAGE_NAME: String get() = Attribute.HOST_IMAGE_NAME
 
-    public val hostImageVersion: String get() = Attribute.hostImageVersion
+    public val HOST_IMAGE_VERSION: String get() = Attribute.HOST_IMAGE_VERSION
 
-    public val hostIp: String get() = Attribute.hostIp
+    public val HOST_IP: String get() = Attribute.HOST_IP
 
-    public val hostMac: String get() = Attribute.hostMac
+    public val HOST_MAC: String get() = Attribute.HOST_MAC
 
-    public val hostName: String get() = Attribute.hostName
+    public val HOST_NAME: String get() = Attribute.HOST_NAME
 
-    public val hostType: String get() = Attribute.hostType
+    public val HOST_TYPE: String get() = Attribute.HOST_TYPE
 
-    public val k8sClusterName: String get() = Attribute.k8sClusterName
+    public val K8S_CLUSTER_NAME: String get() = Attribute.K8S_CLUSTER_NAME
 
-    public val k8sClusterUid: String get() = Attribute.k8sClusterUid
+    public val K8S_CLUSTER_UID: String get() = Attribute.K8S_CLUSTER_UID
 
-    public val k8sContainerName: String get() = Attribute.k8sContainerName
+    public val K8S_CONTAINER_NAME: String get() = Attribute.K8S_CONTAINER_NAME
 
-    public val k8sContainerRestartCount: String get() = Attribute.k8sContainerRestartCount
+    public val K8S_CONTAINER_RESTART_COUNT: String get() = Attribute.K8S_CONTAINER_RESTART_COUNT
 
-    public val k8sContainerStatusLastTerminatedReason: String get() = Attribute.k8sContainerStatusLastTerminatedReason
+    public val K8S_CONTAINER_STATUS_LAST_TERMINATED_REASON: String get() = Attribute.K8S_CONTAINER_STATUS_LAST_TERMINATED_REASON
 
-    public val k8sCronjobAnnotation: String get() = Attribute.k8sCronjobAnnotation
+    public val K8S_CRONJOB_ANNOTATION: String get() = Attribute.K8S_CRONJOB_ANNOTATION
 
-    public val k8sCronjobLabel: String get() = Attribute.k8sCronjobLabel
+    public val K8S_CRONJOB_LABEL: String get() = Attribute.K8S_CRONJOB_LABEL
 
-    public val k8sCronjobName: String get() = Attribute.k8sCronjobName
+    public val K8S_CRONJOB_NAME: String get() = Attribute.K8S_CRONJOB_NAME
 
-    public val k8sCronjobUid: String get() = Attribute.k8sCronjobUid
+    public val K8S_CRONJOB_UID: String get() = Attribute.K8S_CRONJOB_UID
 
-    public val k8sDaemonsetAnnotation: String get() = Attribute.k8sDaemonsetAnnotation
+    public val K8S_DAEMONSET_ANNOTATION: String get() = Attribute.K8S_DAEMONSET_ANNOTATION
 
-    public val k8sDaemonsetLabel: String get() = Attribute.k8sDaemonsetLabel
+    public val K8S_DAEMONSET_LABEL: String get() = Attribute.K8S_DAEMONSET_LABEL
 
-    public val k8sDaemonsetName: String get() = Attribute.k8sDaemonsetName
+    public val K8S_DAEMONSET_NAME: String get() = Attribute.K8S_DAEMONSET_NAME
 
-    public val k8sDaemonsetUid: String get() = Attribute.k8sDaemonsetUid
+    public val K8S_DAEMONSET_UID: String get() = Attribute.K8S_DAEMONSET_UID
 
-    public val k8sDeploymentAnnotation: String get() = Attribute.k8sDeploymentAnnotation
+    public val K8S_DEPLOYMENT_ANNOTATION: String get() = Attribute.K8S_DEPLOYMENT_ANNOTATION
 
-    public val k8sDeploymentLabel: String get() = Attribute.k8sDeploymentLabel
+    public val K8S_DEPLOYMENT_LABEL: String get() = Attribute.K8S_DEPLOYMENT_LABEL
 
-    public val k8sDeploymentName: String get() = Attribute.k8sDeploymentName
+    public val K8S_DEPLOYMENT_NAME: String get() = Attribute.K8S_DEPLOYMENT_NAME
 
-    public val k8sDeploymentUid: String get() = Attribute.k8sDeploymentUid
+    public val K8S_DEPLOYMENT_UID: String get() = Attribute.K8S_DEPLOYMENT_UID
 
-    public val k8sHpaName: String get() = Attribute.k8sHpaName
+    public val K8S_HPA_NAME: String get() = Attribute.K8S_HPA_NAME
 
-    public val k8sHpaScaletargetrefApiVersion: String get() = Attribute.k8sHpaScaletargetrefApiVersion
+    public val K8S_HPA_SCALETARGETREF_API_VERSION: String get() = Attribute.K8S_HPA_SCALETARGETREF_API_VERSION
 
-    public val k8sHpaScaletargetrefKind: String get() = Attribute.k8sHpaScaletargetrefKind
+    public val K8S_HPA_SCALETARGETREF_KIND: String get() = Attribute.K8S_HPA_SCALETARGETREF_KIND
 
-    public val k8sHpaScaletargetrefName: String get() = Attribute.k8sHpaScaletargetrefName
+    public val K8S_HPA_SCALETARGETREF_NAME: String get() = Attribute.K8S_HPA_SCALETARGETREF_NAME
 
-    public val k8sHpaUid: String get() = Attribute.k8sHpaUid
+    public val K8S_HPA_UID: String get() = Attribute.K8S_HPA_UID
 
-    public val k8sJobAnnotation: String get() = Attribute.k8sJobAnnotation
+    public val K8S_JOB_ANNOTATION: String get() = Attribute.K8S_JOB_ANNOTATION
 
-    public val k8sJobLabel: String get() = Attribute.k8sJobLabel
+    public val K8S_JOB_LABEL: String get() = Attribute.K8S_JOB_LABEL
 
-    public val k8sJobName: String get() = Attribute.k8sJobName
+    public val K8S_JOB_NAME: String get() = Attribute.K8S_JOB_NAME
 
-    public val k8sJobUid: String get() = Attribute.k8sJobUid
+    public val K8S_JOB_UID: String get() = Attribute.K8S_JOB_UID
 
-    public val k8sNamespaceAnnotation: String get() = Attribute.k8sNamespaceAnnotation
+    public val K8S_NAMESPACE_ANNOTATION: String get() = Attribute.K8S_NAMESPACE_ANNOTATION
 
-    public val k8sNamespaceLabel: String get() = Attribute.k8sNamespaceLabel
+    public val K8S_NAMESPACE_LABEL: String get() = Attribute.K8S_NAMESPACE_LABEL
 
-    public val k8sNamespaceName: String get() = Attribute.k8sNamespaceName
+    public val K8S_NAMESPACE_NAME: String get() = Attribute.K8S_NAMESPACE_NAME
 
-    public val k8sNodeAnnotation: String get() = Attribute.k8sNodeAnnotation
+    public val K8S_NODE_ANNOTATION: String get() = Attribute.K8S_NODE_ANNOTATION
 
-    public val k8sNodeLabel: String get() = Attribute.k8sNodeLabel
+    public val K8S_NODE_LABEL: String get() = Attribute.K8S_NODE_LABEL
 
-    public val k8sNodeName: String get() = Attribute.k8sNodeName
+    public val K8S_NODE_NAME: String get() = Attribute.K8S_NODE_NAME
 
-    public val k8sNodeUid: String get() = Attribute.k8sNodeUid
+    public val K8S_NODE_UID: String get() = Attribute.K8S_NODE_UID
 
-    public val k8sPodAnnotation: String get() = Attribute.k8sPodAnnotation
+    public val K8S_POD_ANNOTATION: String get() = Attribute.K8S_POD_ANNOTATION
 
-    public val k8sPodLabel: String get() = Attribute.k8sPodLabel
+    public val K8S_POD_LABEL: String get() = Attribute.K8S_POD_LABEL
 
-    public val k8sPodName: String get() = Attribute.k8sPodName
+    public val K8S_POD_NAME: String get() = Attribute.K8S_POD_NAME
 
-    public val k8sPodUid: String get() = Attribute.k8sPodUid
+    public val K8S_POD_UID: String get() = Attribute.K8S_POD_UID
 
-    public val k8sReplicasetAnnotation: String get() = Attribute.k8sReplicasetAnnotation
+    public val K8S_REPLICASET_ANNOTATION: String get() = Attribute.K8S_REPLICASET_ANNOTATION
 
-    public val k8sReplicasetLabel: String get() = Attribute.k8sReplicasetLabel
+    public val K8S_REPLICASET_LABEL: String get() = Attribute.K8S_REPLICASET_LABEL
 
-    public val k8sReplicasetName: String get() = Attribute.k8sReplicasetName
+    public val K8S_REPLICASET_NAME: String get() = Attribute.K8S_REPLICASET_NAME
 
-    public val k8sReplicasetUid: String get() = Attribute.k8sReplicasetUid
+    public val K8S_REPLICASET_UID: String get() = Attribute.K8S_REPLICASET_UID
 
-    public val k8sReplicationcontrollerName: String get() = Attribute.k8sReplicationcontrollerName
+    public val K8S_REPLICATIONCONTROLLER_NAME: String get() = Attribute.K8S_REPLICATIONCONTROLLER_NAME
 
-    public val k8sReplicationcontrollerUid: String get() = Attribute.k8sReplicationcontrollerUid
+    public val K8S_REPLICATIONCONTROLLER_UID: String get() = Attribute.K8S_REPLICATIONCONTROLLER_UID
 
-    public val k8sResourcequotaName: String get() = Attribute.k8sResourcequotaName
+    public val K8S_RESOURCEQUOTA_NAME: String get() = Attribute.K8S_RESOURCEQUOTA_NAME
 
-    public val k8sResourcequotaUid: String get() = Attribute.k8sResourcequotaUid
+    public val K8S_RESOURCEQUOTA_UID: String get() = Attribute.K8S_RESOURCEQUOTA_UID
 
-    public val k8sStatefulsetAnnotation: String get() = Attribute.k8sStatefulsetAnnotation
+    public val K8S_STATEFULSET_ANNOTATION: String get() = Attribute.K8S_STATEFULSET_ANNOTATION
 
-    public val k8sStatefulsetLabel: String get() = Attribute.k8sStatefulsetLabel
+    public val K8S_STATEFULSET_LABEL: String get() = Attribute.K8S_STATEFULSET_LABEL
 
-    public val k8sStatefulsetName: String get() = Attribute.k8sStatefulsetName
+    public val K8S_STATEFULSET_NAME: String get() = Attribute.K8S_STATEFULSET_NAME
 
-    public val k8sStatefulsetUid: String get() = Attribute.k8sStatefulsetUid
+    public val K8S_STATEFULSET_UID: String get() = Attribute.K8S_STATEFULSET_UID
 
-    public val mainframeLparName: String get() = Attribute.mainframeLparName
+    public val MAINFRAME_LPAR_NAME: String get() = Attribute.MAINFRAME_LPAR_NAME
 
-    public val ociManifestDigest: String get() = Attribute.ociManifestDigest
+    public val OCI_MANIFEST_DIGEST: String get() = Attribute.OCI_MANIFEST_DIGEST
 
-    public val osBuildId: String get() = Attribute.osBuildId
+    public val OS_BUILD_ID: String get() = Attribute.OS_BUILD_ID
 
-    public val osDescription: String get() = Attribute.osDescription
+    public val OS_DESCRIPTION: String get() = Attribute.OS_DESCRIPTION
 
-    public val osName: String get() = Attribute.osName
+    public val OS_NAME: String get() = Attribute.OS_NAME
 
-    public val osType: String get() = Attribute.osType
+    public val OS_TYPE: String get() = Attribute.OS_TYPE
 
-    public val osVersion: String get() = Attribute.osVersion
+    public val OS_VERSION: String get() = Attribute.OS_VERSION
 
-    public val otelScopeName: String get() = Attribute.otelScopeName
+    public val OTEL_SCOPE_NAME: String get() = Attribute.OTEL_SCOPE_NAME
 
-    public val otelScopeVersion: String get() = Attribute.otelScopeVersion
+    public val OTEL_SCOPE_VERSION: String get() = Attribute.OTEL_SCOPE_VERSION
 
-    public val processCommand: String get() = Attribute.processCommand
+    public val PROCESS_COMMAND: String get() = Attribute.PROCESS_COMMAND
 
-    public val processCommandArgs: String get() = Attribute.processCommandArgs
+    public val PROCESS_COMMAND_ARGS: String get() = Attribute.PROCESS_COMMAND_ARGS
 
-    public val processCommandLine: String get() = Attribute.processCommandLine
+    public val PROCESS_COMMAND_LINE: String get() = Attribute.PROCESS_COMMAND_LINE
 
-    public val processExecutableName: String get() = Attribute.processExecutableName
+    public val PROCESS_EXECUTABLE_NAME: String get() = Attribute.PROCESS_EXECUTABLE_NAME
 
-    public val processExecutablePath: String get() = Attribute.processExecutablePath
+    public val PROCESS_EXECUTABLE_PATH: String get() = Attribute.PROCESS_EXECUTABLE_PATH
 
-    public val processLinuxCgroup: String get() = Attribute.processLinuxCgroup
+    public val PROCESS_LINUX_CGROUP: String get() = Attribute.PROCESS_LINUX_CGROUP
 
-    public val processOwner: String get() = Attribute.processOwner
+    public val PROCESS_OWNER: String get() = Attribute.PROCESS_OWNER
 
-    public val processParentPid: String get() = Attribute.processParentPid
+    public val PROCESS_PARENT_PID: String get() = Attribute.PROCESS_PARENT_PID
 
-    public val processPid: String get() = Attribute.processPid
+    public val PROCESS_PID: String get() = Attribute.PROCESS_PID
 
-    public val processRuntimeDescription: String get() = Attribute.processRuntimeDescription
+    public val PROCESS_RUNTIME_DESCRIPTION: String get() = Attribute.PROCESS_RUNTIME_DESCRIPTION
 
-    public val processRuntimeName: String get() = Attribute.processRuntimeName
+    public val PROCESS_RUNTIME_NAME: String get() = Attribute.PROCESS_RUNTIME_NAME
 
-    public val processRuntimeVersion: String get() = Attribute.processRuntimeVersion
+    public val PROCESS_RUNTIME_VERSION: String get() = Attribute.PROCESS_RUNTIME_VERSION
 
-    public val serviceInstanceId: String get() = Attribute.serviceInstanceId
+    public val SERVICE_INSTANCE_ID: String get() = Attribute.SERVICE_INSTANCE_ID
 
-    public val serviceName: String get() = Attribute.serviceName
+    public val SERVICE_NAME: String get() = Attribute.SERVICE_NAME
 
-    public val serviceNamespace: String get() = Attribute.serviceNamespace
+    public val SERVICE_NAMESPACE: String get() = Attribute.SERVICE_NAMESPACE
 
-    public val serviceVersion: String get() = Attribute.serviceVersion
+    public val SERVICE_VERSION: String get() = Attribute.SERVICE_VERSION
 
-    public val telemetryDistroName: String get() = Attribute.telemetryDistroName
+    public val TELEMETRY_DISTRO_NAME: String get() = Attribute.TELEMETRY_DISTRO_NAME
 
-    public val telemetryDistroVersion: String get() = Attribute.telemetryDistroVersion
+    public val TELEMETRY_DISTRO_VERSION: String get() = Attribute.TELEMETRY_DISTRO_VERSION
 
-    public val telemetrySdkLanguage: String get() = Attribute.telemetrySdkLanguage
+    public val TELEMETRY_SDK_LANGUAGE: String get() = Attribute.TELEMETRY_SDK_LANGUAGE
 
-    public val telemetrySdkName: String get() = Attribute.telemetrySdkName
+    public val TELEMETRY_SDK_NAME: String get() = Attribute.TELEMETRY_SDK_NAME
 
-    public val telemetrySdkVersion: String get() = Attribute.telemetrySdkVersion
+    public val TELEMETRY_SDK_VERSION: String get() = Attribute.TELEMETRY_SDK_VERSION
 
-    public val userAgentOriginal: String get() = Attribute.userAgentOriginal
+    public val USER_AGENT_ORIGINAL: String get() = Attribute.USER_AGENT_ORIGINAL
 
-    public val vcsRefHeadName: String get() = Attribute.vcsRefHeadName
+    public val VCS_REF_HEAD_NAME: String get() = Attribute.VCS_REF_HEAD_NAME
 
-    public val vcsRefHeadRevision: String get() = Attribute.vcsRefHeadRevision
+    public val VCS_REF_HEAD_REVISION: String get() = Attribute.VCS_REF_HEAD_REVISION
 
-    public val vcsRefType: String get() = Attribute.vcsRefType
+    public val VCS_REF_TYPE: String get() = Attribute.VCS_REF_TYPE
 
-    public val vcsRepositoryName: String get() = Attribute.vcsRepositoryName
+    public val VCS_REPOSITORY_NAME: String get() = Attribute.VCS_REPOSITORY_NAME
 
-    public val vcsRepositoryUrlFull: String get() = Attribute.vcsRepositoryUrlFull
+    public val VCS_REPOSITORY_URL_FULL: String get() = Attribute.VCS_REPOSITORY_URL_FULL
 
-    public val webengineDescription: String get() = Attribute.webengineDescription
+    public val WEBENGINE_DESCRIPTION: String get() = Attribute.WEBENGINE_DESCRIPTION
 
-    public val webengineName: String get() = Attribute.webengineName
+    public val WEBENGINE_NAME: String get() = Attribute.WEBENGINE_NAME
 
-    public val webengineVersion: String get() = Attribute.webengineVersion
+    public val WEBENGINE_VERSION: String get() = Attribute.WEBENGINE_VERSION
 
-    public val zosSmfId: String get() = Attribute.zosSmfId
+    public val ZOS_SMF_ID: String get() = Attribute.ZOS_SMF_ID
 
-    public val zosSysplexName: String get() = Attribute.zosSysplexName
+    public val ZOS_SYSPLEX_NAME: String get() = Attribute.ZOS_SYSPLEX_NAME
 }

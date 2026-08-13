@@ -8,371 +8,371 @@ package io.github.kotlinmania.opentelemetrysemanticconventions
  * be used in spans.
  */
 public object Trace {
-    public val androidAppState: String get() = Attribute.androidAppState
+    public val ANDROID_APP_STATE: String get() = Attribute.ANDROID_APP_STATE
 
-    public val appScreenCoordinateX: String get() = Attribute.appScreenCoordinateX
+    public val APP_SCREEN_COORDINATE_X: String get() = Attribute.APP_SCREEN_COORDINATE_X
 
-    public val appScreenCoordinateY: String get() = Attribute.appScreenCoordinateY
+    public val APP_SCREEN_COORDINATE_Y: String get() = Attribute.APP_SCREEN_COORDINATE_Y
 
-    public val appWidgetId: String get() = Attribute.appWidgetId
+    public val APP_WIDGET_ID: String get() = Attribute.APP_WIDGET_ID
 
-    public val appWidgetName: String get() = Attribute.appWidgetName
+    public val APP_WIDGET_NAME: String get() = Attribute.APP_WIDGET_NAME
 
-    public val awsBedrockGuardrailId: String get() = Attribute.awsBedrockGuardrailId
+    public val AWS_BEDROCK_GUARDRAIL_ID: String get() = Attribute.AWS_BEDROCK_GUARDRAIL_ID
 
-    public val awsBedrockKnowledgeBaseId: String get() = Attribute.awsBedrockKnowledgeBaseId
+    public val AWS_BEDROCK_KNOWLEDGE_BASE_ID: String get() = Attribute.AWS_BEDROCK_KNOWLEDGE_BASE_ID
 
-    public val awsDynamodbAttributeDefinitions: String get() = Attribute.awsDynamodbAttributeDefinitions
+    public val AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS: String get() = Attribute.AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS
 
-    public val awsDynamodbAttributesToGet: String get() = Attribute.awsDynamodbAttributesToGet
+    public val AWS_DYNAMODB_ATTRIBUTES_TO_GET: String get() = Attribute.AWS_DYNAMODB_ATTRIBUTES_TO_GET
 
-    public val awsDynamodbConsistentRead: String get() = Attribute.awsDynamodbConsistentRead
+    public val AWS_DYNAMODB_CONSISTENT_READ: String get() = Attribute.AWS_DYNAMODB_CONSISTENT_READ
 
-    public val awsDynamodbConsumedCapacity: String get() = Attribute.awsDynamodbConsumedCapacity
+    public val AWS_DYNAMODB_CONSUMED_CAPACITY: String get() = Attribute.AWS_DYNAMODB_CONSUMED_CAPACITY
 
-    public val awsDynamodbCount: String get() = Attribute.awsDynamodbCount
+    public val AWS_DYNAMODB_COUNT: String get() = Attribute.AWS_DYNAMODB_COUNT
 
-    public val awsDynamodbExclusiveStartTable: String get() = Attribute.awsDynamodbExclusiveStartTable
+    public val AWS_DYNAMODB_EXCLUSIVE_START_TABLE: String get() = Attribute.AWS_DYNAMODB_EXCLUSIVE_START_TABLE
 
-    public val awsDynamodbGlobalSecondaryIndexUpdates: String get() = Attribute.awsDynamodbGlobalSecondaryIndexUpdates
+    public val AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES: String get() = Attribute.AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES
 
-    public val awsDynamodbGlobalSecondaryIndexes: String get() = Attribute.awsDynamodbGlobalSecondaryIndexes
+    public val AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES: String get() = Attribute.AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES
 
-    public val awsDynamodbIndexName: String get() = Attribute.awsDynamodbIndexName
+    public val AWS_DYNAMODB_INDEX_NAME: String get() = Attribute.AWS_DYNAMODB_INDEX_NAME
 
-    public val awsDynamodbItemCollectionMetrics: String get() = Attribute.awsDynamodbItemCollectionMetrics
+    public val AWS_DYNAMODB_ITEM_COLLECTION_METRICS: String get() = Attribute.AWS_DYNAMODB_ITEM_COLLECTION_METRICS
 
-    public val awsDynamodbLimit: String get() = Attribute.awsDynamodbLimit
+    public val AWS_DYNAMODB_LIMIT: String get() = Attribute.AWS_DYNAMODB_LIMIT
 
-    public val awsDynamodbLocalSecondaryIndexes: String get() = Attribute.awsDynamodbLocalSecondaryIndexes
+    public val AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES: String get() = Attribute.AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES
 
-    public val awsDynamodbProjection: String get() = Attribute.awsDynamodbProjection
+    public val AWS_DYNAMODB_PROJECTION: String get() = Attribute.AWS_DYNAMODB_PROJECTION
 
-    public val awsDynamodbProvisionedReadCapacity: String get() = Attribute.awsDynamodbProvisionedReadCapacity
+    public val AWS_DYNAMODB_PROVISIONED_READ_CAPACITY: String get() = Attribute.AWS_DYNAMODB_PROVISIONED_READ_CAPACITY
 
-    public val awsDynamodbProvisionedWriteCapacity: String get() = Attribute.awsDynamodbProvisionedWriteCapacity
+    public val AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY: String get() = Attribute.AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY
 
-    public val awsDynamodbScanForward: String get() = Attribute.awsDynamodbScanForward
+    public val AWS_DYNAMODB_SCAN_FORWARD: String get() = Attribute.AWS_DYNAMODB_SCAN_FORWARD
 
-    public val awsDynamodbScannedCount: String get() = Attribute.awsDynamodbScannedCount
+    public val AWS_DYNAMODB_SCANNED_COUNT: String get() = Attribute.AWS_DYNAMODB_SCANNED_COUNT
 
-    public val awsDynamodbSegment: String get() = Attribute.awsDynamodbSegment
+    public val AWS_DYNAMODB_SEGMENT: String get() = Attribute.AWS_DYNAMODB_SEGMENT
 
-    public val awsDynamodbSelect: String get() = Attribute.awsDynamodbSelect
+    public val AWS_DYNAMODB_SELECT: String get() = Attribute.AWS_DYNAMODB_SELECT
 
-    public val awsDynamodbTableCount: String get() = Attribute.awsDynamodbTableCount
+    public val AWS_DYNAMODB_TABLE_COUNT: String get() = Attribute.AWS_DYNAMODB_TABLE_COUNT
 
-    public val awsDynamodbTableNames: String get() = Attribute.awsDynamodbTableNames
+    public val AWS_DYNAMODB_TABLE_NAMES: String get() = Attribute.AWS_DYNAMODB_TABLE_NAMES
 
-    public val awsDynamodbTotalSegments: String get() = Attribute.awsDynamodbTotalSegments
+    public val AWS_DYNAMODB_TOTAL_SEGMENTS: String get() = Attribute.AWS_DYNAMODB_TOTAL_SEGMENTS
 
-    public val awsExtendedRequestId: String get() = Attribute.awsExtendedRequestId
+    public val AWS_EXTENDED_REQUEST_ID: String get() = Attribute.AWS_EXTENDED_REQUEST_ID
 
-    public val awsLambdaInvokedArn: String get() = Attribute.awsLambdaInvokedArn
+    public val AWS_LAMBDA_INVOKED_ARN: String get() = Attribute.AWS_LAMBDA_INVOKED_ARN
 
-    public val awsLambdaResourceMappingId: String get() = Attribute.awsLambdaResourceMappingId
+    public val AWS_LAMBDA_RESOURCE_MAPPING_ID: String get() = Attribute.AWS_LAMBDA_RESOURCE_MAPPING_ID
 
-    public val awsRequestId: String get() = Attribute.awsRequestId
+    public val AWS_REQUEST_ID: String get() = Attribute.AWS_REQUEST_ID
 
-    public val awsS3Bucket: String get() = Attribute.awsS3Bucket
+    public val AWS_S3_BUCKET: String get() = Attribute.AWS_S3_BUCKET
 
-    public val awsS3CopySource: String get() = Attribute.awsS3CopySource
+    public val AWS_S3_COPY_SOURCE: String get() = Attribute.AWS_S3_COPY_SOURCE
 
-    public val awsS3Delete: String get() = Attribute.awsS3Delete
+    public val AWS_S3_DELETE: String get() = Attribute.AWS_S3_DELETE
 
-    public val awsS3Key: String get() = Attribute.awsS3Key
+    public val AWS_S3_KEY: String get() = Attribute.AWS_S3_KEY
 
-    public val awsS3PartNumber: String get() = Attribute.awsS3PartNumber
+    public val AWS_S3_PART_NUMBER: String get() = Attribute.AWS_S3_PART_NUMBER
 
-    public val awsS3UploadId: String get() = Attribute.awsS3UploadId
+    public val AWS_S3_UPLOAD_ID: String get() = Attribute.AWS_S3_UPLOAD_ID
 
     @Suppress("DEPRECATION")
-    public val azServiceRequestId: String get() = Attribute.azServiceRequestId
+    public val AZ_SERVICE_REQUEST_ID: String get() = Attribute.AZ_SERVICE_REQUEST_ID
 
-    public val azureClientId: String get() = Attribute.azureClientId
+    public val AZURE_CLIENT_ID: String get() = Attribute.AZURE_CLIENT_ID
 
-    public val azureCosmosdbConnectionMode: String get() = Attribute.azureCosmosdbConnectionMode
+    public val AZURE_COSMOSDB_CONNECTION_MODE: String get() = Attribute.AZURE_COSMOSDB_CONNECTION_MODE
 
-    public val azureCosmosdbConsistencyLevel: String get() = Attribute.azureCosmosdbConsistencyLevel
+    public val AZURE_COSMOSDB_CONSISTENCY_LEVEL: String get() = Attribute.AZURE_COSMOSDB_CONSISTENCY_LEVEL
 
-    public val azureCosmosdbOperationContactedRegions: String get() = Attribute.azureCosmosdbOperationContactedRegions
+    public val AZURE_COSMOSDB_OPERATION_CONTACTED_REGIONS: String get() = Attribute.AZURE_COSMOSDB_OPERATION_CONTACTED_REGIONS
 
-    public val azureCosmosdbOperationRequestCharge: String get() = Attribute.azureCosmosdbOperationRequestCharge
+    public val AZURE_COSMOSDB_OPERATION_REQUEST_CHARGE: String get() = Attribute.AZURE_COSMOSDB_OPERATION_REQUEST_CHARGE
 
-    public val azureCosmosdbRequestBodySize: String get() = Attribute.azureCosmosdbRequestBodySize
+    public val AZURE_COSMOSDB_REQUEST_BODY_SIZE: String get() = Attribute.AZURE_COSMOSDB_REQUEST_BODY_SIZE
 
-    public val azureCosmosdbResponseSubStatusCode: String get() = Attribute.azureCosmosdbResponseSubStatusCode
+    public val AZURE_COSMOSDB_RESPONSE_SUB_STATUS_CODE: String get() = Attribute.AZURE_COSMOSDB_RESPONSE_SUB_STATUS_CODE
 
-    public val azureResourceProviderNamespace: String get() = Attribute.azureResourceProviderNamespace
+    public val AZURE_RESOURCE_PROVIDER_NAMESPACE: String get() = Attribute.AZURE_RESOURCE_PROVIDER_NAMESPACE
 
-    public val azureServiceRequestId: String get() = Attribute.azureServiceRequestId
+    public val AZURE_SERVICE_REQUEST_ID: String get() = Attribute.AZURE_SERVICE_REQUEST_ID
 
-    public val cassandraConsistencyLevel: String get() = Attribute.cassandraConsistencyLevel
+    public val CASSANDRA_CONSISTENCY_LEVEL: String get() = Attribute.CASSANDRA_CONSISTENCY_LEVEL
 
-    public val cassandraCoordinatorDc: String get() = Attribute.cassandraCoordinatorDc
+    public val CASSANDRA_COORDINATOR_DC: String get() = Attribute.CASSANDRA_COORDINATOR_DC
 
-    public val cassandraCoordinatorId: String get() = Attribute.cassandraCoordinatorId
+    public val CASSANDRA_COORDINATOR_ID: String get() = Attribute.CASSANDRA_COORDINATOR_ID
 
-    public val cassandraPageSize: String get() = Attribute.cassandraPageSize
+    public val CASSANDRA_PAGE_SIZE: String get() = Attribute.CASSANDRA_PAGE_SIZE
 
-    public val cassandraQueryIdempotent: String get() = Attribute.cassandraQueryIdempotent
+    public val CASSANDRA_QUERY_IDEMPOTENT: String get() = Attribute.CASSANDRA_QUERY_IDEMPOTENT
 
-    public val cassandraSpeculativeExecutionCount: String get() = Attribute.cassandraSpeculativeExecutionCount
+    public val CASSANDRA_SPECULATIVE_EXECUTION_COUNT: String get() = Attribute.CASSANDRA_SPECULATIVE_EXECUTION_COUNT
 
-    public val cicdPipelineActionName: String get() = Attribute.cicdPipelineActionName
+    public val CICD_PIPELINE_ACTION_NAME: String get() = Attribute.CICD_PIPELINE_ACTION_NAME
 
-    public val cicdPipelineResult: String get() = Attribute.cicdPipelineResult
+    public val CICD_PIPELINE_RESULT: String get() = Attribute.CICD_PIPELINE_RESULT
 
-    public val cicdPipelineTaskName: String get() = Attribute.cicdPipelineTaskName
+    public val CICD_PIPELINE_TASK_NAME: String get() = Attribute.CICD_PIPELINE_TASK_NAME
 
-    public val cicdPipelineTaskRunId: String get() = Attribute.cicdPipelineTaskRunId
+    public val CICD_PIPELINE_TASK_RUN_ID: String get() = Attribute.CICD_PIPELINE_TASK_RUN_ID
 
-    public val cicdPipelineTaskRunResult: String get() = Attribute.cicdPipelineTaskRunResult
+    public val CICD_PIPELINE_TASK_RUN_RESULT: String get() = Attribute.CICD_PIPELINE_TASK_RUN_RESULT
 
-    public val cicdPipelineTaskRunUrlFull: String get() = Attribute.cicdPipelineTaskRunUrlFull
+    public val CICD_PIPELINE_TASK_RUN_URL_FULL: String get() = Attribute.CICD_PIPELINE_TASK_RUN_URL_FULL
 
-    public val clientAddress: String get() = Attribute.clientAddress
+    public val CLIENT_ADDRESS: String get() = Attribute.CLIENT_ADDRESS
 
-    public val clientPort: String get() = Attribute.clientPort
+    public val CLIENT_PORT: String get() = Attribute.CLIENT_PORT
 
-    public val cloudRegion: String get() = Attribute.cloudRegion
+    public val CLOUD_REGION: String get() = Attribute.CLOUD_REGION
 
-    public val cloudResourceId: String get() = Attribute.cloudResourceId
+    public val CLOUD_RESOURCE_ID: String get() = Attribute.CLOUD_RESOURCE_ID
 
-    public val dbCollectionName: String get() = Attribute.dbCollectionName
+    public val DB_COLLECTION_NAME: String get() = Attribute.DB_COLLECTION_NAME
 
-    public val dbNamespace: String get() = Attribute.dbNamespace
+    public val DB_NAMESPACE: String get() = Attribute.DB_NAMESPACE
 
-    public val dbOperationBatchSize: String get() = Attribute.dbOperationBatchSize
+    public val DB_OPERATION_BATCH_SIZE: String get() = Attribute.DB_OPERATION_BATCH_SIZE
 
-    public val dbOperationName: String get() = Attribute.dbOperationName
+    public val DB_OPERATION_NAME: String get() = Attribute.DB_OPERATION_NAME
 
-    public val dbOperationParameter: String get() = Attribute.dbOperationParameter
+    public val DB_OPERATION_PARAMETER: String get() = Attribute.DB_OPERATION_PARAMETER
 
-    public val dbQueryParameter: String get() = Attribute.dbQueryParameter
+    public val DB_QUERY_PARAMETER: String get() = Attribute.DB_QUERY_PARAMETER
 
-    public val dbQuerySummary: String get() = Attribute.dbQuerySummary
+    public val DB_QUERY_SUMMARY: String get() = Attribute.DB_QUERY_SUMMARY
 
-    public val dbQueryText: String get() = Attribute.dbQueryText
+    public val DB_QUERY_TEXT: String get() = Attribute.DB_QUERY_TEXT
 
-    public val dbResponseReturnedRows: String get() = Attribute.dbResponseReturnedRows
+    public val DB_RESPONSE_RETURNED_ROWS: String get() = Attribute.DB_RESPONSE_RETURNED_ROWS
 
-    public val dbResponseStatusCode: String get() = Attribute.dbResponseStatusCode
+    public val DB_RESPONSE_STATUS_CODE: String get() = Attribute.DB_RESPONSE_STATUS_CODE
 
-    public val dbStoredProcedureName: String get() = Attribute.dbStoredProcedureName
+    public val DB_STORED_PROCEDURE_NAME: String get() = Attribute.DB_STORED_PROCEDURE_NAME
 
-    public val dbSystemName: String get() = Attribute.dbSystemName
+    public val DB_SYSTEM_NAME: String get() = Attribute.DB_SYSTEM_NAME
 
-    public val dnsAnswers: String get() = Attribute.dnsAnswers
+    public val DNS_ANSWERS: String get() = Attribute.DNS_ANSWERS
 
-    public val dnsQuestionName: String get() = Attribute.dnsQuestionName
+    public val DNS_QUESTION_NAME: String get() = Attribute.DNS_QUESTION_NAME
 
-    public val elasticsearchNodeName: String get() = Attribute.elasticsearchNodeName
+    public val ELASTICSEARCH_NODE_NAME: String get() = Attribute.ELASTICSEARCH_NODE_NAME
 
-    public val errorMessage: String get() = Attribute.errorMessage
+    public val ERROR_MESSAGE: String get() = Attribute.ERROR_MESSAGE
 
-    public val errorType: String get() = Attribute.errorType
+    public val ERROR_TYPE: String get() = Attribute.ERROR_TYPE
 
     @Suppress("DEPRECATION")
-    public val exceptionEscaped: String get() = Attribute.exceptionEscaped
+    public val EXCEPTION_ESCAPED: String get() = Attribute.EXCEPTION_ESCAPED
 
-    public val exceptionMessage: String get() = Attribute.exceptionMessage
+    public val EXCEPTION_MESSAGE: String get() = Attribute.EXCEPTION_MESSAGE
 
-    public val exceptionStacktrace: String get() = Attribute.exceptionStacktrace
+    public val EXCEPTION_STACKTRACE: String get() = Attribute.EXCEPTION_STACKTRACE
 
-    public val exceptionType: String get() = Attribute.exceptionType
+    public val EXCEPTION_TYPE: String get() = Attribute.EXCEPTION_TYPE
 
-    public val faasColdstart: String get() = Attribute.faasColdstart
+    public val FAAS_COLDSTART: String get() = Attribute.FAAS_COLDSTART
 
-    public val faasCron: String get() = Attribute.faasCron
+    public val FAAS_CRON: String get() = Attribute.FAAS_CRON
 
-    public val faasDocumentCollection: String get() = Attribute.faasDocumentCollection
+    public val FAAS_DOCUMENT_COLLECTION: String get() = Attribute.FAAS_DOCUMENT_COLLECTION
 
-    public val faasDocumentName: String get() = Attribute.faasDocumentName
+    public val FAAS_DOCUMENT_NAME: String get() = Attribute.FAAS_DOCUMENT_NAME
 
-    public val faasDocumentOperation: String get() = Attribute.faasDocumentOperation
+    public val FAAS_DOCUMENT_OPERATION: String get() = Attribute.FAAS_DOCUMENT_OPERATION
 
-    public val faasDocumentTime: String get() = Attribute.faasDocumentTime
+    public val FAAS_DOCUMENT_TIME: String get() = Attribute.FAAS_DOCUMENT_TIME
 
-    public val faasInvokedName: String get() = Attribute.faasInvokedName
+    public val FAAS_INVOKED_NAME: String get() = Attribute.FAAS_INVOKED_NAME
 
-    public val faasInvokedProvider: String get() = Attribute.faasInvokedProvider
+    public val FAAS_INVOKED_PROVIDER: String get() = Attribute.FAAS_INVOKED_PROVIDER
 
-    public val faasInvokedRegion: String get() = Attribute.faasInvokedRegion
+    public val FAAS_INVOKED_REGION: String get() = Attribute.FAAS_INVOKED_REGION
 
-    public val faasTime: String get() = Attribute.faasTime
+    public val FAAS_TIME: String get() = Attribute.FAAS_TIME
 
-    public val faasTrigger: String get() = Attribute.faasTrigger
+    public val FAAS_TRIGGER: String get() = Attribute.FAAS_TRIGGER
 
-    public val featureFlagContextId: String get() = Attribute.featureFlagContextId
+    public val FEATURE_FLAG_CONTEXT_ID: String get() = Attribute.FEATURE_FLAG_CONTEXT_ID
 
-    public val featureFlagKey: String get() = Attribute.featureFlagKey
+    public val FEATURE_FLAG_KEY: String get() = Attribute.FEATURE_FLAG_KEY
 
-    public val featureFlagProviderName: String get() = Attribute.featureFlagProviderName
+    public val FEATURE_FLAG_PROVIDER_NAME: String get() = Attribute.FEATURE_FLAG_PROVIDER_NAME
 
-    public val featureFlagResultReason: String get() = Attribute.featureFlagResultReason
+    public val FEATURE_FLAG_RESULT_REASON: String get() = Attribute.FEATURE_FLAG_RESULT_REASON
 
-    public val featureFlagResultValue: String get() = Attribute.featureFlagResultValue
+    public val FEATURE_FLAG_RESULT_VALUE: String get() = Attribute.FEATURE_FLAG_RESULT_VALUE
 
-    public val featureFlagResultVariant: String get() = Attribute.featureFlagResultVariant
+    public val FEATURE_FLAG_RESULT_VARIANT: String get() = Attribute.FEATURE_FLAG_RESULT_VARIANT
 
-    public val featureFlagSetId: String get() = Attribute.featureFlagSetId
+    public val FEATURE_FLAG_SET_ID: String get() = Attribute.FEATURE_FLAG_SET_ID
 
-    public val featureFlagVersion: String get() = Attribute.featureFlagVersion
+    public val FEATURE_FLAG_VERSION: String get() = Attribute.FEATURE_FLAG_VERSION
 
-    public val genAiAgentDescription: String get() = Attribute.genAiAgentDescription
+    public val GEN_AI_AGENT_DESCRIPTION: String get() = Attribute.GEN_AI_AGENT_DESCRIPTION
 
-    public val genAiAgentId: String get() = Attribute.genAiAgentId
+    public val GEN_AI_AGENT_ID: String get() = Attribute.GEN_AI_AGENT_ID
 
-    public val genAiAgentName: String get() = Attribute.genAiAgentName
+    public val GEN_AI_AGENT_NAME: String get() = Attribute.GEN_AI_AGENT_NAME
 
-    public val genAiConversationId: String get() = Attribute.genAiConversationId
+    public val GEN_AI_CONVERSATION_ID: String get() = Attribute.GEN_AI_CONVERSATION_ID
 
-    public val genAiDataSourceId: String get() = Attribute.genAiDataSourceId
+    public val GEN_AI_DATA_SOURCE_ID: String get() = Attribute.GEN_AI_DATA_SOURCE_ID
 
-    public val genAiOpenaiRequestServiceTier: String get() = Attribute.genAiOpenaiRequestServiceTier
+    public val GEN_AI_OPENAI_REQUEST_SERVICE_TIER: String get() = Attribute.GEN_AI_OPENAI_REQUEST_SERVICE_TIER
 
-    public val genAiOpenaiResponseServiceTier: String get() = Attribute.genAiOpenaiResponseServiceTier
+    public val GEN_AI_OPENAI_RESPONSE_SERVICE_TIER: String get() = Attribute.GEN_AI_OPENAI_RESPONSE_SERVICE_TIER
 
-    public val genAiOpenaiResponseSystemFingerprint: String get() = Attribute.genAiOpenaiResponseSystemFingerprint
+    public val GEN_AI_OPENAI_RESPONSE_SYSTEM_FINGERPRINT: String get() = Attribute.GEN_AI_OPENAI_RESPONSE_SYSTEM_FINGERPRINT
 
-    public val genAiOperationName: String get() = Attribute.genAiOperationName
+    public val GEN_AI_OPERATION_NAME: String get() = Attribute.GEN_AI_OPERATION_NAME
 
-    public val genAiOutputType: String get() = Attribute.genAiOutputType
+    public val GEN_AI_OUTPUT_TYPE: String get() = Attribute.GEN_AI_OUTPUT_TYPE
 
-    public val genAiRequestChoiceCount: String get() = Attribute.genAiRequestChoiceCount
+    public val GEN_AI_REQUEST_CHOICE_COUNT: String get() = Attribute.GEN_AI_REQUEST_CHOICE_COUNT
 
-    public val genAiRequestEncodingFormats: String get() = Attribute.genAiRequestEncodingFormats
+    public val GEN_AI_REQUEST_ENCODING_FORMATS: String get() = Attribute.GEN_AI_REQUEST_ENCODING_FORMATS
 
-    public val genAiRequestFrequencyPenalty: String get() = Attribute.genAiRequestFrequencyPenalty
+    public val GEN_AI_REQUEST_FREQUENCY_PENALTY: String get() = Attribute.GEN_AI_REQUEST_FREQUENCY_PENALTY
 
-    public val genAiRequestMaxTokens: String get() = Attribute.genAiRequestMaxTokens
+    public val GEN_AI_REQUEST_MAX_TOKENS: String get() = Attribute.GEN_AI_REQUEST_MAX_TOKENS
 
-    public val genAiRequestModel: String get() = Attribute.genAiRequestModel
+    public val GEN_AI_REQUEST_MODEL: String get() = Attribute.GEN_AI_REQUEST_MODEL
 
-    public val genAiRequestPresencePenalty: String get() = Attribute.genAiRequestPresencePenalty
+    public val GEN_AI_REQUEST_PRESENCE_PENALTY: String get() = Attribute.GEN_AI_REQUEST_PRESENCE_PENALTY
 
-    public val genAiRequestSeed: String get() = Attribute.genAiRequestSeed
+    public val GEN_AI_REQUEST_SEED: String get() = Attribute.GEN_AI_REQUEST_SEED
 
-    public val genAiRequestStopSequences: String get() = Attribute.genAiRequestStopSequences
+    public val GEN_AI_REQUEST_STOP_SEQUENCES: String get() = Attribute.GEN_AI_REQUEST_STOP_SEQUENCES
 
-    public val genAiRequestTemperature: String get() = Attribute.genAiRequestTemperature
+    public val GEN_AI_REQUEST_TEMPERATURE: String get() = Attribute.GEN_AI_REQUEST_TEMPERATURE
 
-    public val genAiRequestTopK: String get() = Attribute.genAiRequestTopK
+    public val GEN_AI_REQUEST_TOP_K: String get() = Attribute.GEN_AI_REQUEST_TOP_K
 
-    public val genAiRequestTopP: String get() = Attribute.genAiRequestTopP
+    public val GEN_AI_REQUEST_TOP_P: String get() = Attribute.GEN_AI_REQUEST_TOP_P
 
-    public val genAiResponseFinishReasons: String get() = Attribute.genAiResponseFinishReasons
+    public val GEN_AI_RESPONSE_FINISH_REASONS: String get() = Attribute.GEN_AI_RESPONSE_FINISH_REASONS
 
-    public val genAiResponseId: String get() = Attribute.genAiResponseId
+    public val GEN_AI_RESPONSE_ID: String get() = Attribute.GEN_AI_RESPONSE_ID
 
-    public val genAiResponseModel: String get() = Attribute.genAiResponseModel
+    public val GEN_AI_RESPONSE_MODEL: String get() = Attribute.GEN_AI_RESPONSE_MODEL
 
-    public val genAiSystem: String get() = Attribute.genAiSystem
+    public val GEN_AI_SYSTEM: String get() = Attribute.GEN_AI_SYSTEM
 
-    public val genAiToolCallId: String get() = Attribute.genAiToolCallId
+    public val GEN_AI_TOOL_CALL_ID: String get() = Attribute.GEN_AI_TOOL_CALL_ID
 
-    public val genAiToolDescription: String get() = Attribute.genAiToolDescription
+    public val GEN_AI_TOOL_DESCRIPTION: String get() = Attribute.GEN_AI_TOOL_DESCRIPTION
 
-    public val genAiToolName: String get() = Attribute.genAiToolName
+    public val GEN_AI_TOOL_NAME: String get() = Attribute.GEN_AI_TOOL_NAME
 
-    public val genAiUsageInputTokens: String get() = Attribute.genAiUsageInputTokens
+    public val GEN_AI_USAGE_INPUT_TOKENS: String get() = Attribute.GEN_AI_USAGE_INPUT_TOKENS
 
-    public val genAiUsageOutputTokens: String get() = Attribute.genAiUsageOutputTokens
+    public val GEN_AI_USAGE_OUTPUT_TOKENS: String get() = Attribute.GEN_AI_USAGE_OUTPUT_TOKENS
 
-    public val graphqlDocument: String get() = Attribute.graphqlDocument
+    public val GRAPHQL_DOCUMENT: String get() = Attribute.GRAPHQL_DOCUMENT
 
-    public val graphqlOperationName: String get() = Attribute.graphqlOperationName
+    public val GRAPHQL_OPERATION_NAME: String get() = Attribute.GRAPHQL_OPERATION_NAME
 
-    public val graphqlOperationType: String get() = Attribute.graphqlOperationType
+    public val GRAPHQL_OPERATION_TYPE: String get() = Attribute.GRAPHQL_OPERATION_TYPE
 
-    public val httpRequestBodySize: String get() = Attribute.httpRequestBodySize
+    public val HTTP_REQUEST_BODY_SIZE: String get() = Attribute.HTTP_REQUEST_BODY_SIZE
 
-    public val httpRequestHeader: String get() = Attribute.httpRequestHeader
+    public val HTTP_REQUEST_HEADER: String get() = Attribute.HTTP_REQUEST_HEADER
 
-    public val httpRequestMethod: String get() = Attribute.httpRequestMethod
+    public val HTTP_REQUEST_METHOD: String get() = Attribute.HTTP_REQUEST_METHOD
 
-    public val httpRequestMethodOriginal: String get() = Attribute.httpRequestMethodOriginal
+    public val HTTP_REQUEST_METHOD_ORIGINAL: String get() = Attribute.HTTP_REQUEST_METHOD_ORIGINAL
 
-    public val httpRequestResendCount: String get() = Attribute.httpRequestResendCount
+    public val HTTP_REQUEST_RESEND_COUNT: String get() = Attribute.HTTP_REQUEST_RESEND_COUNT
 
-    public val httpRequestSize: String get() = Attribute.httpRequestSize
+    public val HTTP_REQUEST_SIZE: String get() = Attribute.HTTP_REQUEST_SIZE
 
-    public val httpResponseBodySize: String get() = Attribute.httpResponseBodySize
+    public val HTTP_RESPONSE_BODY_SIZE: String get() = Attribute.HTTP_RESPONSE_BODY_SIZE
 
-    public val httpResponseHeader: String get() = Attribute.httpResponseHeader
+    public val HTTP_RESPONSE_HEADER: String get() = Attribute.HTTP_RESPONSE_HEADER
 
-    public val httpResponseSize: String get() = Attribute.httpResponseSize
+    public val HTTP_RESPONSE_SIZE: String get() = Attribute.HTTP_RESPONSE_SIZE
 
-    public val httpResponseStatusCode: String get() = Attribute.httpResponseStatusCode
+    public val HTTP_RESPONSE_STATUS_CODE: String get() = Attribute.HTTP_RESPONSE_STATUS_CODE
 
-    public val httpRoute: String get() = Attribute.httpRoute
+    public val HTTP_ROUTE: String get() = Attribute.HTTP_ROUTE
 
-    public val iosAppState: String get() = Attribute.iosAppState
+    public val IOS_APP_STATE: String get() = Attribute.IOS_APP_STATE
 
-    public val networkLocalAddress: String get() = Attribute.networkLocalAddress
+    public val NETWORK_LOCAL_ADDRESS: String get() = Attribute.NETWORK_LOCAL_ADDRESS
 
-    public val networkLocalPort: String get() = Attribute.networkLocalPort
+    public val NETWORK_LOCAL_PORT: String get() = Attribute.NETWORK_LOCAL_PORT
 
-    public val networkPeerAddress: String get() = Attribute.networkPeerAddress
+    public val NETWORK_PEER_ADDRESS: String get() = Attribute.NETWORK_PEER_ADDRESS
 
-    public val networkPeerPort: String get() = Attribute.networkPeerPort
+    public val NETWORK_PEER_PORT: String get() = Attribute.NETWORK_PEER_PORT
 
-    public val networkProtocolName: String get() = Attribute.networkProtocolName
+    public val NETWORK_PROTOCOL_NAME: String get() = Attribute.NETWORK_PROTOCOL_NAME
 
-    public val networkProtocolVersion: String get() = Attribute.networkProtocolVersion
+    public val NETWORK_PROTOCOL_VERSION: String get() = Attribute.NETWORK_PROTOCOL_VERSION
 
-    public val networkTransport: String get() = Attribute.networkTransport
+    public val NETWORK_TRANSPORT: String get() = Attribute.NETWORK_TRANSPORT
 
-    public val networkType: String get() = Attribute.networkType
+    public val NETWORK_TYPE: String get() = Attribute.NETWORK_TYPE
 
-    public val processCommandArgs: String get() = Attribute.processCommandArgs
+    public val PROCESS_COMMAND_ARGS: String get() = Attribute.PROCESS_COMMAND_ARGS
 
-    public val processExecutableName: String get() = Attribute.processExecutableName
+    public val PROCESS_EXECUTABLE_NAME: String get() = Attribute.PROCESS_EXECUTABLE_NAME
 
-    public val processExecutablePath: String get() = Attribute.processExecutablePath
+    public val PROCESS_EXECUTABLE_PATH: String get() = Attribute.PROCESS_EXECUTABLE_PATH
 
-    public val processExitCode: String get() = Attribute.processExitCode
+    public val PROCESS_EXIT_CODE: String get() = Attribute.PROCESS_EXIT_CODE
 
-    public val processPid: String get() = Attribute.processPid
+    public val PROCESS_PID: String get() = Attribute.PROCESS_PID
 
-    public val rpcMessageCompressedSize: String get() = Attribute.rpcMessageCompressedSize
+    public val RPC_MESSAGE_COMPRESSED_SIZE: String get() = Attribute.RPC_MESSAGE_COMPRESSED_SIZE
 
-    public val rpcMessageId: String get() = Attribute.rpcMessageId
+    public val RPC_MESSAGE_ID: String get() = Attribute.RPC_MESSAGE_ID
 
-    public val rpcMessageType: String get() = Attribute.rpcMessageType
+    public val RPC_MESSAGE_TYPE: String get() = Attribute.RPC_MESSAGE_TYPE
 
-    public val rpcMessageUncompressedSize: String get() = Attribute.rpcMessageUncompressedSize
+    public val RPC_MESSAGE_UNCOMPRESSED_SIZE: String get() = Attribute.RPC_MESSAGE_UNCOMPRESSED_SIZE
 
-    public val rpcMethod: String get() = Attribute.rpcMethod
+    public val RPC_METHOD: String get() = Attribute.RPC_METHOD
 
-    public val rpcService: String get() = Attribute.rpcService
+    public val RPC_SERVICE: String get() = Attribute.RPC_SERVICE
 
-    public val rpcSystem: String get() = Attribute.rpcSystem
+    public val RPC_SYSTEM: String get() = Attribute.RPC_SYSTEM
 
-    public val serverAddress: String get() = Attribute.serverAddress
+    public val SERVER_ADDRESS: String get() = Attribute.SERVER_ADDRESS
 
-    public val serverPort: String get() = Attribute.serverPort
+    public val SERVER_PORT: String get() = Attribute.SERVER_PORT
 
-    public val sessionId: String get() = Attribute.sessionId
+    public val SESSION_ID: String get() = Attribute.SESSION_ID
 
-    public val sessionPreviousId: String get() = Attribute.sessionPreviousId
+    public val SESSION_PREVIOUS_ID: String get() = Attribute.SESSION_PREVIOUS_ID
 
-    public val tlsProtocolName: String get() = Attribute.tlsProtocolName
+    public val TLS_PROTOCOL_NAME: String get() = Attribute.TLS_PROTOCOL_NAME
 
-    public val tlsProtocolVersion: String get() = Attribute.tlsProtocolVersion
+    public val TLS_PROTOCOL_VERSION: String get() = Attribute.TLS_PROTOCOL_VERSION
 
-    public val urlFull: String get() = Attribute.urlFull
+    public val URL_FULL: String get() = Attribute.URL_FULL
 
-    public val urlPath: String get() = Attribute.urlPath
+    public val URL_PATH: String get() = Attribute.URL_PATH
 
-    public val urlQuery: String get() = Attribute.urlQuery
+    public val URL_QUERY: String get() = Attribute.URL_QUERY
 
-    public val urlScheme: String get() = Attribute.urlScheme
+    public val URL_SCHEME: String get() = Attribute.URL_SCHEME
 
-    public val urlTemplate: String get() = Attribute.urlTemplate
+    public val URL_TEMPLATE: String get() = Attribute.URL_TEMPLATE
 
-    public val userAgentOriginal: String get() = Attribute.userAgentOriginal
+    public val USER_AGENT_ORIGINAL: String get() = Attribute.USER_AGENT_ORIGINAL
 
-    public val userAgentSyntheticType: String get() = Attribute.userAgentSyntheticType
+    public val USER_AGENT_SYNTHETIC_TYPE: String get() = Attribute.USER_AGENT_SYNTHETIC_TYPE
 }
