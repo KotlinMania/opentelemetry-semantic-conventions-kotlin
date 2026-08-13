@@ -7,6 +7,7 @@ package io.github.kotlinmania.opentelemetrysemanticconventions
  * The resource semantic conventions define a set of standardized attributes
  * to be used in resources.
  */
+@Suppress("DEPRECATION")
 public object Resource {
     public val ANDROID_OS_API_LEVEL: String get() = Attribute.ANDROID_OS_API_LEVEL
 

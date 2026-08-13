@@ -7,6 +7,7 @@ package io.github.kotlinmania.opentelemetrysemanticconventions
  * The trace semantic conventions define a set of standardized attributes to
  * be used in spans.
  */
+@Suppress("DEPRECATION")
 public object Trace {
     public val ANDROID_APP_STATE: String get() = Attribute.ANDROID_APP_STATE
 
@@ -86,7 +87,6 @@ public object Trace {
 
     public val AWS_S3_UPLOAD_ID: String get() = Attribute.AWS_S3_UPLOAD_ID
 
-    @Suppress("DEPRECATION")
     public val AZ_SERVICE_REQUEST_ID: String get() = Attribute.AZ_SERVICE_REQUEST_ID
 
     public val AZURE_CLIENT_ID: String get() = Attribute.AZURE_CLIENT_ID
@@ -173,7 +173,6 @@ public object Trace {
 
     public val ERROR_TYPE: String get() = Attribute.ERROR_TYPE
 
-    @Suppress("DEPRECATION")
     public val EXCEPTION_ESCAPED: String get() = Attribute.EXCEPTION_ESCAPED
 
     public val EXCEPTION_MESSAGE: String get() = Attribute.EXCEPTION_MESSAGE
