@@ -1,4 +1,4 @@
-// port-lint: source opentelemetry-semantic-conventions/src/metric.rs
+// port-lint: source metric.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
 /**
@@ -27,7 +27,7 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT`] | `Required`
-     * | [`Attribute.ASPNETCORE_DIAGNOSTICS_HANDLER_TYPE`] | `Conditionally_required`: if and only if the exception was handled by this handler.
+     * | [`Attribute.ASPNETCORE_DIAGNOSTICS_HANDLER_TYPE`] | `Conditionally required`: if and only if the exception was handled by this handler.
      * | [`Attribute.ERROR_TYPE`] | `Required`
      */
     public const val ASPNETCORE_DIAGNOSTICS_EXCEPTIONS: String = "aspnetcore.diagnostics.exceptions"
@@ -50,7 +50,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally required`: if the matched endpoint for the request had a rate-limiting policy.
      */
     public const val ASPNETCORE_RATE_LIMITING_ACTIVE_REQUEST_LEASES: String = "aspnetcore.rate_limiting.active_request_leases"
 
@@ -72,7 +72,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally required`: if the matched endpoint for the request had a rate-limiting policy.
      */
     public const val ASPNETCORE_RATE_LIMITING_QUEUED_REQUESTS: String = "aspnetcore.rate_limiting.queued_requests"
 
@@ -94,7 +94,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally required`: if the matched endpoint for the request had a rate-limiting policy.
      * | [`Attribute.ASPNETCORE_RATE_LIMITING_RESULT`] | `Required`
      */
     public const val ASPNETCORE_RATE_LIMITING_REQUEST_TIME_IN_QUEUE: String = "aspnetcore.rate_limiting.request.time_in_queue"
@@ -117,7 +117,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally required`: if the matched endpoint for the request had a rate-limiting policy.
      */
     public const val ASPNETCORE_RATE_LIMITING_REQUEST_LEASE_DURATION: String = "aspnetcore.rate_limiting.request_lease.duration"
 
@@ -144,7 +144,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally_required`: if the matched endpoint for the request had a rate-limiting policy.
+     * | [`Attribute.ASPNETCORE_RATE_LIMITING_POLICY`] | `Conditionally required`: if the matched endpoint for the request had a rate-limiting policy.
      * | [`Attribute.ASPNETCORE_RATE_LIMITING_RESULT`] | `Required`
      */
     public const val ASPNETCORE_RATE_LIMITING_REQUESTS: String = "aspnetcore.rate_limiting.requests"
@@ -161,15 +161,15 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{match_attempt}` |
+     * | Unit: | `{match-attempt}` |
      * | Status: | `Stable`  |
      *
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ASPNETCORE_ROUTING_IS_FALLBACK`] | `Conditionally_required`: if and only if a route was successfully matched.
+     * | [`Attribute.ASPNETCORE_ROUTING_IS_FALLBACK`] | `Conditionally required`: if and only if a route was successfully matched.
      * | [`Attribute.ASPNETCORE_ROUTING_MATCH_STATUS`] | `Required`
-     * | [`Attribute.HTTP_ROUTE`] | `Conditionally_required`: if and only if a route was successfully matched.
+     * | [`Attribute.HTTP_ROUTE`] | `Conditionally required`: if and only if a route was successfully matched.
      */
     public const val ASPNETCORE_ROUTING_MATCH_ATTEMPTS: String = "aspnetcore.routing.match_attempts"
 
@@ -188,7 +188,7 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
     public const val AZURE_COSMOSDB_CLIENT_ACTIVE_INSTANCE_COUNT: String = "azure.cosmosdb.client.active_instance.count"
 
@@ -200,22 +200,22 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `histogram` |
-     * | Unit: | `{request_unit}` |
+     * | Unit: | `{request-unit}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.AZURE_COSMOSDB_CONSISTENCY_LEVEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.AZURE_COSMOSDB_CONSISTENCY_LEVEL`] | `Conditionally required`: If available.
      * | [`Attribute.AZURE_COSMOSDB_OPERATION_CONTACTED_REGIONS`] | `{"recommended": "if available"}`
-     * | [`Attribute.AZURE_COSMOSDB_RESPONSE_SUB_STATUS_CODE`] | `Conditionally_required`: when response was received and contained sub-code.
-     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally_required`: If available.
-     * | [`Attribute.DB_NAMESPACE`] | `Conditionally_required`: If available.
+     * | [`Attribute.AZURE_COSMOSDB_RESPONSE_SUB_STATUS_CODE`] | `Conditionally required`: when response was received and contained sub-code.
+     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally required`: If available.
+     * | [`Attribute.DB_NAMESPACE`] | `Conditionally required`: If available.
      * | [`Attribute.DB_OPERATION_NAME`] | `Required`
-     * | [`Attribute.DB_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If the operation failed and status code is available.
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the operation failed.
+     * | [`Attribute.DB_RESPONSE_STATUS_CODE`] | `Conditionally required`: If the operation failed and status code is available.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the operation failed.
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
     public const val AZURE_COSMOSDB_CLIENT_OPERATION_REQUEST_CHARGE: String = "azure.cosmosdb.client.operation.request_charge"
 
@@ -253,9 +253,9 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.CICD_PIPELINE_NAME`] | `Required`
-     * | [`Attribute.CICD_PIPELINE_RESULT`] | `Conditionally_required`: If and only if the pipeline run result has been set during that state.
+     * | [`Attribute.CICD_PIPELINE_RESULT`] | `Conditionally required`: If and only if the pipeline run result has been set during that state.
      * | [`Attribute.CICD_PIPELINE_RUN_STATE`] | `Required`
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the pipeline run failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the pipeline run failed.
      */
     public const val CICD_PIPELINE_RUN_DURATION: String = "cicd.pipeline.run.duration"
 
@@ -342,7 +342,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.CPU_MODE`] | `Conditionally_required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
+     * | [`Attribute.CPU_MODE`] | `Conditionally required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
      */
     public const val CONTAINER_CPU_TIME: String = "container.cpu.time"
 
@@ -364,7 +364,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.CPU_MODE`] | `Conditionally_required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
+     * | [`Attribute.CPU_MODE`] | `Conditionally required`: Required if mode is available, i.e. metrics coming from the Docker Stats API.
      */
     public const val CONTAINER_CPU_USAGE: String = "container.cpu.usage"
 
@@ -510,7 +510,7 @@ public object Metric {
      *
      * ## Notes
      *
-     * This metric reports data from [`gc.stats()`](https://docs.python.org/3/library/gc.html#gc.get_stats)
+     * This metric reports data from [`gc.stats()`](https://docs.python.org/3/library/gc.html#gc.stats)
      * ## Metadata
      * | | |
      * |:-|:-
@@ -532,7 +532,7 @@ public object Metric {
      *
      * ## Notes
      *
-     * This metric reports data from [`gc.stats()`](https://docs.python.org/3/library/gc.html#gc.get_stats)
+     * This metric reports data from [`gc.stats()`](https://docs.python.org/3/library/gc.html#gc.stats)
      * ## Metadata
      * | | |
      * |:-|:-
@@ -554,7 +554,7 @@ public object Metric {
      *
      * ## Notes
      *
-     * This metric reports data from [`gc.stats()`](https://docs.python.org/3/library/gc.html#gc.get_stats)
+     * This metric reports data from [`gc.stats()`](https://docs.python.org/3/library/gc.html#gc.stats)
      * ## Metadata
      * | | |
      * |:-|:-
@@ -919,7 +919,7 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
     @Deprecated("{note: Replaced by `azure.cosmosdb.client.active_instance.count`., reason: renamed, renamed_to: azure.cosmosdb.client.active_instance.count}")
     public const val DB_CLIENT_COSMOSDB_ACTIVE_INSTANCE_COUNT: String = "db.client.cosmosdb.active_instance.count"
@@ -932,18 +932,18 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `histogram` |
-     * | Unit: | `{request_unit}` |
+     * | Unit: | `{request-unit}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally_required`: If available.
-     * | [`Attribute.DB_COSMOSDB_CONSISTENCY_LEVEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally required`: If available.
+     * | [`Attribute.DB_COSMOSDB_CONSISTENCY_LEVEL`] | `Conditionally required`: If available.
      * | [`Attribute.DB_COSMOSDB_REGIONS_CONTACTED`] | `{"recommended": "if available"}`
-     * | [`Attribute.DB_COSMOSDB_SUB_STATUS_CODE`] | `Conditionally_required`: when response was received and contained sub-code.
-     * | [`Attribute.DB_NAMESPACE`] | `Conditionally_required`: If available.
-     * | [`Attribute.DB_OPERATION_NAME`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call. The operation name MAY be parsed from the query text, in which case it SHOULD be the single operation name found in the query.
+     * | [`Attribute.DB_COSMOSDB_SUB_STATUS_CODE`] | `Conditionally required`: when response was received and contained sub-code.
+     * | [`Attribute.DB_NAMESPACE`] | `Conditionally required`: If available.
+     * | [`Attribute.DB_OPERATION_NAME`] | `Conditionally required`: If readily available and if there is a single operation name that describes the database call. The operation name MAY be parsed from the query text, in which case it SHOULD be the single operation name found in the query.
      */
     @Deprecated("{note: Replaced by `azure.cosmosdb.client.operation.request_charge`., reason: renamed, renamed_to: azure.cosmosdb.client.operation.request_charge}")
     public const val DB_CLIENT_COSMOSDB_OPERATION_REQUEST_CHARGE: String = "db.client.cosmosdb.operation.request_charge"
@@ -966,19 +966,19 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally_required`: If readily available and if a database call is performed on a single collection.
-     * | [`Attribute.DB_NAMESPACE`] | `Conditionally_required`: If available.
-     * | [`Attribute.DB_OPERATION_NAME`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call.
+     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally required`: If readily available and if a database call is performed on a single collection.
+     * | [`Attribute.DB_NAMESPACE`] | `Conditionally required`: If available.
+     * | [`Attribute.DB_OPERATION_NAME`] | `Conditionally required`: If readily available and if there is a single operation name that describes the database call.
      * | [`Attribute.DB_QUERY_SUMMARY`] | `{"recommended": "if available through instrumentation hooks or if the instrumentation supports generating a query summary."}`
      * | [`Attribute.DB_QUERY_TEXT`] | `Opt_in`
-     * | [`Attribute.DB_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If the operation failed and status code is available.
+     * | [`Attribute.DB_RESPONSE_STATUS_CODE`] | `Conditionally required`: If the operation failed and status code is available.
      * | [`Attribute.DB_STORED_PROCEDURE_NAME`] | `{"recommended": "if operation applies to a specific stored procedure."}`
      * | [`Attribute.DB_SYSTEM_NAME`] | `Required`
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the operation failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the operation failed.
      * | [`Attribute.NETWORK_PEER_ADDRESS`] | `{"recommended": "if applicable for this database system."}`
      * | [`Attribute.NETWORK_PEER_PORT`] | `{"recommended": "if and only if `network.peer.address` is set."}`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
     public const val DB_CLIENT_OPERATION_DURATION: String = "db.client.operation.duration"
 
@@ -996,18 +996,18 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally_required`: If readily available and if a database call is performed on a single collection.
-     * | [`Attribute.DB_NAMESPACE`] | `Conditionally_required`: If available.
-     * | [`Attribute.DB_OPERATION_NAME`] | `Conditionally_required`: If readily available and if there is a single operation name that describes the database call.
+     * | [`Attribute.DB_COLLECTION_NAME`] | `Conditionally required`: If readily available and if a database call is performed on a single collection.
+     * | [`Attribute.DB_NAMESPACE`] | `Conditionally required`: If available.
+     * | [`Attribute.DB_OPERATION_NAME`] | `Conditionally required`: If readily available and if there is a single operation name that describes the database call.
      * | [`Attribute.DB_QUERY_SUMMARY`] | `{"recommended": "if available through instrumentation hooks or if the instrumentation supports generating a query summary."}`
      * | [`Attribute.DB_QUERY_TEXT`] | `Opt_in`
-     * | [`Attribute.DB_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If the operation failed and status code is available.
+     * | [`Attribute.DB_RESPONSE_STATUS_CODE`] | `Conditionally required`: If the operation failed and status code is available.
      * | [`Attribute.DB_SYSTEM_NAME`] | `Required`
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the operation failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the operation failed.
      * | [`Attribute.NETWORK_PEER_ADDRESS`] | `{"recommended": "if applicable for this database system."}`
      * | [`Attribute.NETWORK_PEER_PORT`] | `{"recommended": "if and only if `network.peer.address` is set."}`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If using a port other than the default port for this DBMS and if `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If using a port other than the default port for this DBMS and if `server.address` is set.
      */
     public const val DB_CLIENT_RESPONSE_RETURNED_ROWS: String = "db.client.response.returned_rows"
 
@@ -1026,7 +1026,7 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.DNS_QUESTION_NAME`] | `Required`
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: if and only if an error has occurred.
      */
     public const val DNS_LOOKUP_DURATION: String = "dns.lookup.duration"
 
@@ -1338,7 +1338,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{work_item}` |
+     * | Unit: | `{work-item}` |
      * | Status: | `Stable`  |
      */
     public const val DOTNET_THREAD_POOL_QUEUE_LENGTH: String = "dotnet.thread_pool.queue.length"
@@ -1374,7 +1374,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{work_item}` |
+     * | Unit: | `{work-item}` |
      * | Status: | `Stable`  |
      */
     public const val DOTNET_THREAD_POOL_WORK_ITEM_COUNT: String = "dotnet.thread_pool.work_item.count"
@@ -1573,13 +1573,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: if the operation ended in an error
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: if the operation ended in an error
      * | [`Attribute.GEN_AI_OPERATION_NAME`] | `Required`
-     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally required`: If available.
      * | [`Attribute.GEN_AI_RESPONSE_MODEL`] | `Recommended`
      * | [`Attribute.GEN_AI_SYSTEM`] | `Required`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If `server.address` is set.
      */
     public const val GEN_AI_CLIENT_OPERATION_DURATION: String = "gen_ai.client.operation.duration"
 
@@ -1598,12 +1598,12 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.GEN_AI_OPERATION_NAME`] | `Required`
-     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally required`: If available.
      * | [`Attribute.GEN_AI_RESPONSE_MODEL`] | `Recommended`
      * | [`Attribute.GEN_AI_SYSTEM`] | `Required`
      * | [`Attribute.GEN_AI_TOKEN_TYPE`] | `Required`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If `server.address` is set.
      */
     public const val GEN_AI_CLIENT_TOKEN_USAGE: String = "gen_ai.client.token.usage"
 
@@ -1621,13 +1621,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: if the operation ended in an error
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: if the operation ended in an error
      * | [`Attribute.GEN_AI_OPERATION_NAME`] | `Required`
-     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally required`: If available.
      * | [`Attribute.GEN_AI_RESPONSE_MODEL`] | `Recommended`
      * | [`Attribute.GEN_AI_SYSTEM`] | `Required`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If `server.address` is set.
      */
     public const val GEN_AI_SERVER_REQUEST_DURATION: String = "gen_ai.server.request.duration"
 
@@ -1646,11 +1646,11 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.GEN_AI_OPERATION_NAME`] | `Required`
-     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally required`: If available.
      * | [`Attribute.GEN_AI_RESPONSE_MODEL`] | `Recommended`
      * | [`Attribute.GEN_AI_SYSTEM`] | `Required`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If `server.address` is set.
      */
     public const val GEN_AI_SERVER_TIME_PER_OUTPUT_TOKEN: String = "gen_ai.server.time_per_output_token"
 
@@ -1669,11 +1669,11 @@ public object Metric {
      * | Name | Requirement |
      * |:-|:- |
      * | [`Attribute.GEN_AI_OPERATION_NAME`] | `Required`
-     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally_required`: If available.
+     * | [`Attribute.GEN_AI_REQUEST_MODEL`] | `Conditionally required`: If available.
      * | [`Attribute.GEN_AI_RESPONSE_MODEL`] | `Recommended`
      * | [`Attribute.GEN_AI_SYSTEM`] | `Required`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
-     * | [`Attribute.SERVER_PORT`] | `Conditionally_required`: If `server.address` is set.
+     * | [`Attribute.SERVER_PORT`] | `Conditionally required`: If `server.address` is set.
      */
     public const val GEN_AI_SERVER_TIME_TO_FIRST_TOKEN: String = "gen_ai.server.time_to_first_token"
 
@@ -1853,7 +1853,7 @@ public object Metric {
      * | [`Attribute.SERVER_ADDRESS`] | `Required`
      * | [`Attribute.SERVER_PORT`] | `Required`
      * | [`Attribute.URL_SCHEME`] | `Opt_in`
-     * | [`Attribute.URL_TEMPLATE`] | `Conditionally_required`: If available.
+     * | [`Attribute.URL_TEMPLATE`] | `Conditionally required`: If available.
      */
     public const val HTTP_CLIENT_ACTIVE_REQUESTS: String = "http.client.active_requests"
 
@@ -1920,15 +1920,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If request has ended with an error.
      * | [`Attribute.HTTP_REQUEST_METHOD`] | `Required`
-     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally required`: If and only if one was received/sent.
+     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally required`: If not `http` and `network.protocol.version` is set.
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.SERVER_ADDRESS`] | `Required`
      * | [`Attribute.SERVER_PORT`] | `Required`
      * | [`Attribute.URL_SCHEME`] | `Opt_in`
-     * | [`Attribute.URL_TEMPLATE`] | `Conditionally_required`: If available.
+     * | [`Attribute.URL_TEMPLATE`] | `Conditionally required`: If available.
      */
     public const val HTTP_CLIENT_REQUEST_BODY_SIZE: String = "http.client.request.body.size"
 
@@ -1946,10 +1946,10 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If request has ended with an error.
      * | [`Attribute.HTTP_REQUEST_METHOD`] | `Required`
-     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally required`: If and only if one was received/sent.
+     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally required`: If not `http` and `network.protocol.version` is set.
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.SERVER_ADDRESS`] | `Required`
      * | [`Attribute.SERVER_PORT`] | `Required`
@@ -1976,15 +1976,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If request has ended with an error.
      * | [`Attribute.HTTP_REQUEST_METHOD`] | `Required`
-     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally required`: If and only if one was received/sent.
+     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally required`: If not `http` and `network.protocol.version` is set.
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.SERVER_ADDRESS`] | `Required`
      * | [`Attribute.SERVER_PORT`] | `Required`
      * | [`Attribute.URL_SCHEME`] | `Opt_in`
-     * | [`Attribute.URL_TEMPLATE`] | `Conditionally_required`: If available.
+     * | [`Attribute.URL_TEMPLATE`] | `Conditionally required`: If available.
      */
     public const val HTTP_CLIENT_RESPONSE_BODY_SIZE: String = "http.client.response.body.size"
 
@@ -2027,11 +2027,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If request has ended with an error.
      * | [`Attribute.HTTP_REQUEST_METHOD`] | `Required`
-     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.HTTP_ROUTE`] | `Conditionally_required`: If and only if it's available
-     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally required`: If and only if one was received/sent.
+     * | [`Attribute.HTTP_ROUTE`] | `Conditionally required`: If and only if it's available
+     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally required`: If not `http` and `network.protocol.version` is set.
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.SERVER_ADDRESS`] | `Opt_in`
      * | [`Attribute.SERVER_PORT`] | `Opt_in`
@@ -2054,11 +2054,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If request has ended with an error.
      * | [`Attribute.HTTP_REQUEST_METHOD`] | `Required`
-     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.HTTP_ROUTE`] | `Conditionally_required`: If and only if it's available
-     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally required`: If and only if one was received/sent.
+     * | [`Attribute.HTTP_ROUTE`] | `Conditionally required`: If and only if it's available
+     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally required`: If not `http` and `network.protocol.version` is set.
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.SERVER_ADDRESS`] | `Opt_in`
      * | [`Attribute.SERVER_PORT`] | `Opt_in`
@@ -2085,11 +2085,11 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If request has ended with an error.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If request has ended with an error.
      * | [`Attribute.HTTP_REQUEST_METHOD`] | `Required`
-     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally_required`: If and only if one was received/sent.
-     * | [`Attribute.HTTP_ROUTE`] | `Conditionally_required`: If and only if it's available
-     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally_required`: If not `http` and `network.protocol.version` is set.
+     * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `Conditionally required`: If and only if one was received/sent.
+     * | [`Attribute.HTTP_ROUTE`] | `Conditionally required`: If and only if it's available
+     * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Conditionally required`: If not `http` and `network.protocol.version` is set.
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.SERVER_ADDRESS`] | `Opt_in`
      * | [`Attribute.SERVER_PORT`] | `Opt_in`
@@ -2133,7 +2133,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: if and only if an error has occurred
      * | [`Attribute.HW_ID`] | `Required`
      * | [`Attribute.HW_NAME`] | `Recommended`
      * | [`Attribute.HW_PARENT`] | `Recommended`
@@ -2443,7 +2443,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{file_descriptor}` |
+     * | Unit: | `{file-descriptor}` |
      * | Status: | `Development`  |
      */
     public const val JVM_FILE_DESCRIPTOR_COUNT: String = "jvm.file_descriptor.count"
@@ -2575,7 +2575,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `gauge` |
-     * | Unit: | `{run_queue_item}` |
+     * | Unit: | `{run-queue-item}` |
      * | Status: | `Development`  |
      */
     public const val JVM_SYSTEM_CPU_LOAD_1M: String = "jvm.system.cpu.load_1m"
@@ -3038,7 +3038,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_CONTAINER_NAME`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource.
+     * | [`Attribute.K8S_CONTAINER_NAME`] | `Conditionally required`: if and only if k8s.hpa.metric.type is ContainerResource.
      * | [`Attribute.K8S_HPA_METRIC_TYPE`] | `Recommended`
      */
     public const val K8S_HPA_METRIC_TARGET_CPU_AVERAGE_UTILIZATION: String = "k8s.hpa.metric.target.cpu.average_utilization"
@@ -3064,7 +3064,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_CONTAINER_NAME`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource
+     * | [`Attribute.K8S_CONTAINER_NAME`] | `Conditionally required`: if and only if k8s.hpa.metric.type is ContainerResource
      * | [`Attribute.K8S_HPA_METRIC_TYPE`] | `Recommended`
      */
     public const val K8S_HPA_METRIC_TARGET_CPU_AVERAGE_VALUE: String = "k8s.hpa.metric.target.cpu.average_value"
@@ -3090,7 +3090,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_CONTAINER_NAME`] | `Conditionally_required`: if and only if k8s.hpa.metric.type is ContainerResource
+     * | [`Attribute.K8S_CONTAINER_NAME`] | `Conditionally required`: if and only if k8s.hpa.metric.type is ContainerResource
      * | [`Attribute.K8S_HPA_METRIC_TYPE`] | `Recommended`
      */
     public const val K8S_HPA_METRIC_TARGET_CPU_VALUE: String = "k8s.hpa.metric.target.cpu.value"
@@ -3957,7 +3957,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
     public const val K8S_RESOURCEQUOTA_PERSISTENTVOLUMECLAIM_COUNT_HARD: String = "k8s.resourcequota.persistentvolumeclaim_count.hard"
 
@@ -3984,7 +3984,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
     public const val K8S_RESOURCEQUOTA_PERSISTENTVOLUMECLAIM_COUNT_USED: String = "k8s.resourcequota.persistentvolumeclaim_count.used"
 
@@ -4011,7 +4011,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
     public const val K8S_RESOURCEQUOTA_STORAGE_REQUEST_HARD: String = "k8s.resourcequota.storage.request.hard"
 
@@ -4038,7 +4038,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally_required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
+     * | [`Attribute.K8S_STORAGECLASS_NAME`] | `Conditionally required`: The `k8s.storageclass.name` should be required when a resource quota is defined for a specific storage class.
      */
     public const val K8S_RESOURCEQUOTA_STORAGE_REQUEST_USED: String = "k8s.resourcequota.storage.request.used"
 
@@ -4182,7 +4182,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: if and only if an error has occurred.
      * | [`Attribute.NETWORK_PROTOCOL_NAME`] | `Recommended`
      * | [`Attribute.NETWORK_PROTOCOL_VERSION`] | `Recommended`
      * | [`Attribute.NETWORK_TRANSPORT`] | `Recommended`
@@ -4289,7 +4289,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: if and only if an error has occurred.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: if and only if an error has occurred.
      * | [`Attribute.NETWORK_TRANSPORT`] | `Recommended`
      * | [`Attribute.NETWORK_TYPE`] | `{"recommended": "if the transport is `tcp` or `udp`"}`
      * | [`Attribute.SERVER_ADDRESS`] | `Recommended`
@@ -4344,15 +4344,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
+     * | [`Attribute.MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally required`: if applicable.
+     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
      * | [`Attribute.MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
-     * | [`Attribute.MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`Attribute.MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally required`: if applicable.
+     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally required`: if available.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
      * | [`Attribute.MESSAGING_SYSTEM`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     public const val MESSAGING_CLIENT_CONSUMED_MESSAGES: String = "messaging.client.consumed.messages"
@@ -4375,16 +4375,16 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
+     * | [`Attribute.MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally required`: if applicable.
+     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
      * | [`Attribute.MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
-     * | [`Attribute.MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`Attribute.MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally required`: if applicable.
+     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally required`: if available.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
-     * | [`Attribute.MESSAGING_OPERATION_TYPE`] | `Conditionally_required`: If applicable.
+     * | [`Attribute.MESSAGING_OPERATION_TYPE`] | `Conditionally required`: If applicable.
      * | [`Attribute.MESSAGING_SYSTEM`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     public const val MESSAGING_CLIENT_OPERATION_DURATION: String = "messaging.client.operation.duration"
@@ -4403,13 +4403,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
+     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
      * | [`Attribute.MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
-     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally required`: if available.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
      * | [`Attribute.MESSAGING_SYSTEM`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.sent.messages`., reason: renamed, renamed_to: messaging.client.sent.messages}")
@@ -4433,13 +4433,13 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
+     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
      * | [`Attribute.MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
-     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally required`: if available.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
      * | [`Attribute.MESSAGING_SYSTEM`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     public const val MESSAGING_CLIENT_SENT_MESSAGES: String = "messaging.client.sent.messages"
@@ -4462,15 +4462,15 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
-     * | [`Attribute.MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally_required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
+     * | [`Attribute.MESSAGING_CONSUMER_GROUP_NAME`] | `Conditionally required`: if applicable.
+     * | [`Attribute.MESSAGING_DESTINATION_NAME`] | `Conditionally required`: if and only if `messaging.destination.name` is known to have low cardinality. Otherwise, `messaging.destination.template` MAY be populated.
      * | [`Attribute.MESSAGING_DESTINATION_PARTITION_ID`] | `Recommended`
-     * | [`Attribute.MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally_required`: if applicable.
-     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally_required`: if available.
+     * | [`Attribute.MESSAGING_DESTINATION_SUBSCRIPTION_NAME`] | `Conditionally required`: if applicable.
+     * | [`Attribute.MESSAGING_DESTINATION_TEMPLATE`] | `Conditionally required`: if available.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
      * | [`Attribute.MESSAGING_SYSTEM`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     public const val MESSAGING_PROCESS_DURATION: String = "messaging.process.duration"
@@ -4489,9 +4489,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.consumed.messages`., reason: renamed, renamed_to: messaging.client.consumed.messages}")
@@ -4511,9 +4511,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.operation.duration`., reason: renamed, renamed_to: messaging.client.operation.duration}")
@@ -4533,9 +4533,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.sent.messages`., reason: renamed, renamed_to: messaging.client.sent.messages}")
@@ -4555,9 +4555,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.operation.duration`., reason: renamed, renamed_to: messaging.client.operation.duration}")
@@ -4577,9 +4577,9 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If and only if the messaging operation has failed.
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If and only if the messaging operation has failed.
      * | [`Attribute.MESSAGING_OPERATION_NAME`] | `Required`
-     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally_required`: If available.
+     * | [`Attribute.SERVER_ADDRESS`] | `Conditionally required`: If available.
      * | [`Attribute.SERVER_PORT`] | `Recommended`
      */
     @Deprecated("{note: Replaced by `messaging.client.consumed.messages`., reason: renamed, renamed_to: messaging.client.consumed.messages}")
@@ -4757,7 +4757,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{log_record}` |
+     * | Unit: | `{log-record}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -4783,7 +4783,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{log_record}` |
+     * | Unit: | `{log-record}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -4810,7 +4810,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{data_point}` |
+     * | Unit: | `{data-point}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -4836,7 +4836,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{data_point}` |
+     * | Unit: | `{data-point}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -4869,7 +4869,7 @@ public object Metric {
      * ## Attributes
      * | Name | Requirement |
      * |:-|:- |
-     * | [`Attribute.ERROR_TYPE`] | `Conditionally_required`: If operation has ended with an error
+     * | [`Attribute.ERROR_TYPE`] | `Conditionally required`: If operation has ended with an error
      * | [`Attribute.HTTP_RESPONSE_STATUS_CODE`] | `{"recommended": "when applicable"}`
      * | [`Attribute.OTEL_COMPONENT_NAME`] | `Recommended`
      * | [`Attribute.OTEL_COMPONENT_TYPE`] | `Recommended`
@@ -4968,7 +4968,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{log_record}` |
+     * | Unit: | `{log-record}` |
      * | Status: | `Development`  |
      */
     public const val OTEL_SDK_LOG_CREATED: String = "otel.sdk.log.created"
@@ -5012,7 +5012,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{log_record}` |
+     * | Unit: | `{log-record}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -5036,7 +5036,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{log_record}` |
+     * | Unit: | `{log-record}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -5059,7 +5059,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{log_record}` |
+     * | Unit: | `{log-record}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -5246,7 +5246,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `counter` |
-     * | Unit: | `{context_switch}` |
+     * | Unit: | `{context-switch}` |
      * | Status: | `Development`  |
      *
      * ## Attributes
@@ -5362,7 +5362,7 @@ public object Metric {
      * | | |
      * |:-|:-
      * | Instrument: | `updowncounter` |
-     * | Unit: | `{file_descriptor}` |
+     * | Unit: | `{file-descriptor}` |
      * | Status: | `Development`  |
      */
     public const val PROCESS_OPEN_FILE_DESCRIPTOR_COUNT: String = "process.open_file_descriptor.count"

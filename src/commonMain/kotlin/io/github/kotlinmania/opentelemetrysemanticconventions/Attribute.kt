@@ -1,4 +1,4 @@
-// port-lint: source opentelemetry-semantic-conventions/src/attribute.rs
+// port-lint: source attribute.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
 /**
@@ -104,7 +104,7 @@ public object Attribute {
      * # Examples
      *
      * - `"f9bc787d-ff05-48ad-90e1-fca1d46130b3"`
-     * - `"submit_order_1829"`
+     * - `"submit-order-1829"`
      */
     public const val APP_WIDGET_ID: String = "app.widget.id"
 
@@ -267,7 +267,7 @@ public object Attribute {
      * # Examples
      *
      * - `"acquired"`
-     * - `"request_canceled"`
+     * - `"request-canceled"`
      */
     public const val ASPNETCORE_RATE_LIMITING_RESULT: String = "aspnetcore.rate_limiting.result"
 
@@ -430,7 +430,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"name_to_group"`
+     * - `"name-to-group"`
      */
     public const val AWS_DYNAMODB_INDEX_NAME: String = "aws.dynamodb.index_name"
 
@@ -595,7 +595,7 @@ public object Attribute {
     public const val AWS_ECS_CLUSTER_ARN: String = "aws.ecs.cluster.arn"
 
     /**
-     * The Amazon Resource Name (ARN) of an [ECS container instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_instances.html).
+     * The Amazon Resource Name (ARN) of an [ECS container instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-instances.html).
      *
      * ## Notes
      *
@@ -1226,7 +1226,7 @@ public object Attribute {
      * - `"Build and Test"`
      * - `"Lint"`
      * - `"Deploy Go Project"`
-     * - `"deploy_to_environment"`
+     * - `"deploy-to-environment"`
      */
     public const val CICD_PIPELINE_NAME: String = "cicd.pipeline.name"
 
@@ -1289,7 +1289,7 @@ public object Attribute {
      * - `"Run GoLang Linter"`
      * - `"Go Build"`
      * - `"go-test"`
-     * - `"deploy_binary"`
+     * - `"deploy-binary"`
      */
     public const val CICD_PIPELINE_TASK_NAME: String = "cicd.pipeline.task.name"
 
@@ -1463,7 +1463,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * The prefix of the service SHOULD match the one specified in `cloud.provider`
+     * The prefix of the service SHOULD align with the one specified in `cloud.provider`
      */
     public const val CLOUD_PLATFORM: String = "cloud.platform"
 
@@ -1772,7 +1772,7 @@ public object Attribute {
     public const val CODE_COLUMN: String = "code.column"
 
     /**
-     * The column number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Line'. This constraint is imposed to prevent redundancy and maintain data integrity.
+     * The column number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in `message Line`. This constraint is imposed to prevent redundancy and maintain data integrity.
      *
      * ## Notes
      *
@@ -1783,7 +1783,7 @@ public object Attribute {
     public const val CODE_COLUMN_NUMBER: String = "code.column.number"
 
     /**
-     * The source code file name that identifies the code unit as uniquely as possible (preferably an absolute file path). This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Function'. This constraint is imposed to prevent redundancy and maintain data integrity.
+     * The source code file name that identifies the code unit as uniquely as possible (preferably an absolute file path). This attribute MUST NOT be used on the Profile signal since the data is already captured in `message Function`. This constraint is imposed to prevent redundancy and maintain data integrity.
      *
      * ## Notes
      *
@@ -1818,7 +1818,7 @@ public object Attribute {
     public const val CODE_FUNCTION: String = "code.function"
 
     /**
-     * The method or function fully-qualified name without arguments. The value should fit the natural representation of the language runtime, which is also likely the same used within `code.stacktrace` attribute value. This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Function'. This constraint is imposed to prevent redundancy and maintain data integrity.
+     * The method or function fully-qualified name without arguments. The value should fit the natural representation of the language runtime, which is also likely the same used within `code.stacktrace` attribute value. This attribute MUST NOT be used on the Profile signal since the data is already captured in `message Function`. This constraint is imposed to prevent redundancy and maintain data integrity.
      *
      * ## Notes
      *
@@ -1834,8 +1834,8 @@ public object Attribute {
      * - PHP function: `GuzzleHttp\Client::transfer`
      * - Go function: `github.com/my/repo/pkg.foo.func5`
      * - Elixir: `OpenTelemetry.Ctx.new`
-     * - Erlang: `opentelemetry_ctx:new`
-     * - Rust: `playground::my_module::my_cool_func`
+     * - Erlang: `opentelemetryCtx.new`
+     * - Rust: `playground.myModule.myCoolFunc`
      * - C function: `fopen`
      *
      * # Examples
@@ -1847,7 +1847,7 @@ public object Attribute {
     public const val CODE_FUNCTION_NAME: String = "code.function.name"
 
     /**
-     * The line number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Line'. This constraint is imposed to prevent redundancy and maintain data integrity.
+     * The line number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in `message Line`. This constraint is imposed to prevent redundancy and maintain data integrity.
      *
      * ## Notes
      *
@@ -1882,7 +1882,7 @@ public object Attribute {
     public const val CODE_NAMESPACE: String = "code.namespace"
 
     /**
-     * A stacktrace as a string in the natural representation for the language runtime. The representation is identical to [`exception.stacktrace`](/docs/exceptions/exceptions-spans.md#stacktrace-representation). This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Location'. This constraint is imposed to prevent redundancy and maintain data integrity.
+     * A stacktrace as a string in the natural representation for the language runtime. The representation is identical to [`exception.stacktrace`](/docs/exceptions/exceptions-spans.md#stacktrace-representation). This attribute MUST NOT be used on the Profile signal since the data is already captured in `message Location`. This constraint is imposed to prevent redundancy and maintain data integrity.
      *
      * ## Notes
      *
@@ -2596,7 +2596,7 @@ public object Attribute {
      * If a query parameter has no name and instead is referenced only by index,
      * then `[key]` SHOULD be the 0-based index.
      *
-     * `db.query.parameter.[key]` SHOULD match
+     * `db.query.parameter.[key]` SHOULD align
      * up with the parameterized placeholders present in `db.query.text`.
      *
      * `db.query.parameter.[key]` SHOULD NOT be captured on batch operations.
@@ -2764,14 +2764,14 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"readonly_user"`
-     * - `"reporting_user"`
+     * - `"readonly-user"`
+     * - `"reporting-user"`
      */
     @Deprecated("{note: Removed, no replacement at this time., reason: obsoleted}")
     public const val DB_USER: String = "db.user"
 
     /**
-     * 'Deprecated, use `deployment.environment.name` instead.'
+     * Deprecated, use `deployment.environment.name` instead.
      *
      * ## Notes
      *
@@ -3097,7 +3097,7 @@ public object Attribute {
      *
      * - `"timeout"`
      * - `"java.net.UnknownHostException"`
-     * - `"server_certificate_invalid"`
+     * - `"server-certificate-invalid"`
      * - `"500"`
      */
     public const val ERROR_TYPE: String = "error.type"
@@ -3131,7 +3131,7 @@ public object Attribute {
      * # Examples
      *
      * - `"Division by zero"`
-     * - `"Can't convert 'int' object to str implicitly"`
+     * - `"Can't convert int object to str implicitly"`
      */
     public const val EXCEPTION_MESSAGE: String = "exception.message"
 
@@ -3390,7 +3390,7 @@ public object Attribute {
      * # Examples
      *
      * - `"static"`
-     * - `"targeting_match"`
+     * - `"targeting-match"`
      * - `"error"`
      * - `"default"`
      */
@@ -3427,7 +3427,7 @@ public object Attribute {
      * # Examples
      *
      * - `"static"`
-     * - `"targeting_match"`
+     * - `"targeting-match"`
      * - `"error"`
      * - `"default"`
      */
@@ -3820,7 +3820,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Intended to be a stable identifier for Google Cloud client libraries that is uniform across implementation languages. The value should be derived from the canonical service domain for the service; for example, 'foo.googleapis.com' should result in a value of 'foo'.
+     * Intended to be a stable identifier for Google Cloud client libraries that is uniform across implementation languages. The value should be derived from the canonical service domain for the service; for example, "foo.googleapis.com" should result in a value of "foo".
      *
      * # Examples
      *
@@ -3899,7 +3899,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"asst_5j66UpCpwteGg4YSxUnt7lPY"`
+     * - `"asst-5j66UpCpwteGg4YSxUnt7lPY"`
      */
     public const val GEN_AI_AGENT_ID: String = "gen_ai.agent.id"
 
@@ -3922,7 +3922,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"[{'role': 'assistant', 'content': 'The capital of France is Paris.'}]"`
+     * - `"[{\"role\": \"assistant\", \"content\": \"The capital of France is Paris.\"}]"`
      */
     @Deprecated("{note: Removed, no replacement at this time., reason: obsoleted}")
     public const val GEN_AI_COMPLETION: String = "gen_ai.completion"
@@ -3934,7 +3934,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"conv_5j66UpCpwteGg4YSxUnt7lPY"`
+     * - `"conv-5j66UpCpwteGg4YSxUnt7lPY"`
      */
     public const val GEN_AI_CONVERSATION_ID: String = "gen_ai.conversation.id"
 
@@ -3943,7 +3943,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Data sources are used by AI agents and RAG applications to store grounding data. A data source may be an external database, object store, document collection, website, or any other storage system used by the GenAI agent or application. The `gen_ai.data_source.id` SHOULD match the identifier used by the GenAI system rather than a name specific to the external storage, such as a database or object store. Semantic conventions referencing `gen_ai.data_source.id` MAY also leverage additional attributes, such as `db.*`, to further identify and describe the data source.
+     * Data sources are used by AI agents and RAG applications to store grounding data. A data source may be an external database, object store, document collection, website, or any other storage system used by the GenAI agent or application. The `gen_ai.data_source.id` SHOULD align with the identifier used by the GenAI system rather than a name specific to the external storage, such as a database or object store. Semantic conventions referencing `gen_ai.data_source.id` MAY also leverage additional attributes, such as `db.*`, to further identify and describe the data source.
      *
      * # Examples
      *
@@ -4002,7 +4002,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"fp_44709d6fcb"`
+     * - `"fp-44709d6fcb"`
      */
     public const val GEN_AI_OPENAI_RESPONSE_SYSTEM_FINGERPRINT: String = "gen_ai.openai.response.system_fingerprint"
 
@@ -4033,7 +4033,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"[{'role': 'user', 'content': 'What is the capital of France?'}]"`
+     * - `"[{\"role\": \"user\", \"content\": \"What is the capital of France?\"}]"`
      */
     @Deprecated("{note: Removed, no replacement at this time., reason: obsoleted}")
     public const val GEN_AI_PROMPT: String = "gen_ai.prompt"
@@ -4251,7 +4251,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"call_mszuSIzqtI65i1wAUOE8w5H4"`
+     * - `"call-mszuSIzqtI65i1wAUOE8w5H4"`
      */
     public const val GEN_AI_TOOL_CALL_ID: String = "gen_ai.tool.call.id"
 
@@ -4794,7 +4794,7 @@ public object Attribute {
      * OTEL_INSTRUMENTATION_HTTP_KNOWN_METHODS and support a comma-separated list of case-sensitive known HTTP methods
      * (this list MUST be a full override of the default known method, it is not a list of known methods in addition to the defaults).
      *
-     * HTTP method names are case-sensitive and `http.request.method` attribute value MUST match a known HTTP method name exactly.
+     * HTTP method names are case-sensitive and `http.request.method` attribute value MUST correspond to a known HTTP method name exactly.
      * Instrumentations for specific web frameworks that consider HTTP methods to be case insensitive, SHOULD populate a canonical equivalent.
      * Tracing instrumentations that do so, MUST also set `http.request.method_original` to the original value.
      *
@@ -5053,7 +5053,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"win32battery_battery_testsysa33_1"`
+     * - `"win32battery-battery-testsysa33-1"`
      */
     public const val HW_ID: String = "hw.id"
 
@@ -5191,7 +5191,7 @@ public object Attribute {
      * # Examples
      *
      * - `"heap"`
-     * - `"non_heap"`
+     * - `"non-heap"`
      */
     public const val JVM_MEMORY_TYPE: String = "jvm.memory.type"
 
@@ -5238,7 +5238,7 @@ public object Attribute {
      *
      * Every object created in a K8s cluster is assigned a distinct UID. The
      * `kube-system` namespace is used by Kubernetes itself and will exist
-     * for the lifetime of the cluster. Using the `uid` of the `kube-system`
+     * for the life of the cluster. Using the `uid` of the `kube-system`
      * namespace is a reasonable proxy for the K8s ClusterID as it will only
      * change if the cluster is rebuilt. Furthermore, Kubernetes UIDs are
      * UUIDs as standardized by
@@ -6404,7 +6404,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"ack_id"`
+     * - `"ack-id"`
      */
     public const val MESSAGING_GCP_PUBSUB_MESSAGE_ACK_ID: String = "messaging.gcp_pubsub.message.ack_id"
 
@@ -6426,7 +6426,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"ordering_key"`
+     * - `"ordering-key"`
      */
     public const val MESSAGING_GCP_PUBSUB_MESSAGE_ORDERING_KEY: String = "messaging.gcp_pubsub.message.ordering_key"
 
@@ -6977,7 +6977,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"close_wait"`
+     * - `"close-wait"`
      */
     public const val NETWORK_CONNECTION_STATE: String = "network.connection.state"
 
@@ -7241,7 +7241,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"otlp_grpc_span_exporter/0"`
+     * - `"otlp-grpc-span-exporter/0"`
      * - `"custom-name"`
      */
     public const val OTEL_COMPONENT_NAME: String = "otel.component.name"
@@ -7256,7 +7256,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"batching_span_processor"`
+     * - `"batching-span-processor"`
      * - `"com.example.MySpanExporter"`
      */
     public const val OTEL_COMPONENT_TYPE: String = "otel.component.type"
@@ -7559,7 +7559,7 @@ public object Attribute {
     public const val PROCESS_EXIT_TIME: String = "process.exit.time"
 
     /**
-     * The PID of the process's group leader. This is also the process group ID (PGID) of the process.
+     * The PID of the process group leader. This is also the process group ID (PGID) of the process.
      *
      * ## Notes
      *
@@ -7581,7 +7581,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Control groups (cgroups) are a kernel feature used to organize and manage process resources. This attribute provides the path(s) to the cgroup(s) associated with the process, which should match the contents of the [/proc/\[PID\]/cgroup](https://man7.org/linux/man-pages/man7/cgroups.7.html) file.
+     * Control groups (cgroups) are a kernel feature used to organize and manage process resources. This attribute provides the path(s) to the cgroup(s) associated with the process, which should correspond to the contents of the [/proc/\[PID\]/cgroup](https://man7.org/linux/man-pages/man7/cgroups.7.html) file.
      *
      * # Examples
      *
@@ -7708,7 +7708,7 @@ public object Attribute {
     public const val PROCESS_SAVED_USER_NAME: String = "process.saved_user.name"
 
     /**
-     * The PID of the process's session leader. This is also the session ID (SID) of the process.
+     * The PID of the process session leader. This is also the session ID (SID) of the process.
      *
      * ## Notes
      *
@@ -8220,7 +8220,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"app_shutdown"`
+     * - `"app-shutdown"`
      * - `"timeout"`
      */
     public const val SIGNALR_CONNECTION_STATUS: String = "signalr.connection.status"
@@ -8232,8 +8232,8 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"web_sockets"`
-     * - `"long_polling"`
+     * - `"web-sockets"`
+     * - `"long-polling"`
      */
     public const val SIGNALR_TRANSPORT: String = "signalr.transport"
 
@@ -8362,7 +8362,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"close_wait"`
+     * - `"close-wait"`
      */
     @Deprecated("{note: Replaced by `network.connection.state`., reason: renamed, renamed_to: network.connection.state}")
     public const val SYSTEM_NETWORK_STATE: String = "system.network.state"
@@ -8531,8 +8531,8 @@ public object Attribute {
      * - `"failure"`
      * - `"skipped"`
      * - `"aborted"`
-     * - `"timed_out"`
-     * - `"in_progress"`
+     * - `"timed-out"`
+     * - `"in-progress"`
      */
     public const val TEST_SUITE_RUN_STATUS: String = "test.suite.run.status"
 
