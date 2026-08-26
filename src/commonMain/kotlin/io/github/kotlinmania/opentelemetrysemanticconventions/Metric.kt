@@ -735,7 +735,7 @@ public object Metric {
     /**
      * ## Description
      *
-     * Deprecated, use `db.client.connection.create_time` instead. Note: the unit also changed from `ms` to `s`
+     * Deprecated, use `db.client.connection.createTime` instead. Note: the unit also changed from `ms` to `s`
      * ## Metadata
      * | | |
      * |:-|:-
