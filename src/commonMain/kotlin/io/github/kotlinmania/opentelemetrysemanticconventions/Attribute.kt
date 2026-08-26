@@ -606,7 +606,7 @@ public object Attribute {
     public const val AWS_ECS_CONTAINER_ARN: String = "aws.ecs.container.arn"
 
     /**
-     * The [launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) for an ECS task.
+     * The [launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch-types.html) for an ECS task.
      *
      * ## Notes
      */
