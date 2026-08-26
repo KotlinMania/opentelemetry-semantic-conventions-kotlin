@@ -4,14 +4,14 @@ Based on AST analysis, here are the concrete next steps.
 
 ## Summary
 
-- **Files Present:** 5/5 (100.0%)
+- **Files Present:** 0/0 (nan%)
 - **Function parity:** 0/0 matched — N/A
-- **Class/type parity:** 0/0 matched (target 4) — N/A
-- **Combined symbol parity:** 0/0 matched (target 4) — N/A
-- **Average inline-code cosine:** 0.60 (function body across 5 matched files)
-- **Average documentation cosine:** 0.81 (doc text across 5 matched files)
-- **Cheat-zeroed Files:** 2
-- **Critical Issues:** 2 files with <0.60 function similarity
+- **Class/type parity:** 0/0 matched — N/A
+- **Combined symbol parity:** 0/0 matched — N/A
+- **Average inline-code cosine:** 0.00 (function body across 0 matched files)
+- **Average documentation cosine:** 0.00 (doc text across 0 matched files)
+- **Cheat-zeroed Files:** 0
+- **Critical Issues:** 0 files with <0.60 function similarity
 
 ## Priority 1: Fix Incomplete High-Dependency Files
 
@@ -26,61 +26,6 @@ No missing high-value files detected.
 ## Detailed Work Items
 
 Every matched file is listed below with function and type symbol parity.
-
-### 1. metric
-
-- **Target:** `opentelemetrysemanticconventions.Metric [ZERO]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 10.0
-- **Functions:** 0/0 matched
-- **Missing functions:** _none_
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
-
-### 2. attribute
-
-- **Target:** `opentelemetrysemanticconventions.Attribute [ZERO]`
-- **Similarity:** 0.00
-- **Dependents:** 0
-- **Priority Score:** 10.0
-- **Functions:** 0/0 matched
-- **Missing functions:** _none_
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
-
-### 3. lib
-
-- **Target:** `opentelemetrysemanticconventions.Lib`
-- **Similarity:** 1.00
-- **Dependents:** 0
-- **Priority Score:** 0.0
-- **Functions:** 0/0 matched
-- **Missing functions:** _none_
-- **Types:** 0/0 matched
-- **Missing types:** _none_
-
-### 4. trace
-
-- **Target:** `opentelemetrysemanticconventions.Trace`
-- **Similarity:** 1.00
-- **Dependents:** 0
-- **Priority Score:** 0.0
-- **Functions:** 0/0 matched
-- **Missing functions:** _none_
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
-
-### 5. resource
-
-- **Target:** `opentelemetrysemanticconventions.Resource`
-- **Similarity:** 1.00
-- **Dependents:** 0
-- **Priority Score:** 0.0
-- **Functions:** 0/0 matched
-- **Missing functions:** _none_
-- **Types:** 0/0 matched (target 1)
-- **Missing types:** _none_
 
 ## Success Criteria
 
