@@ -1,4 +1,4 @@
-// port-lint: source opentelemetry-semantic-conventions/src/attribute.rs
+// port-lint: source attribute.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
 /**
@@ -60,7 +60,7 @@ public object Attribute {
      * - [Firebase Installation ID](https://firebase.google.com/docs/projects/manage-installations).
      * - A globally unique UUID which is persisted across sessions in your application.
      * - [App set ID](https://developer.android.com/identity/app-set-id).
-     * - [`Settings.getString(Settings.Secure.ANDROID_ID)`](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID).
+     * - [`Settings.getString(Settings.Secure.ANDROID%5FID)`](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID%5FID).
      *
      * More information about Android identifier best practices can be found [here](https://developer.android.com/training/articles/user-data-ids).
      *
@@ -542,7 +542,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"ALL_ATTRIBUTES"`
+     * - `"ALL-ATTRIBUTES"`
      * - `"COUNT"`
      */
     public const val AWS_DYNAMODB_SELECT: String = "aws.dynamodb.select"
@@ -625,7 +625,7 @@ public object Attribute {
     public const val AWS_ECS_TASK_ARN: String = "aws.ecs.task.arn"
 
     /**
-     * The family name of the [ECS task definition](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) used to create the ECS task.
+     * The family name of the [ECS task definition](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-definitions.html) used to create the ECS task.
      *
      * ## Notes
      *
@@ -697,7 +697,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * This may be different from `cloud.resource_id` if an alias is involved.
+     * This may be different from `cloud.resource id` if an alias is involved.
      *
      * # Examples
      *
@@ -721,7 +721,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * See the [log group ARN format documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#CWL_ARN_Format).
+     * See the [log group ARN format documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#CWL-ARN-Format).
      *
      * # Examples
      *
@@ -752,7 +752,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * See the [log stream ARN format documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#CWL_ARN_Format). One log group can contain several log streams, so these ARNs necessarily identify both a log group and a log stream.
+     * See the [log stream ARN format documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/iam-access-control-overview-cwl.html#CWL-ARN-Format). One log group can contain several log streams, so these ARNs necessarily identify both a log group and a log stream.
      *
      * # Examples
      *
@@ -806,7 +806,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * The `copy_source` attribute applies to S3 copy operations and corresponds to the `--copy-source` parameter
+     * The copy source attribute applies to S3 copy operations and corresponds to the `--copy-source` parameter
      * of the [copy-object operation within the S3 API](https://docs.aws.amazon.com/cli/latest/reference/s3api/copy-object.html).
      * This applies in particular to the following operations:
      *
@@ -867,9 +867,9 @@ public object Attribute {
      *
      * ## Notes
      *
-     * The `part_number` attribute is only applicable to the [upload-part](https://docs.aws.amazon.com/cli/latest/reference/s3api/upload-part.html)
+     * The part number attribute is only applicable to the [upload-part](https://docs.aws.amazon.com/cli/latest/reference/s3api/upload-part.html)
      * and [upload-part-copy](https://docs.aws.amazon.com/cli/latest/reference/s3api/upload-part-copy.html) operations.
-     * The `part_number` attribute corresponds to the `--part-number` parameter of the
+     * The part number attribute corresponds to the `--part-number` parameter of the
      * [upload-part operation within the S3 API](https://docs.aws.amazon.com/cli/latest/reference/s3api/upload-part.html).
      *
      * # Examples
@@ -883,7 +883,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * The `upload_id` attribute applies to S3 multipart-upload operations and corresponds to the `--upload-id` parameter
+     * The upload id attribute applies to S3 multipart-upload operations and corresponds to the `--upload-id` parameter
      * of the [S3 API](https://docs.aws.amazon.com/cli/latest/reference/s3api/index.html) multipart operations.
      * This applies in particular to the following operations:
      *
@@ -955,7 +955,7 @@ public object Attribute {
     public const val AWS_STEP_FUNCTIONS_STATE_MACHINE_ARN: String = "aws.step_functions.state_machine.arn"
 
     /**
-     * Deprecated, use `azure.resource_provider.namespace` instead.
+     * Deprecated, use `azure.resource provider.namespace` instead.
      *
      * ## Notes
      *
@@ -1280,7 +1280,7 @@ public object Attribute {
     public const val CICD_PIPELINE_RUN_URL_FULL: String = "cicd.pipeline.run.url.full"
 
     /**
-     * The human readable name of a task within a pipeline. Task here most closely aligns with a [computing process](https://wikipedia.org/wiki/Pipeline_(computing)) in a pipeline. Other terms for tasks include commands, steps, and procedures.
+     * The human readable name of a task within a pipeline. Task here most closely aligns with a [computing process](https://wikipedia.org/wiki/Pipeline%5F(computing)) in a pipeline. Other terms for tasks include commands, steps, and procedures.
      *
      * ## Notes
      *
@@ -1479,7 +1479,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Refer to your provider's docs to see the available regions, for example [Alibaba Cloud regions](https://www.alibabacloud.com/help/doc-detail/40654.htm), [AWS regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/), [Azure regions](https://azure.microsoft.com/global-infrastructure/geographies/), [Google Cloud regions](https://cloud.google.com/about/locations), or [Tencent Cloud regions](https://www.tencentcloud.com/document/product/213/6091).
+     * Refer to your provider's docs to see the available regions, for example [Alibaba Cloud regions](https://www.alibabacloud.com/help/doc-detail/40654.htm), [AWS regions](https://aws.amazon.com/about-aws/global-infrastructure/regions az/), [Azure regions](https://azure.microsoft.com/global-infrastructure/geographies/), [Google Cloud regions](https://cloud.google.com/about/locations), or [Tencent Cloud regions](https://www.tencentcloud.com/document/product/213/6091).
      *
      * # Examples
      *
@@ -1494,9 +1494,9 @@ public object Attribute {
      * ## Notes
      *
      * On some cloud providers, it may not be possible to determine the full ID at startup,
-     * so it may be necessary to set `cloud.resource_id` as a span attribute instead.
+     * so it may be necessary to set `cloud.resource id` as a span attribute instead.
      *
-     * The exact value to use for `cloud.resource_id` depends on the cloud provider.
+     * The exact value to use for `cloud.resource id` depends on the cloud provider.
      * The following well-known definitions MUST be used if you set this attribute and they apply:
      *
      * - **AWS Lambda:** The function [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
@@ -1507,20 +1507,20 @@ public object Attribute {
      * - **GCP:** The [URI of the resource](https://cloud.google.com/iam/docs/full-resource-names)
      * - **Azure:** The [Fully Qualified Resource ID](https://learn.microsoft.com/rest/api/resources/resources/get-by-id) of the invoked function,
      * *not* the function app, having the form
-     * `/subscriptions/[SUBSCRIPTION_GUID]/resourceGroups/[RG]/providers/Microsoft.Web/sites/[FUNCAPP]/functions/[FUNC]`.
+     * `/subscriptions/[SUBSCRIPTION-GUID]/resourceGroups/[RG]/providers/Microsoft.Web/sites/[FUNCAPP]/functions/[FUNC]`.
      * This means that a span attribute MUST be used, as an Azure function app can host multiple functions that would usually share
      * a TracerProvider.
      *
      * # Examples
      *
-     * - `"arn:aws:lambda:REGION:ACCOUNT_ID:function:my-function"`
-     * - `"//run.googleapis.com/projects/PROJECT_ID/locations/LOCATION_ID/services/SERVICE_ID"`
-     * - `"/subscriptions/<SUBSCRIPTION_GUID>/resourceGroups/<RG>/providers/Microsoft.Web/sites/<FUNCAPP>/functions/<FUNC>"`
+     * - `"arn:aws:lambda:REGION:ACCOUNT-ID:function:my-function"`
+     * - `"//run.googleapis.com/projects/PROJECT-ID/locations/LOCATION-ID/services/SERVICE-ID"`
+     * - `"/subscriptions/<SUBSCRIPTION-GUID>/resourceGroups/<RG>/providers/Microsoft.Web/sites/<FUNCAPP>/functions/<FUNC>"`
      */
     public const val CLOUD_RESOURCE_ID: String = "cloud.resource_id"
 
     /**
-     * The [event_id](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#id) uniquely identifies the event.
+     * The [event id](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#id) uniquely identifies the event.
      *
      * ## Notes
      *
@@ -1567,13 +1567,13 @@ public object Attribute {
     public const val CLOUDEVENTS_EVENT_SUBJECT: String = "cloudevents.event_subject"
 
     /**
-     * The [event_type](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#type) contains a value describing the type of event related to the originating occurrence.
+     * The [event type](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#type) contains a value describing the type of event related to the originating occurrence.
      *
      * ## Notes
      *
      * # Examples
      *
-     * - `"com.github.pull_request.opened"`
+     * - `"com.github.pull request.opened"`
      * - `"com.example.object.deleted.v2"`
      */
     public const val CLOUDEVENTS_EVENT_TYPE: String = "cloudevents.event_type"
@@ -1584,7 +1584,7 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.application_id`. This is the same value as
+     * variable `VCAP-APPLICATION.application id`. This is the same value as
      * reported by `cf app [app-name] --guid`.
      *
      * # Examples
@@ -1598,13 +1598,13 @@ public object Attribute {
      *
      * ## Notes
      *
-     * CloudFoundry defines the `instance_id` in the [Loggregator v2 envelope](https://github.com/cloudfoundry/loggregator-api#v2-envelope).
+     * CloudFoundry defines the instance id in the [Loggregator v2 envelope](https://github.com/cloudfoundry/loggregator-api#v2-envelope).
      * It is used for logs and metrics emitted by CloudFoundry. It is
      * supposed to contain the application instance index for applications
      * deployed on the runtime.
      *
      * Application instrumentation should use the value from environment
-     * variable `CF_INSTANCE_INDEX`.
+     * variable `CF-INSTANCE-INDEX`.
      *
      * # Examples
      *
@@ -1619,7 +1619,7 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.application_name`. This is the same value
+     * variable `VCAP-APPLICATION.application name`. This is the same value
      * as reported by `cf apps`.
      *
      * # Examples
@@ -1634,7 +1634,7 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.org_id`. This is the same value as
+     * variable `VCAP-APPLICATION.org id`. This is the same value as
      * reported by `cf org [org-name] --guid`.
      *
      * # Examples
@@ -1649,7 +1649,7 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.org_name`. This is the same value as
+     * variable `VCAP-APPLICATION.org name`. This is the same value as
      * reported by `cf orgs`.
      *
      * # Examples
@@ -1664,8 +1664,8 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.process_id`. It is supposed to be equal to
-     * `VCAP_APPLICATION.app_id` for applications deployed to the runtime.
+     * variable `VCAP-APPLICATION.process id`. It is supposed to be equal to
+     * `VCAP-APPLICATION.app id` for applications deployed to the runtime.
      * For system components, this could be the actual PID.
      *
      * # Examples
@@ -1695,7 +1695,7 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.space_id`. This is the same value as
+     * variable `VCAP-APPLICATION.space id`. This is the same value as
      * reported by `cf space [space-name] --guid`.
      *
      * # Examples
@@ -1710,7 +1710,7 @@ public object Attribute {
      * ## Notes
      *
      * Application instrumentation should use the value from environment
-     * variable `VCAP_APPLICATION.space_name`. This is the same value as
+     * variable `VCAP-APPLICATION.space name`. This is the same value as
      * reported by `cf spaces`.
      *
      * # Examples
@@ -1724,7 +1724,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * CloudFoundry defines the `source_id` in the [Loggregator v2 envelope](https://github.com/cloudfoundry/loggregator-api#v2-envelope).
+     * CloudFoundry defines the source id in the [Loggregator v2 envelope](https://github.com/cloudfoundry/loggregator-api#v2-envelope).
      * It is used for logs and metrics emitted by CloudFoundry. It is
      * supposed to contain the component name, e.g. "gorouter", for
      * CloudFoundry components.
@@ -1745,7 +1745,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * CloudFoundry defines the `instance_id` in the [Loggregator v2 envelope](https://github.com/cloudfoundry/loggregator-api#v2-envelope).
+     * CloudFoundry defines the instance id in the [Loggregator v2 envelope](https://github.com/cloudfoundry/loggregator-api#v2-envelope).
      * It is used for logs and metrics emitted by CloudFoundry. It is
      * supposed to contain the vm id for CloudFoundry components.
      *
@@ -1789,7 +1789,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"/usr/local/MyApplication/content_root/app/index.php"`
+     * - `"/usr/local/MyApplication/content root/app/index.php"`
      */
     public const val CODE_FILE_PATH: String = "code.file.path"
 
@@ -1800,7 +1800,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"/usr/local/MyApplication/content_root/app/index.php"`
+     * - `"/usr/local/MyApplication/content root/app/index.php"`
      */
     @Deprecated("{note: Replaced by `code.file.path`., reason: renamed, renamed_to: code.file.path}")
     public const val CODE_FILEPATH: String = "code.filepath"
@@ -1962,7 +1962,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * This can sometimes be referred to as a "volume handle" in CSI implementations. This should represent the `Volume.volume_id` field in CSI spec.
+     * This can sometimes be referred to as a "volume handle" in CSI implementations. This should represent the `Volume.volume id` field in CSI spec.
      *
      * # Examples
      *
@@ -2175,7 +2175,7 @@ public object Attribute {
     public const val DB_CASSANDRA_PAGE_SIZE: String = "db.cassandra.page_size"
 
     /**
-     * Deprecated, use `cassandra.speculative_execution.count` instead.
+     * Deprecated, use `cassandra.speculative execution.count` instead.
      *
      * ## Notes
      *
@@ -2336,7 +2336,7 @@ public object Attribute {
     public const val DB_COSMOSDB_OPERATION_TYPE: String = "db.cosmosdb.operation_type"
 
     /**
-     * Deprecated, use `azure.cosmosdb.operation.contacted_regions` instead.
+     * Deprecated, use `azure.cosmosdb.operation.contacted regions` instead.
      *
      * ## Notes
      *
@@ -2352,7 +2352,7 @@ public object Attribute {
     public const val DB_COSMOSDB_REGIONS_CONTACTED: String = "db.cosmosdb.regions_contacted"
 
     /**
-     * Deprecated, use `azure.cosmosdb.operation.request_charge` instead.
+     * Deprecated, use `azure.cosmosdb.operation.request charge` instead.
      *
      * ## Notes
      *
@@ -2373,7 +2373,7 @@ public object Attribute {
     public const val DB_COSMOSDB_REQUEST_CONTENT_LENGTH: String = "db.cosmosdb.request_content_length"
 
     /**
-     * Deprecated, use `db.response.status_code` instead.
+     * Deprecated, use `db.response.status code` instead.
      *
      * ## Notes
      *
@@ -2386,7 +2386,7 @@ public object Attribute {
     public const val DB_COSMOSDB_STATUS_CODE: String = "db.cosmosdb.status_code"
 
     /**
-     * Deprecated, use `azure.cosmosdb.response.sub_status_code` instead.
+     * Deprecated, use `azure.cosmosdb.response.sub status code` instead.
      *
      * ## Notes
      *
@@ -2576,7 +2576,7 @@ public object Attribute {
      * ## Notes
      *
      * For example, a client-side maximum number of rows to read from the database
-     * MAY be recorded as the `db.operation.parameter.max_rows` attribute.
+     * MAY be recorded as the `db.operation.parameter.max rows` attribute.
      *
      * `db.query.text` parameters SHOULD be captured using `db.query.parameter.[key]`
      * instead of `db.operation.parameter.[key]`.
@@ -2632,8 +2632,8 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"SELECT wuser_table"`
-     * - `"INSERT shipping_details SELECT orders"`
+     * - `"SELECT wuser table"`
+     * - `"INSERT shipping details SELECT orders"`
      * - `"get user by id"`
      */
     public const val DB_QUERY_SUMMARY: String = "db.query.summary"
@@ -2649,7 +2649,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"SELECT * FROM wuser_table where username = ?"`
+     * - `"SELECT * FROM wuser table where username = ?"`
      * - `"SET mykey ?"`
      */
     public const val DB_QUERY_TEXT: String = "db.query.text"
@@ -2687,7 +2687,7 @@ public object Attribute {
      * ## Notes
      *
      * The status code returned by the database. Usually it represents an error code, but may also represent partial success, warning, or differentiate between various types of successful outcomes.
-     * Semantic conventions for individual database systems SHOULD document what `db.response.status_code` means in the context of that system.
+     * Semantic conventions for individual database systems SHOULD document what `db.response.status code` means in the context of that system.
      *
      * # Examples
      *
@@ -2717,7 +2717,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"SELECT * FROM wuser_table"`
+     * - `"SELECT * FROM wuser table"`
      * - `"SET mykey \"WuValue\""`
      */
     @Deprecated("{note: Replaced by `db.query.text`., reason: renamed, renamed_to: db.query.text}")
@@ -2784,7 +2784,7 @@ public object Attribute {
     public const val DEPLOYMENT_ENVIRONMENT: String = "deployment.environment"
 
     /**
-     * Name of the [deployment environment](https://wikipedia.org/wiki/Deployment_environment) (aka deployment tier).
+     * Name of the [deployment environment](https://wikipedia.org/wiki/Deployment%5Fenvironment) (aka deployment tier).
      *
      * ## Notes
      *
@@ -3166,7 +3166,7 @@ public object Attribute {
     public const val FAAS_COLDSTART: String = "faas.coldstart"
 
     /**
-     * A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm).
+     * A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058%5F01/doc/doc.1014/e12030/cron expressions.htm).
      *
      * ## Notes
      *
@@ -3282,7 +3282,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * It's recommended to set this attribute since e.g. too little memory can easily stop a Java AWS Lambda function from working correctly. On AWS Lambda, the environment variable `AWS_LAMBDA_FUNCTION_MEMORY_SIZE` provides this information (which must be multiplied by 1,048,576).
+     * It's recommended to set this attribute since e.g. too little memory can easily stop a Java AWS Lambda function from working correctly. On AWS Lambda, the environment variable `AWS-LAMBDA-FUNCTION-MEMORY-SIZE` provides this information (which must be multiplied by 1,048,576).
      *
      * # Examples
      *
@@ -3310,7 +3310,7 @@ public object Attribute {
      * can also be seen in the resource JSON for the function).
      * This means that a span attribute MUST be used, as an Azure function
      * app can host multiple functions that would usually share
-     * a TracerProvider (see also the `cloud.resource_id` attribute).
+     * a TracerProvider (see also the `cloud.resource id` attribute).
      *
      * # Examples
      *
@@ -3349,7 +3349,7 @@ public object Attribute {
      * - **Google Cloud Run (Services):** The [revision](https://cloud.google.com/run/docs/managing/revisions)
      * (i.e., the function name plus the revision suffix).
      * - **Google Cloud Functions:** The value of the
-     * [`K_REVISION` environment variable](https://cloud.google.com/functions/docs/env-var#runtime_environment_variables_set_automatically).
+     * [`K-REVISION` environment variable](https://cloud.google.com/functions/docs/env-var#runtime environment variables set automatically).
      * - **Azure Functions:** Not applicable. Do not set this attribute.
      *
      * # Examples
@@ -3383,7 +3383,7 @@ public object Attribute {
     public const val FEATURE_FLAG_EVALUATION_ERROR_MESSAGE: String = "feature_flag.evaluation.error.message"
 
     /**
-     * Deprecated, use `feature_flag.result.reason` instead.
+     * Deprecated, use `feature flag.result.reason` instead.
      *
      * ## Notes
      *
@@ -3439,9 +3439,9 @@ public object Attribute {
      * ## Notes
      *
      * With some feature flag providers, feature flag results can be quite large or contain private or sensitive details.
-     * Because of this, `feature_flag.result.variant` is often the preferred attribute if it is available.
+     * Because of this, `feature flag.result.variant` is often the preferred attribute if it is available.
      *
-     * It may be desirable to redact or otherwise limit the size and scope of `feature_flag.result.value` if possible.
+     * It may be desirable to redact or otherwise limit the size and scope of `feature flag.result.value` if possible.
      * Because the evaluated flag value is unstructured and may be any type, it is left to the instrumentation author to determine how best to achieve this.
      *
      * # Examples
@@ -3484,7 +3484,7 @@ public object Attribute {
     public const val FEATURE_FLAG_SET_ID: String = "feature_flag.set.id"
 
     /**
-     * Deprecated, use `feature_flag.result.variant` instead.
+     * Deprecated, use `feature flag.result.variant` instead.
      *
      * ## Notes
      *
@@ -3596,7 +3596,7 @@ public object Attribute {
      * ## Notes
      *
      * On Linux, a resource fork is used to store additional data with a filesystem object. A file always has at least one fork for the data portion, and additional forks may exist.
-     * On NTFS, this is analogous to an Alternate Data Stream (ADS), and the default data stream for a file is just called \$DATA. Zone.Identifier is commonly used by Windows to track contents downloaded from the Internet. An ADS is typically of the form: C:\path\to\filename.extension:some_fork_name, and some_fork_name is the value that should populate `fork_name`. `filename.extension` should populate `file.name`, and `extension` should populate `file.extension`. The full path, `file.path`, will include the fork name.
+     * On NTFS, this is analogous to an Alternate Data Stream (ADS), and the default data stream for a file is just called \$DATA. Zone.Identifier is commonly used by Windows to track contents downloaded from the Internet. An ADS is typically of the form: C:\path\to\filename.extension:some fork name, and some fork name is the value that should populate fork name. `filename.extension` should populate `file.name`, and `extension` should populate `file.extension`. The full path, `file.path`, will include the fork name.
      *
      * # Examples
      *
@@ -3771,7 +3771,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * [See AppHub environment type](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type_1)
+     * [See AppHub environment type](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type 1)
      */
     public const val GCP_APPHUB_SERVICE_ENVIRONMENT_TYPE: String = "gcp.apphub.service.environment_type"
 
@@ -3800,7 +3800,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * [See AppHub environment type](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type_1)
+     * [See AppHub environment type](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type 1)
      */
     public const val GCP_APPHUB_WORKLOAD_ENVIRONMENT_TYPE: String = "gcp.apphub.workload.environment_type"
 
@@ -3833,7 +3833,7 @@ public object Attribute {
     public const val GCP_CLIENT_SERVICE: String = "gcp.client.service"
 
     /**
-     * The name of the Cloud Run [execution](https://cloud.google.com/run/docs/managing/job-executions) being run for the Job, as set by the [`CLOUD_RUN_EXECUTION`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable.
+     * The name of the Cloud Run [execution](https://cloud.google.com/run/docs/managing/job-executions) being run for the Job, as set by the [`CLOUD%5FRUN%5FEXECUTION`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable.
      *
      * ## Notes
      *
@@ -3845,7 +3845,7 @@ public object Attribute {
     public const val GCP_CLOUD_RUN_JOB_EXECUTION: String = "gcp.cloud_run.job.execution"
 
     /**
-     * The index for a task within an execution as provided by the [`CLOUD_RUN_TASK_INDEX`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable.
+     * The index for a task within an execution as provided by the [`CLOUD%5FRUN%5FTASK%5FINDEX`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable.
      *
      * ## Notes
      *
@@ -3943,7 +3943,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Data sources are used by AI agents and RAG applications to store grounding data. A data source may be an external database, object store, document collection, website, or any other storage system used by the GenAI agent or application. The `gen_ai.data_source.id` SHOULD align with the identifier used by the GenAI system rather than a name specific to the external storage, such as a database or object store. Semantic conventions referencing `gen_ai.data_source.id` MAY also leverage additional attributes, such as `db.*`, to further identify and describe the data source.
+     * Data sources are used by AI agents and RAG applications to store grounding data. A data source may be an external database, object store, document collection, website, or any other storage system used by the GenAI agent or application. The `gen ai.data source.id` SHOULD align with the identifier used by the GenAI system rather than a name specific to the external storage, such as a database or object store. Semantic conventions referencing `gen ai.data source.id` MAY also leverage additional attributes, such as `db.*`, to further identify and describe the data source.
      *
      * # Examples
      *
@@ -3952,7 +3952,7 @@ public object Attribute {
     public const val GEN_AI_DATA_SOURCE_ID: String = "gen_ai.data_source.id"
 
     /**
-     * Deprecated, use `gen_ai.output.type`.
+     * Deprecated, use `gen ai.output.type`.
      *
      * ## Notes
      */
@@ -3960,7 +3960,7 @@ public object Attribute {
     public const val GEN_AI_OPENAI_REQUEST_RESPONSE_FORMAT: String = "gen_ai.openai.request.response_format"
 
     /**
-     * Deprecated, use `gen_ai.request.seed`.
+     * Deprecated, use `gen ai.request.seed`.
      *
      * ## Notes
      *
@@ -4022,7 +4022,7 @@ public object Attribute {
      *
      * This attribute SHOULD be used when the client requests output of a specific type. The model may return zero or more outputs of this type.
      * This attribute specifies the output modality and not the actual output format. For example, if an image is requested, the actual output could be a URL pointing to an image file.
-     * Additional output format details may be recorded in the future in the `gen_ai.output.{type}.*` attributes
+     * Additional output format details may be recorded in the future in the `gen ai.output.{type}.*` attributes
      */
     public const val GEN_AI_OUTPUT_TYPE: String = "gen_ai.output.type"
 
@@ -4149,7 +4149,7 @@ public object Attribute {
     public const val GEN_AI_REQUEST_TEMPERATURE: String = "gen_ai.request.temperature"
 
     /**
-     * The top_k sampling setting for the GenAI request.
+     * The top k sampling setting for the GenAI request.
      *
      * ## Notes
      *
@@ -4160,7 +4160,7 @@ public object Attribute {
     public const val GEN_AI_REQUEST_TOP_K: String = "gen_ai.request.top_k"
 
     /**
-     * The top_p sampling setting for the GenAI request.
+     * The top p sampling setting for the GenAI request.
      *
      * ## Notes
      *
@@ -4214,17 +4214,17 @@ public object Attribute {
      *
      * ## Notes
      *
-     * The `gen_ai.system` describes a family of GenAI models with specific model identified
-     * by `gen_ai.request.model` and `gen_ai.response.model` attributes.
+     * The `gen ai.system` describes a family of GenAI models with specific model identified
+     * by `gen ai.request.model` and `gen ai.response.model` attributes.
      *
      * The actual GenAI product may differ from the one identified by the client.
      * Multiple systems, including Azure OpenAI and Gemini, are accessible by OpenAI client
-     * libraries. In such cases, the `gen_ai.system` is set to `openai` based on the
+     * libraries. In such cases, the `gen ai.system` is set to `openai` based on the
      * instrumentation's best knowledge, instead of the actual system. The `server.address`
      * attribute may help identify the actual system in use for `openai`.
      *
      * For custom model, a custom friendly name SHOULD be used.
-     * If none of these options apply, the `gen_ai.system` SHOULD be set to `_OTHER`.
+     * If none of these options apply, the `gen ai.system` SHOULD be set to `-OTHER`.
      *
      * # Examples
      *
@@ -4297,7 +4297,7 @@ public object Attribute {
     public const val GEN_AI_TOOL_TYPE: String = "gen_ai.tool.type"
 
     /**
-     * Deprecated, use `gen_ai.usage.output_tokens` instead.
+     * Deprecated, use `gen ai.usage.output tokens` instead.
      *
      * ## Notes
      *
@@ -4331,7 +4331,7 @@ public object Attribute {
     public const val GEN_AI_USAGE_OUTPUT_TOKENS: String = "gen_ai.usage.output_tokens"
 
     /**
-     * Deprecated, use `gen_ai.usage.input_tokens` instead.
+     * Deprecated, use `gen ai.usage.input tokens` instead.
      *
      * ## Notes
      *
@@ -4350,7 +4350,7 @@ public object Attribute {
     public const val GEO_CONTINENT_CODE: String = "geo.continent.code"
 
     /**
-     * Two-letter ISO Country Code ([ISO 3166-1 alpha2](https://wikipedia.org/wiki/ISO_3166-1#Codes)).
+     * Two-letter ISO Country Code ([ISO 3166-1 alpha2](https://wikipedia.org/wiki/ISO%5F3166-1#Codes)).
      *
      * ## Notes
      *
@@ -4373,7 +4373,7 @@ public object Attribute {
     public const val GEO_LOCALITY_NAME: String = "geo.locality.name"
 
     /**
-     * Latitude of the geo location in [WGS84](https://wikipedia.org/wiki/World_Geodetic_System#WGS84).
+     * Latitude of the geo location in [WGS84](https://wikipedia.org/wiki/World%5FGeodetic%5FSystem#WGS84).
      *
      * ## Notes
      *
@@ -4384,7 +4384,7 @@ public object Attribute {
     public const val GEO_LOCATION_LAT: String = "geo.location.lat"
 
     /**
-     * Longitude of the geo location in [WGS84](https://wikipedia.org/wiki/World_Geodetic_System#WGS84).
+     * Longitude of the geo location in [WGS84](https://wikipedia.org/wiki/World%5FGeodetic%5FSystem#WGS84).
      *
      * ## Notes
      *
@@ -4406,7 +4406,7 @@ public object Attribute {
     public const val GEO_POSTAL_CODE: String = "geo.postal_code"
 
     /**
-     * Region ISO code ([ISO 3166-2](https://wikipedia.org/wiki/ISO_3166-2)).
+     * Region ISO code ([ISO 3166-2](https://wikipedia.org/wiki/ISO%5F3166-2)).
      *
      * ## Notes
      *
@@ -4577,7 +4577,7 @@ public object Attribute {
     public const val HOST_CPU_VENDOR_ID: String = "host.cpu.vendor.id"
 
     /**
-     * Unique host ID. For Cloud, this must be the instance_id assigned by the cloud provider. For non-containerized systems, this should be the `machine-id`. See the table below for the sources to use to determine the `machine-id` based on operating system.
+     * Unique host ID. For Cloud, this must be the instance id assigned by the cloud provider. For non-containerized systems, this should be the `machine-id`. See the table below for the sources to use to determine the `machine-id` based on operating system.
      *
      * ## Notes
      *
@@ -4606,7 +4606,7 @@ public object Attribute {
      * # Examples
      *
      * - `"infra-ami-eks-worker-node-7d4ec78312"`
-     * - `"CentOS-8-x86_64-1905"`
+     * - `"CentOS-8-x86 64-1905"`
      */
     public const val HOST_IMAGE_NAME: String = "host.image.name"
 
@@ -4752,7 +4752,7 @@ public object Attribute {
      * Instrumentations SHOULD require an explicit configuration of which headers are to be captured.
      * Including all request headers can be a security risk - explicit configuration helps avoid leaking sensitive information.
      *
-     * The `User-Agent` header is already captured in the `user_agent.original` attribute.
+     * The `User-Agent` header is already captured in the `user agent.original` attribute.
      * Users MAY explicitly configure instrumentations to capture them even though it is not recommended.
      *
      * The attribute value MUST consist of either multiple header values as an array of strings
@@ -4787,16 +4787,16 @@ public object Attribute {
      * By default, this convention defines "known" methods as the ones listed in [RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html#name-methods)
      * and the PATCH method defined in [RFC5789](https://www.rfc-editor.org/rfc/rfc5789.html).
      *
-     * If the HTTP request method is not known to instrumentation, it MUST set the `http.request.method` attribute to `_OTHER`.
+     * If the HTTP request method is not known to instrumentation, it MUST set the `http.request.method` attribute to `-OTHER`.
      *
-     * If the HTTP instrumentation could end up converting valid HTTP request methods to `_OTHER`, then it MUST provide a way to override
+     * If the HTTP instrumentation could end up converting valid HTTP request methods to `-OTHER`, then it MUST provide a way to override
      * the list of known HTTP methods. If this override is done via environment variable, then the environment variable MUST be named
-     * OTEL_INSTRUMENTATION_HTTP_KNOWN_METHODS and support a comma-separated list of case-sensitive known HTTP methods
+     * OTEL-INSTRUMENTATION-HTTP-KNOWN-METHODS and support a comma-separated list of case-sensitive known HTTP methods
      * (this list MUST be a full override of the default known method, it is not a list of known methods in addition to the defaults).
      *
      * HTTP method names are case-sensitive and `http.request.method` attribute value MUST correspond to a known HTTP method name exactly.
      * Instrumentations for specific web frameworks that consider HTTP methods to be case insensitive, SHOULD populate a canonical equivalent.
-     * Tracing instrumentations that do so, MUST also set `http.request.method_original` to the original value.
+     * Tracing instrumentations that do so, MUST also set `http.request.method original` to the original value.
      *
      * # Examples
      *
@@ -4998,7 +4998,7 @@ public object Attribute {
     public const val HTTP_SERVER_NAME: String = "http.server_name"
 
     /**
-     * Deprecated, use `http.response.status_code` instead.
+     * Deprecated, use `http.response.status code` instead.
      *
      * ## Notes
      *
@@ -5034,14 +5034,14 @@ public object Attribute {
     public const val HTTP_URL: String = "http.url"
 
     /**
-     * Deprecated, use `user_agent.original` instead.
+     * Deprecated, use `user agent.original` instead.
      *
      * ## Notes
      *
      * # Examples
      *
      * - `"CERN-LineMode/2.15 libwww/2.17b3"`
-     * - `"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1"`
+     * - `"Mozilla/5.0 (iPhone; CPU iPhone OS 14 7 1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1"`
      */
     @Deprecated("{note: Replaced by `user_agent.original`., reason: renamed, renamed_to: user_agent.original}")
     public const val HTTP_USER_AGENT: String = "http.user_agent"
@@ -5075,7 +5075,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"dellStorage_perc_0"`
+     * - `"dellStorage-perc-0"`
      */
     public const val HW_PARENT: String = "hw.parent"
 
@@ -6204,7 +6204,7 @@ public object Attribute {
     public const val MAINFRAME_LPAR_NAME: String = "mainframe.lpar.name"
 
     /**
-     * Deprecated, use `rpc.message.compressed_size` instead.
+     * Deprecated, use `rpc.message.compressed size` instead.
      *
      * ## Notes
      */
@@ -6228,7 +6228,7 @@ public object Attribute {
     public const val MESSAGE_TYPE: String = "message.type"
 
     /**
-     * Deprecated, use `rpc.message.uncompressed_size` instead.
+     * Deprecated, use `rpc.message.uncompressed size` instead.
      *
      * ## Notes
      */
@@ -6240,7 +6240,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Instrumentations SHOULD NOT set `messaging.batch.message_count` on spans that operate with a single message. When a messaging client library supports both batch and single-message API for the same operation, instrumentations SHOULD use `messaging.batch.message_count` for batching APIs and SHOULD NOT use it for single-message APIs.
+     * Instrumentations SHOULD NOT set `messaging.batch.message count` on spans that operate with a single message. When a messaging client library supports both batch and single-message API for the same operation, instrumentations SHOULD use `messaging.batch.message count` for batching APIs and SHOULD NOT use it for single-message APIs.
      *
      * # Examples
      *
@@ -7073,7 +7073,7 @@ public object Attribute {
     public const val NETWORK_PEER_PORT: String = "network.peer.port"
 
     /**
-     * [OSI application layer](https://wikipedia.org/wiki/Application_layer) or non-OSI equivalent.
+     * [OSI application layer](https://wikipedia.org/wiki/Application%5Flayer) or non-OSI equivalent.
      *
      * ## Notes
      *
@@ -7102,7 +7102,7 @@ public object Attribute {
     public const val NETWORK_PROTOCOL_VERSION: String = "network.protocol.version"
 
     /**
-     * [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication).
+     * [OSI transport layer](https://wikipedia.org/wiki/Transport%5Flayer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process communication).
      *
      * ## Notes
      *
@@ -7120,7 +7120,7 @@ public object Attribute {
     public const val NETWORK_TRANSPORT: String = "network.transport"
 
     /**
-     * [OSI network layer](https://wikipedia.org/wiki/Network_layer) or non-OSI equivalent.
+     * [OSI network layer](https://wikipedia.org/wiki/Network%5Flayer) or non-OSI equivalent.
      *
      * ## Notes
      *
@@ -7177,7 +7177,7 @@ public object Attribute {
     public const val OS_BUILD_ID: String = "os.build_id"
 
     /**
-     * Human readable (not intended to be parsed) OS version information, like e.g. reported by `ver` or `lsb_release -a` commands.
+     * Human readable (not intended to be parsed) OS version information, like e.g. reported by `ver` or `lsb release -a` commands.
      *
      * ## Notes
      *
@@ -7228,15 +7228,15 @@ public object Attribute {
      * Implementations SHOULD ensure a low cardinality for this attribute, even across application or SDK restarts.
      * E.g. implementations MUST NOT use UUIDs as values for this attribute.
      *
-     * Implementations MAY achieve these goals by following a `[otel.component.type]/[instance-counter]` pattern, e.g. `batching_span_processor/0`.
+     * Implementations MAY achieve these goals by following a `[otel.component.type]/[instance-counter]` pattern, e.g. `batching span processor/0`.
      * Hereby `otel.component.type` refers to the corresponding attribute value of the component.
      *
      * The value of `instance-counter` MAY be automatically assigned by the component and uniqueness within the enclosing SDK instance MUST be guaranteed.
      * For example, `[instance-counter]` MAY be implemented by using a monotonically increasing counter (starting with `0`), which is incremented every time an
      * instance of the given component type is started.
      *
-     * With this implementation, for example the first Batching Span Processor would have `batching_span_processor/0`
-     * as `otel.component.name`, the second one `batching_span_processor/1` and so on.
+     * With this implementation, for example the first Batching Span Processor would have `batching span processor/0`
+     * as `otel.component.name`, the second one `batching span processor/1` and so on.
      * These values will therefore be reused in the case of an application restart.
      *
      * # Examples
@@ -7375,7 +7375,7 @@ public object Attribute {
     public const val POOL_NAME: String = "pool.name"
 
     /**
-     * Length of the process.command_args array
+     * Length of the process.command args array
      *
      * ## Notes
      *
@@ -7413,7 +7413,7 @@ public object Attribute {
     public const val PROCESS_COMMAND_ARGS: String = "process.command_args"
 
     /**
-     * The full command used to launch the process as a single string representing the full command. On Windows, can be set to the result of `GetCommandLineW`. Do not set this if you have to assemble it just for monitoring; use `process.command_args` instead. SHOULD NOT be collected by default unless there is sanitization that excludes sensitive data.
+     * The full command used to launch the process as a single string representing the full command. On Windows, can be set to the result of `GetCommandLineW`. Do not set this if you have to assemble it just for monitoring; use `process.command args` instead. SHOULD NOT be collected by default unless there is sanitization that excludes sensitive data.
      *
      * ## Notes
      *
@@ -7457,9 +7457,9 @@ public object Attribute {
      * Examples:
      *
      * - an environment variable `USER` with value `"ubuntu"` SHOULD be recorded
-     * as the `process.environment_variable.USER` attribute with value `"ubuntu"`.
+     * as the `process.environment variable.USER` attribute with value `"ubuntu"`.
      * - an environment variable `PATH` with value `"/usr/local/bin:/usr/bin"`
-     * SHOULD be recorded as the `process.environment_variable.PATH` attribute
+     * SHOULD be recorded as the `process.environment variable.PATH` attribute
      * with value `"/usr/local/bin:/usr/bin"`.
      *
      * # Examples
@@ -7487,7 +7487,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"foh3mEXu7BLZjsN9pOwG/kATcXlYVCDEFouRMQed_/WwRFB1hPo9LBkekthSPG/x8hMC8emW2cCjXD0_1aY"`
+     * - `"foh3mEXu7BLZjsN9pOwG/kATcXlYVCDEFouRMQed-/WwRFB1hPo9LBkekthSPG/x8hMC8emW2cCjXD0-1aY"`
      */
     public const val PROCESS_EXECUTABLE_BUILD_ID_GO: String = "process.executable.build_id.go"
 
@@ -7503,7 +7503,7 @@ public object Attribute {
     public const val PROCESS_EXECUTABLE_BUILD_ID_HTLHASH: String = "process.executable.build_id.htlhash"
 
     /**
-     * "Deprecated, use `process.executable.build_id.htlhash` instead."
+     * "Deprecated, use `process.executable.build id.htlhash` instead."
      *
      * ## Notes
      *
@@ -7806,7 +7806,7 @@ public object Attribute {
      * Including all request metadata values can be a security risk - explicit configuration helps avoid leaking sensitive information.
      *
      * For example, a property `my-custom-key` with value `["1.2.3.4", "1.2.3.5"]` SHOULD be recorded as
-     * the `rpc.connect_rpc.request.metadata.my-custom-key` attribute with value `["1.2.3.4", "1.2.3.5"]`
+     * the `rpc.connect rpc.request.metadata.my-custom-key` attribute with value `["1.2.3.4", "1.2.3.5"]`
      *
      * # Examples
      *
@@ -7825,13 +7825,13 @@ public object Attribute {
      * Instrumentations SHOULD require an explicit configuration of which metadata values are to be captured.
      * Including all response metadata values can be a security risk - explicit configuration helps avoid leaking sensitive information.
      *
-     * For example, a property `my-custom-key` with value `"attribute_value"` SHOULD be recorded as
-     * the `rpc.connect_rpc.response.metadata.my-custom-key` attribute with value `["attribute_value"]`
+     * For example, a property `my-custom-key` with value `"attribute value"` SHOULD be recorded as
+     * the `rpc.connect rpc.response.metadata.my-custom-key` attribute with value `["attribute value"]`
      *
      * # Examples
      *
      * - `[
-     * "attribute_value",
+     * "attribute value",
      * ]`
      */
     public const val RPC_CONNECT_RPC_RESPONSE_METADATA: String = "rpc.connect_rpc.response.metadata"
@@ -7864,13 +7864,13 @@ public object Attribute {
      * Instrumentations SHOULD require an explicit configuration of which metadata values are to be captured.
      * Including all response metadata values can be a security risk - explicit configuration helps avoid leaking sensitive information.
      *
-     * For example, a property `my-custom-key` with value `["attribute_value"]` SHOULD be recorded as
-     * the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute_value"]`
+     * For example, a property `my-custom-key` with value `["attribute value"]` SHOULD be recorded as
+     * the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute value"]`
      *
      * # Examples
      *
      * - `[
-     * "attribute_value",
+     * "attribute value",
      * ]`
      */
     public const val RPC_GRPC_RESPONSE_METADATA: String = "rpc.grpc.response.metadata"
@@ -8034,7 +8034,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"BLOCK_DNS_over_TLS"`
+     * - `"BLOCK-DNS-over-TLS"`
      */
     public const val SECURITY_RULE_NAME: String = "security_rule.name"
 
@@ -8047,7 +8047,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"https://en.wikipedia.org/wiki/DNS_over_TLS"`
+     * - `"https://en.wikipedia.org/wiki/DNS%5Fover%5FTLS"`
      */
     public const val SECURITY_RULE_REFERENCE: String = "security_rule.reference"
 
@@ -8058,7 +8058,7 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"Standard_Protocol_Filters"`
+     * - `"Standard-Protocol-Filters"`
      */
     public const val SECURITY_RULE_RULESET_NAME: String = "security_rule.ruleset.name"
 
@@ -8158,7 +8158,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * MUST be the same for all instances of horizontally scaled services. If the value was not specified, SDKs MUST fallback to `unknown_service:` concatenated with [`process.executable.name`](process.md), e.g. `unknown_service:bash`. If `process.executable.name` is not available, the value MUST be set to `unknown_service`.
+     * MUST be the same for all instances of horizontally scaled services. If the value was not specified, SDKs MUST fallback to unknown service: concatenated with [`process.executable.name`](process.md), e.g. `unknown service:bash`. If `process.executable.name` is not available, the value MUST be set to unknown service.
      *
      * # Examples
      *
@@ -8265,7 +8265,7 @@ public object Attribute {
     public const val SOURCE_PORT: String = "source.port"
 
     /**
-     * Deprecated, use `cpu.logical_number` instead.
+     * Deprecated, use `cpu.logical number` instead.
      *
      * ## Notes
      *
@@ -8401,7 +8401,7 @@ public object Attribute {
     public const val SYSTEM_PAGING_TYPE: String = "system.paging.type"
 
     /**
-     * The process state, e.g., [Linux Process State Codes](https://man7.org/linux/man-pages/man1/ps.1.html#PROCESS_STATE_CODES)
+     * The process state, e.g., [Linux Process State Codes](https://man7.org/linux/man-pages/man1/ps.1.html#PROCESS%5FSTATE%5FCODES)
      *
      * ## Notes
      *
@@ -8485,7 +8485,7 @@ public object Attribute {
     public const val TELEMETRY_SDK_VERSION: String = "telemetry.sdk.version"
 
     /**
-     * The fully qualified human readable name of the [test case](https://wikipedia.org/wiki/Test_case).
+     * The fully qualified human readable name of the [test case](https://wikipedia.org/wiki/Test%5Fcase).
      *
      * ## Notes
      *
@@ -8493,7 +8493,7 @@ public object Attribute {
      *
      * - `"org.example.TestCase1.test1"`
      * - `"example/tests/TestCase1.test1"`
-     * - `"ExampleTestCase1_test1"`
+     * - `"ExampleTestCase1-test1"`
      */
     public const val TEST_CASE_NAME: String = "test.case.name"
 
@@ -8510,7 +8510,7 @@ public object Attribute {
     public const val TEST_CASE_RESULT_STATUS: String = "test.case.result.status"
 
     /**
-     * The human readable name of a [test suite](https://wikipedia.org/wiki/Test_suite).
+     * The human readable name of a [test suite](https://wikipedia.org/wiki/Test%5Fsuite).
      *
      * ## Notes
      *
@@ -8567,13 +8567,13 @@ public object Attribute {
      *
      * # Examples
      *
-     * - `"TLS_RSA_WITH_3DES_EDE_CBC_SHA"`
-     * - `"TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"`
+     * - `"TLS-RSA-WITH-3DES-EDE-CBC-SHA"`
+     * - `"TLS-ECDHE-RSA-WITH-AES-128-CBC-SHA256"`
      */
     public const val TLS_CIPHER: String = "tls.cipher"
 
     /**
-     * PEM-encoded stand-alone certificate offered by the client. This is usually mutually-exclusive of `client.certificate_chain` since this value also exists in that list.
+     * PEM-encoded stand-alone certificate offered by the client. This is usually mutually-exclusive of `client.certificate chain` since this value also exists in that list.
      *
      * ## Notes
      *
@@ -8705,8 +8705,8 @@ public object Attribute {
      * # Examples
      *
      * - `[
-     * "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
-     * "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+     * "TLS-ECDHE-RSA-WITH-AES-256-GCM-SHA384",
+     * "TLS-ECDHE-ECDSA-WITH-AES-256-GCM-SHA384",
      * ]`
      */
     public const val TLS_CLIENT_SUPPORTED_CIPHERS: String = "tls.client.supported_ciphers"
@@ -8745,14 +8745,14 @@ public object Attribute {
     public const val TLS_NEXT_PROTOCOL: String = "tls.next_protocol"
 
     /**
-     * Normalized lowercase protocol name parsed from original string of the negotiated [SSL/TLS protocol version](https://docs.openssl.org/1.1.1/man3/SSL_get_version/#return-values)
+     * Normalized lowercase protocol name parsed from original string of the negotiated [SSL/TLS protocol version](https://docs.openssl.org/1.1.1/man3/SSL%5Fget%5Fversion/#return-values)
      *
      * ## Notes
      */
     public const val TLS_PROTOCOL_NAME: String = "tls.protocol.name"
 
     /**
-     * Numeric part of the version parsed from the original string of the negotiated [SSL/TLS protocol version](https://docs.openssl.org/1.1.1/man3/SSL_get_version/#return-values)
+     * Numeric part of the version parsed from the original string of the negotiated [SSL/TLS protocol version](https://docs.openssl.org/1.1.1/man3/SSL%5Fget%5Fversion/#return-values)
      *
      * ## Notes
      *
@@ -8775,7 +8775,7 @@ public object Attribute {
     public const val TLS_RESUMED: String = "tls.resumed"
 
     /**
-     * PEM-encoded stand-alone certificate offered by the server. This is usually mutually-exclusive of `server.certificate_chain` since this value also exists in that list.
+     * PEM-encoded stand-alone certificate offered by the server. This is usually mutually-exclusive of `server.certificate chain` since this value also exists in that list.
      *
      * ## Notes
      *
@@ -9057,7 +9057,7 @@ public object Attribute {
     public const val URL_SCHEME: String = "url.scheme"
 
     /**
-     * The subdomain portion of a fully qualified domain name includes all of the names except the host name under the registered_domain. In a partially qualified domain, or if the qualification level of the full name cannot be determined, subdomain contains all of the names below the registered domain.
+     * The subdomain portion of a fully qualified domain name includes all of the names except the host name under the registered domain. In a partially qualified domain, or if the qualification level of the full name cannot be determined, subdomain contains all of the names below the registered domain.
      *
      * ## Notes
      *
@@ -9163,7 +9163,7 @@ public object Attribute {
      *
      * - `[
      * "admin",
-     * "reporting_user",
+     * "reporting user",
      * ]`
      */
     public const val USER_ROLES: String = "user.roles"
@@ -9173,7 +9173,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * [Example](https://www.whatsmyua.info) of extracting browser's name from original string. In the case of using a user-agent for non-browser products, such as microservices with multiple names/versions inside the `user_agent.original`, the most significant name SHOULD be selected. In such a scenario it should align with `user_agent.version`
+     * [Example](https://www.whatsmyua.info) of extracting browser's name from original string. In the case of using a user-agent for non-browser products, such as microservices with multiple names/versions inside the `user agent.original`, the most significant name SHOULD be selected. In such a scenario it should align with `user agent.version`
      *
      * # Examples
      *
@@ -9190,7 +9190,7 @@ public object Attribute {
      * # Examples
      *
      * - `"CERN-LineMode/2.15 libwww/2.17b3"`
-     * - `"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1"`
+     * - `"Mozilla/5.0 (iPhone; CPU iPhone OS 14 7 1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1"`
      * - `"YourApp/1.0.0 grpc-java-okhttp/1.27.2"`
      */
     public const val USER_AGENT_ORIGINAL: String = "user_agent.original"
@@ -9229,7 +9229,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * This attribute MAY be derived from the contents of the `user_agent.original` attribute. Components that populate the attribute are responsible for determining what they consider to be synthetic bot or test traffic. This attribute can either be set for self-identification purposes, or on telemetry detected to be generated as a result of a synthetic request. This attribute is useful for distinguishing between genuine client traffic and synthetic traffic generated by bots or tests
+     * This attribute MAY be derived from the contents of the `user agent.original` attribute. Components that populate the attribute are responsible for determining what they consider to be synthetic bot or test traffic. This attribute can either be set for self-identification purposes, or on telemetry detected to be generated as a result of a synthetic request. This attribute is useful for distinguishing between genuine client traffic and synthetic traffic generated by bots or tests
      */
     public const val USER_AGENT_SYNTHETIC_TYPE: String = "user_agent.synthetic.type"
 
@@ -9238,7 +9238,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * [Example](https://www.whatsmyua.info) of extracting browser's version from original string. In the case of using a user-agent for non-browser products, such as microservices with multiple names/versions inside the `user_agent.original`, the most significant version SHOULD be selected. In such a scenario it should align with `user_agent.name`
+     * [Example](https://www.whatsmyua.info) of extracting browser's version from original string. In the case of using a user-agent for non-browser products, such as microservices with multiple names/versions inside the `user agent.original`, the most significant version SHOULD be selected. In such a scenario it should align with `user agent.name`
      *
      * # Examples
      *
@@ -9259,7 +9259,7 @@ public object Attribute {
      *
      * ## Notes
      *
-     * Value can be retrieved from value `space_name` of [`v8.getHeapSpaceStatistics()`](https://nodejs.org/api/v8.html#v8getheapspacestatistics)
+     * Value can be retrieved from value space name of [`v8.getHeapSpaceStatistics()`](https://nodejs.org/api/v8.html#v8getheapspacestatistics)
      */
     public const val V8JS_HEAP_SPACE_NAME: String = "v8js.heap.space.name"
 
@@ -9340,7 +9340,7 @@ public object Attribute {
     public const val VCS_PROVIDER_NAME: String = "vcs.provider.name"
 
     /**
-     * The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository.
+     * The name of the [reference](https://git-scm.com/docs/gitglossary#def ref) such as **branch** or **tag** in the repository.
      *
      * ## Notes
      *
@@ -9384,7 +9384,7 @@ public object Attribute {
     public const val VCS_REF_BASE_REVISION: String = "vcs.ref.base.revision"
 
     /**
-     * The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository.
+     * The type of the [reference](https://git-scm.com/docs/gitglossary#def ref) in the repository.
      *
      * ## Notes
      *
@@ -9400,7 +9400,7 @@ public object Attribute {
     public const val VCS_REF_BASE_TYPE: String = "vcs.ref.base.type"
 
     /**
-     * The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository.
+     * The name of the [reference](https://git-scm.com/docs/gitglossary#def ref) such as **branch** or **tag** in the repository.
      *
      * ## Notes
      *
@@ -9441,7 +9441,7 @@ public object Attribute {
     public const val VCS_REF_HEAD_REVISION: String = "vcs.ref.head.revision"
 
     /**
-     * The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository.
+     * The type of the [reference](https://git-scm.com/docs/gitglossary#def ref) in the repository.
      *
      * ## Notes
      *
@@ -9456,7 +9456,7 @@ public object Attribute {
     public const val VCS_REF_HEAD_TYPE: String = "vcs.ref.head.type"
 
     /**
-     * The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository.
+     * The type of the [reference](https://git-scm.com/docs/gitglossary#def ref) in the repository.
      *
      * ## Notes
      *
