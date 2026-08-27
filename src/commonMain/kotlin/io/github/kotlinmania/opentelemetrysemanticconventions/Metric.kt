@@ -1,4 +1,4 @@
-// port-lint: source metric.rs
+// port-lint: source opentelemetry-semantic-conventions/src/metric.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
 /**

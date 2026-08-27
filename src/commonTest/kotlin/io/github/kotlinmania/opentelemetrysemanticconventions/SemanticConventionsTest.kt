@@ -1,4 +1,4 @@
-// port-lint: tests conventions.rs
+// port-lint: tests opentelemetry-semantic-conventions/src/lib.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
 import kotlin.test.Test
