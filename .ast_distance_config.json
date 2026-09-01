@@ -2,7 +2,7 @@
   "type": "port",
   "name": "opentelemetry-semantic-conventions-kotlin",
   "source": {
-    "path": "tmp",
+    "path": "tmp/opentelemetry-semantic-conventions/src",
     "lang": "rust"
   },
   "target": {
