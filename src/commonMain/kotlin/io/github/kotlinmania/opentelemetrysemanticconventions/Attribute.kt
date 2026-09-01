@@ -1,4 +1,4 @@
-// port-lint: source opentelemetry-semantic-conventions/src/attribute.rs
+// port-lint: source attribute.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
 /**
