@@ -1,10 +1,12 @@
-// port-lint: tests lib.rs
 package io.github.kotlinmania.opentelemetrysemanticconventions
 
+import io.github.kotlinmania.opentelemetry.KeyValue
+import io.github.kotlinmania.opentelemetry.global.meter
+import io.github.kotlinmania.opentelemetry.global.tracer
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 
-@Suppress("DEPRECATION")
 class SemanticConventionsTest {
     @Test
     fun schemaUrlIsDefined() {
@@ -36,7 +38,35 @@ class SemanticConventionsTest {
     @Test
     fun metricConstantsAreDefined() {
         assertEquals("aspnetcore.diagnostics.exceptions", Metric.ASPNETCORE_DIAGNOSTICS_EXCEPTIONS)
-        assertEquals("cpu.frequency", Metric.CPU_FREQUENCY)
+        assertEquals("system.cpu.frequency", Metric.SYSTEM_CPU_FREQUENCY)
         assertEquals("dns.lookup.duration", Metric.DNS_LOOKUP_DURATION)
+    }
+
+    @Test
+    fun metricUsageDoctest() {
+        val m = meter("mylibraryname")
+        val histogram =
+            m
+                .u64Histogram(Metric.HTTP_SERVER_REQUEST_DURATION)
+                .withUnit("s")
+                .withDescription("Duration of HTTP server requests.")
+                .build()
+        assertNotNull(histogram)
+        assertEquals("GET", KeyValue.new(Attribute.HTTP_REQUEST_METHOD, "GET").value.asStr())
+    }
+
+    @Test
+    fun traceUsageDoctest() {
+        val t = tracer("my-component")
+        val span =
+            t
+                .spanBuilder("span-name")
+                .withAttributes(
+                    listOf(
+                        KeyValue.new(Trace.CLIENT_ADDRESS, "example.org"),
+                        KeyValue.new(Trace.CLIENT_PORT, 80L),
+                    ),
+                ).start(t)
+        span.end()
     }
 }
